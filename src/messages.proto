@@ -1,18 +1,18 @@
 syntax = "proto3";
 package messages;
 
-// An AraId
+// The Ara Identity associated with a peer.
 message AraId {
   string did = 1;
 }
 
-// A signature of a peer associated with an ARAid
+// A signed piece of data that can be used to validate a peer.
 message Signature {
   AraId ara_id = 1;
   bytes data = 2;
 }
 
-// A statement of work for a specific job
+// A statement of work for a specific task.
 message SOW {
   bytes nonce = 1;
   string work_unit = 2;
@@ -20,7 +20,7 @@ message SOW {
   bytes data = 4;
 }
 
-// A quote from a specific farmer for a specific job
+// A quote from a specific farmer for a specific SOW.
 message Quote {
   bytes nonce = 1;
   int64 per_unit_cost = 2;
@@ -29,8 +29,8 @@ message Quote {
 }
 
 /**
- * An abstract agreement between two parties (a requester and a farmer)
- * spelling out the terms of a specific job 
+ * An abstract agreement between two peers (a farmer and a requester) 
+ * spelling out the terms of a task.
  **/
 message Agreement {
   bytes nonce = 1;
@@ -40,7 +40,7 @@ message Agreement {
   bytes data = 5;
 }
 
-// Details of the reward for a specific agreement
+// A reward for a specific agreement, sent by a verifiable peer.
 message Reward {
   bytes nonce = 1;
 	Agreement agreement = 2;
@@ -49,7 +49,7 @@ message Reward {
   bytes data = 5;
 }
 
-// A receipt of reward
+// A receipt for a reward, sent by a verifiable peer.
 message Receipt {
   bytes nonce = 1;
   Reward reward = 2;

@@ -22,17 +22,20 @@ Protocol buffers for Ara Farming
 * [Receipt](#receipt)
 
 ### AraId <a name="araid"></a>
+The Ara Identity associated with a peer.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | did | string |  |  |
 
 ### Signature <a name="signature"></a>
+A signed piece of data that can be used to validate a peer.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | ara_id | [AraId](#araid) |  |  |
 | data | bytes |  |  |
 
 ### SOW <a name="sow"></a>
+A statement of work for a specific task.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | nonce | bytes |  |  |
@@ -41,6 +44,7 @@ Protocol buffers for Ara Farming
 | data | bytes |  |  |
 
 ### Quote <a name="quote"></a>
+A quote from a specific farmer for a specific SOW.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | nonce | bytes |  |  |
@@ -49,6 +53,7 @@ Protocol buffers for Ara Farming
 | farmer | [AraId](#araid) |  |  |
 
 ### Agreement <a name="agreement"></a>
+An abstract agreement between two peers (a farmer and a requester) spelling out the terms of a task.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | nonce | bytes |  |  |
@@ -58,6 +63,7 @@ Protocol buffers for Ara Farming
 | data | bytes |  |  |
 
 ### Reward <a name="reward"></a>
+A reward for a specific agreement, sent by a verifiable peer.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | nonce | bytes |  |  |
@@ -67,6 +73,7 @@ Protocol buffers for Ara Farming
 | data | bytes |  |  |
 
 ### Receipt <a name="receipt"></a>
+A receipt for a reward, sent by a verifiable peer.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | nonce | bytes |  |  |
