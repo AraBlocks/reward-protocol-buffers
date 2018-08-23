@@ -1,0 +1,45 @@
+{
+  "name": "farming-protocol-buffers",
+  "version": "0.0.1",
+  "description": "Protocol buffers for Farming",
+  "main": "index.js",
+  "bin": {},
+  "scripts": {
+    "test": "ava test",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "coverage": "npm run nyc",
+    "nyc": "nyc npm test",
+    "release-version": "./scripts/changelog",
+    "build": "sh ./scripts/build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arablocks/farming-protocol-buffers.git"
+  },
+  "keywords": [
+    "ara",
+    "farming",
+    "farming-protocol",
+    "farming-protocol-buffers"
+  ],
+  "author": "Brandon Plaster <brandon@littlstar.com>",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/arablocks/farming-protocol-buffers/issues"
+  },
+  "homepage": "https://github.com/arablocks/farming-protocol-buffers#readme",
+  "dependencies": {
+    "google-protobuf": "^3.6.1"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint": "^4.19.1",
+    "eslint-config-ara": "github:arablocks/eslint-config-ara",
+    "eslint-plugin-import": "^2.12.0",
+    "generate-changelog": "^1.7.1",
+    "jsdoc-to-markdown": "^4.0.1"
+  }
+}
