@@ -106,7 +106,7 @@ npm run build
 Releases follow [Semantic Versioning](https://semver.org/)
 
 ## See Also
-- [RFC](https://github.com/AraBlocks/RFCs) 
+- [RFC](https://github.com/AraBlocks/RFCs/pull/10/files) 
 
 ## License
 LGPL-3.0
