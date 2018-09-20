@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * A quote from a specific farmer for a specific job
+ * A quote from a specific farmer for a specific SOW.
  *
  * Generated from protobuf message <code>messages.Quote</code>
  */

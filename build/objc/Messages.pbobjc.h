@@ -51,6 +51,41 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MessagesRoot : GPBRootObject
 @end
 
+#pragma mark - AraId
+
+typedef GPB_ENUM(AraId_FieldNumber) {
+  AraId_FieldNumber_Did = 1,
+};
+
+/**
+ * The Ara Identity associated with a peer.
+ **/
+@interface AraId : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *did;
+
+@end
+
+#pragma mark - Signature
+
+typedef GPB_ENUM(Signature_FieldNumber) {
+  Signature_FieldNumber_AraId = 1,
+  Signature_FieldNumber_Data_p = 2,
+};
+
+/**
+ * A signed piece of data that can be used to validate a peer.
+ **/
+@interface Signature : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) AraId *araId;
+/** Test to see if @c araId has been set. */
+@property(nonatomic, readwrite) BOOL hasAraId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
+
+@end
+
 #pragma mark - SOW
 
 typedef GPB_ENUM(SOW_FieldNumber) {
@@ -58,10 +93,11 @@ typedef GPB_ENUM(SOW_FieldNumber) {
   SOW_FieldNumber_WorkUnit = 2,
   SOW_FieldNumber_Requester = 3,
   SOW_FieldNumber_Data_p = 4,
+  SOW_FieldNumber_CurrencyUnit = 5,
 };
 
 /**
- * A statement of work for a specific job
+ * A statement of work for a specific task.
  **/
 @interface SOW : GPBMessage
 
@@ -75,6 +111,8 @@ typedef GPB_ENUM(SOW_FieldNumber) {
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
 
+@property(nonatomic, readwrite, copy, null_resettable) NSString *currencyUnit;
+
 @end
 
 #pragma mark - Quote
@@ -87,7 +125,7 @@ typedef GPB_ENUM(Quote_FieldNumber) {
 };
 
 /**
- * A quote from a specific farmer for a specific job
+ * A quote from a specific farmer for a specific SOW.
  **/
 @interface Quote : GPBMessage
 
@@ -117,8 +155,8 @@ typedef GPB_ENUM(Agreement_FieldNumber) {
 
 /**
  * *
- * An abstract agreement between two parties (a requester and a farmer)
- * spelling out the terms of a specific job
+ * An abstract agreement between two peers (a farmer and a requester)
+ * spelling out the terms of a task.
  **/
 @interface Agreement : GPBMessage
 
@@ -151,7 +189,7 @@ typedef GPB_ENUM(Reward_FieldNumber) {
 };
 
 /**
- * Details of the reward for a specific agreement
+ * A reward for a specific agreement, sent by a verifiable peer.
  **/
 @interface Reward : GPBMessage
 
@@ -180,7 +218,7 @@ typedef GPB_ENUM(Receipt_FieldNumber) {
 };
 
 /**
- * A receipt of reward
+ * A receipt for a reward, sent by a verifiable peer.
  **/
 @interface Receipt : GPBMessage
 
@@ -193,41 +231,6 @@ typedef GPB_ENUM(Receipt_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) Signature *farmerSignature;
 /** Test to see if @c farmerSignature has been set. */
 @property(nonatomic, readwrite) BOOL hasFarmerSignature;
-
-@end
-
-#pragma mark - Signature
-
-typedef GPB_ENUM(Signature_FieldNumber) {
-  Signature_FieldNumber_AraId = 1,
-  Signature_FieldNumber_Data_p = 2,
-};
-
-/**
- * A signature of a peer associated with an ARAid
- **/
-@interface Signature : GPBMessage
-
-@property(nonatomic, readwrite, strong, null_resettable) AraId *araId;
-/** Test to see if @c araId has been set. */
-@property(nonatomic, readwrite) BOOL hasAraId;
-
-@property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
-
-@end
-
-#pragma mark - AraId
-
-typedef GPB_ENUM(AraId_FieldNumber) {
-  AraId_FieldNumber_Did = 1,
-};
-
-/**
- * An ARAid
- **/
-@interface AraId : GPBMessage
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *did;
 
 @end
 

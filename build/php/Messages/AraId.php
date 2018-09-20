@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * An ARAid
+ * The Ara Identity associated with a peer.
  *
  * Generated from protobuf message <code>messages.AraId</code>
  */

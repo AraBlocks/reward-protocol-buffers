@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * A statement of work for a specific job
+ * A statement of work for a specific task.
  *
  * Generated from protobuf message <code>messages.SOW</code>
  */
@@ -31,6 +31,10 @@ class SOW extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes data = 4;</code>
      */
     private $data = '';
+    /**
+     * Generated from protobuf field <code>string currency_unit = 5;</code>
+     */
+    private $currency_unit = '';
 
     public function __construct() {
         \GPBMetadata\Messages::initOnce();
@@ -121,6 +125,28 @@ class SOW extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->data = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string currency_unit = 5;</code>
+     * @return string
+     */
+    public function getCurrencyUnit()
+    {
+        return $this->currency_unit;
+    }
+
+    /**
+     * Generated from protobuf field <code>string currency_unit = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCurrencyUnit($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->currency_unit = $var;
 
         return $this;
     }

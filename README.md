@@ -24,68 +24,69 @@ Protocol buffers for Ara Farming
 ### AraId <a name="araid"></a>
 The Ara Identity associated with a peer.
 
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| did | string |  |  |
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| did | string | The DID associated with a peer |
 
 ### Signature <a name="signature"></a>
 A signed piece of data that can be used to validate a peer.
 
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| ara_id | [AraId](#araid) |  |  |
-| data | bytes |  |  |
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| ara_id | [AraId](#araid) | A resolvable AraId |
+| data | bytes | Data signed by the private key of the associated AraId |
 
 ### SOW <a name="sow"></a>
 A statement of work for a specific task.
 
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| nonce | bytes |  |  |
-| work_unit | string |  |  |
-| requester | [AraId](#araid) |  |  |
-| data | bytes |  |  |
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| nonce | bytes | Identifier for the SOW |
+| work_unit | string | An individual unit of work (i.e GB, Frame, etc.) |
+| currency_unit | string | An individual unit of currency (i.e. Ara^-18, USD, wei, etc.) |
+| requester | [AraId](#araid) | The AraId of the requester |
+| data | bytes | Miscellaneous data |
 
 ### Quote <a name="quote"></a>
 A quote from a specific farmer for a specific SOW.
 
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| nonce | bytes |  |  |
-| per_unit_cost | string |  |  |
-| sow | [SOW](#sow) |  |  |
-| farmer | [AraId](#araid) |  |  |
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| nonce | bytes | Identifier for the quote |
+| per_unit_cost | int64 | The cost (in `currency_units`) per unit of work (in `work_units`) |
+| sow | [SOW](#sow) | The associated SOW |
+| farmer | [AraId](#araid) | The AraId of the farmer |
 
 ### Agreement <a name="agreement"></a>
 An abstract agreement between two peers (a farmer and a requester) spelling out the terms of a task.
 
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| nonce | bytes |  |  |
-| quote | [Quote](#quote) |  |  |
-| requester_signature | [Signature](#signature) |  |  |
-| farmer_signature | [Signature](#signature) |  |  |
-| data | bytes |  |  |
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| nonce | bytes | Identifier for the agreement |
+| quote | [Quote](#quote) | The associated quote |
+| requester_signature | [Signature](#signature) | The requester's verifiable signature |
+| farmer_signature | [Signature](#signature) | The farmer's verifiable signature |
+| data | bytes | Miscellaneous data |
 
 ### Reward <a name="reward"></a>
 A reward for a specific agreement, sent by a verifiable peer.
 
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| nonce | bytes |  |  |
-| agreement | [Agreement](#agreement) |  |  |
-| amount | int64 |  |  |
-| requester_signature | [Signature](#signature) |  |  |
-| data | bytes |  |  |
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| nonce | bytes | Identifier for the reward |
+| agreement | [Agreement](#agreement) | The associated agreement |
+| amount | int64 | The reward amount (in `currency_units`) |
+| requester_signature | [Signature](#signature) | The requester's verifiable signature |
+| data | bytes | Miscellaneous data |
 
 ### Receipt <a name="receipt"></a>
 A receipt for a reward, sent by a verifiable peer.
 
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| nonce | bytes |  |  |
-| reward | [Reward](#reward) |  |  |
-| farmer_signature | [Signature](#signature) |  |  |
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| nonce | bytes | Identifier for the receipt |
+| reward | [Reward](#reward) | The associated reward |
+| farmer_signature | [Signature](#signature) | The farmer's verifiable signature |
 
 ## Local Development Setup
 ### Generating Protobuf files
@@ -106,7 +107,8 @@ npm run build
 Releases follow [Semantic Versioning](https://semver.org/)
 
 ## See Also
-- [RFC](https://github.com/AraBlocks/RFCs/blob/c110d3a8bc5fbdc7f331853667ce780f012a2244/text/0000-afp.md) 
+- [RFC](https://github.com/AraBlocks/RFCs/blob/c110d3a8bc5fbdc7f331853667ce780f012a2244/text/0000-afp.md)
+- [ara-identity](https://github.com/AraBlocks/ara-identity) 
 
 ## License
 LGPL-3.0
