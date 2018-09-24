@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * A receipt of reward
+ * A receipt for a reward, sent by a verifiable peer.
  *
  * Generated from protobuf message <code>messages.Receipt</code>
  */

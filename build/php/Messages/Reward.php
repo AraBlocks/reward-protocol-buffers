@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Details of the reward for a specific agreement
+ * A reward for a specific agreement, sent by a verifiable peer.
  *
  * Generated from protobuf message <code>messages.Reward</code>
  */

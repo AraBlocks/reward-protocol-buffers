@@ -42,6 +42,103 @@ static GPBFileDescriptor *MessagesRoot_FileDescriptor(void) {
   return descriptor;
 }
 
+#pragma mark - AraId
+
+@implementation AraId
+
+@dynamic did;
+
+typedef struct AraId__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *did;
+} AraId__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "did",
+        .dataTypeSpecific.className = NULL,
+        .number = AraId_FieldNumber_Did,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(AraId__storage_, did),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[AraId class]
+                                     rootClass:[MessagesRoot class]
+                                          file:MessagesRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(AraId__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - Signature
+
+@implementation Signature
+
+@dynamic hasAraId, araId;
+@dynamic data_p;
+
+typedef struct Signature__storage_ {
+  uint32_t _has_storage_[1];
+  AraId *araId;
+  NSData *data_p;
+} Signature__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "araId",
+        .dataTypeSpecific.className = GPBStringifySymbol(AraId),
+        .number = Signature_FieldNumber_AraId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Signature__storage_, araId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "data_p",
+        .dataTypeSpecific.className = NULL,
+        .number = Signature_FieldNumber_Data_p,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Signature__storage_, data_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[Signature class]
+                                     rootClass:[MessagesRoot class]
+                                          file:MessagesRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(Signature__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - SOW
 
 @implementation SOW
@@ -50,6 +147,7 @@ static GPBFileDescriptor *MessagesRoot_FileDescriptor(void) {
 @dynamic workUnit;
 @dynamic hasRequester, requester;
 @dynamic data_p;
+@dynamic currencyUnit;
 
 typedef struct SOW__storage_ {
   uint32_t _has_storage_[1];
@@ -57,6 +155,7 @@ typedef struct SOW__storage_ {
   NSString *workUnit;
   AraId *requester;
   NSData *data_p;
+  NSString *currencyUnit;
 } SOW__storage_;
 
 // This method is threadsafe because it is initially called
@@ -100,6 +199,15 @@ typedef struct SOW__storage_ {
         .offset = (uint32_t)offsetof(SOW__storage_, data_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
+      },
+      {
+        .name = "currencyUnit",
+        .dataTypeSpecific.className = NULL,
+        .number = SOW_FieldNumber_CurrencyUnit,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(SOW__storage_, currencyUnit),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -424,103 +532,6 @@ typedef struct Receipt__storage_ {
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Receipt__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
-
-#pragma mark - Signature
-
-@implementation Signature
-
-@dynamic hasAraId, araId;
-@dynamic data_p;
-
-typedef struct Signature__storage_ {
-  uint32_t _has_storage_[1];
-  AraId *araId;
-  NSData *data_p;
-} Signature__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "araId",
-        .dataTypeSpecific.className = GPBStringifySymbol(AraId),
-        .number = Signature_FieldNumber_AraId,
-        .hasIndex = 0,
-        .offset = (uint32_t)offsetof(Signature__storage_, araId),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "data_p",
-        .dataTypeSpecific.className = NULL,
-        .number = Signature_FieldNumber_Data_p,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(Signature__storage_, data_p),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeBytes,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[Signature class]
-                                     rootClass:[MessagesRoot class]
-                                          file:MessagesRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(Signature__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
-
-#pragma mark - AraId
-
-@implementation AraId
-
-@dynamic did;
-
-typedef struct AraId__storage_ {
-  uint32_t _has_storage_[1];
-  NSString *did;
-} AraId__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "did",
-        .dataTypeSpecific.className = NULL,
-        .number = AraId_FieldNumber_Did,
-        .hasIndex = 0,
-        .offset = (uint32_t)offsetof(AraId__storage_, did),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[AraId class]
-                                     rootClass:[MessagesRoot class]
-                                          file:MessagesRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(AraId__storage_)
                                          flags:GPBDescriptorInitializationFlag_None];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;

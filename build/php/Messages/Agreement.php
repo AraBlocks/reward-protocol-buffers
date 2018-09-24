@@ -10,8 +10,8 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- * An abstract agreement between two parties (a requester and a farmer)
- * spelling out the terms of a specific job 
+ * An abstract agreement between two peers (a farmer and a requester) 
+ * spelling out the terms of a task.
  *
  * Generated from protobuf message <code>messages.Agreement</code>
  */

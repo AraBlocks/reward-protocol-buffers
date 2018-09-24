@@ -14,6 +14,1195 @@ public final class Messages {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface AraIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:messages.AraId)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string did = 1;</code>
+     */
+    java.lang.String getDid();
+    /**
+     * <code>string did = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDidBytes();
+  }
+  /**
+   * <pre>
+   * The Ara Identity associated with a peer.
+   * </pre>
+   *
+   * Protobuf type {@code messages.AraId}
+   */
+  public  static final class AraId extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:messages.AraId)
+      AraIdOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AraId.newBuilder() to construct.
+    private AraId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AraId() {
+      did_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AraId(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              did_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return messages.Messages.internal_static_messages_AraId_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return messages.Messages.internal_static_messages_AraId_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              messages.Messages.AraId.class, messages.Messages.AraId.Builder.class);
+    }
+
+    public static final int DID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object did_;
+    /**
+     * <code>string did = 1;</code>
+     */
+    public java.lang.String getDid() {
+      java.lang.Object ref = did_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        did_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string did = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDidBytes() {
+      java.lang.Object ref = did_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        did_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, did_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, did_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof messages.Messages.AraId)) {
+        return super.equals(obj);
+      }
+      messages.Messages.AraId other = (messages.Messages.AraId) obj;
+
+      boolean result = true;
+      result = result && getDid()
+          .equals(other.getDid());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DID_FIELD_NUMBER;
+      hash = (53 * hash) + getDid().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static messages.Messages.AraId parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static messages.Messages.AraId parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static messages.Messages.AraId parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static messages.Messages.AraId parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static messages.Messages.AraId parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static messages.Messages.AraId parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static messages.Messages.AraId parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static messages.Messages.AraId parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static messages.Messages.AraId parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static messages.Messages.AraId parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static messages.Messages.AraId parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static messages.Messages.AraId parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(messages.Messages.AraId prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The Ara Identity associated with a peer.
+     * </pre>
+     *
+     * Protobuf type {@code messages.AraId}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:messages.AraId)
+        messages.Messages.AraIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return messages.Messages.internal_static_messages_AraId_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return messages.Messages.internal_static_messages_AraId_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                messages.Messages.AraId.class, messages.Messages.AraId.Builder.class);
+      }
+
+      // Construct using messages.Messages.AraId.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        did_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return messages.Messages.internal_static_messages_AraId_descriptor;
+      }
+
+      public messages.Messages.AraId getDefaultInstanceForType() {
+        return messages.Messages.AraId.getDefaultInstance();
+      }
+
+      public messages.Messages.AraId build() {
+        messages.Messages.AraId result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public messages.Messages.AraId buildPartial() {
+        messages.Messages.AraId result = new messages.Messages.AraId(this);
+        result.did_ = did_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof messages.Messages.AraId) {
+          return mergeFrom((messages.Messages.AraId)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(messages.Messages.AraId other) {
+        if (other == messages.Messages.AraId.getDefaultInstance()) return this;
+        if (!other.getDid().isEmpty()) {
+          did_ = other.did_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        messages.Messages.AraId parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (messages.Messages.AraId) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object did_ = "";
+      /**
+       * <code>string did = 1;</code>
+       */
+      public java.lang.String getDid() {
+        java.lang.Object ref = did_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          did_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string did = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDidBytes() {
+        java.lang.Object ref = did_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          did_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string did = 1;</code>
+       */
+      public Builder setDid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        did_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string did = 1;</code>
+       */
+      public Builder clearDid() {
+        
+        did_ = getDefaultInstance().getDid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string did = 1;</code>
+       */
+      public Builder setDidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        did_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:messages.AraId)
+    }
+
+    // @@protoc_insertion_point(class_scope:messages.AraId)
+    private static final messages.Messages.AraId DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new messages.Messages.AraId();
+    }
+
+    public static messages.Messages.AraId getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AraId>
+        PARSER = new com.google.protobuf.AbstractParser<AraId>() {
+      public AraId parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AraId(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AraId> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AraId> getParserForType() {
+      return PARSER;
+    }
+
+    public messages.Messages.AraId getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:messages.Signature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.messages.AraId ara_id = 1;</code>
+     */
+    boolean hasAraId();
+    /**
+     * <code>.messages.AraId ara_id = 1;</code>
+     */
+    messages.Messages.AraId getAraId();
+    /**
+     * <code>.messages.AraId ara_id = 1;</code>
+     */
+    messages.Messages.AraIdOrBuilder getAraIdOrBuilder();
+
+    /**
+     * <code>bytes data = 2;</code>
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * <pre>
+   * A signed piece of data that can be used to validate a peer.
+   * </pre>
+   *
+   * Protobuf type {@code messages.Signature}
+   */
+  public  static final class Signature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:messages.Signature)
+      SignatureOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Signature.newBuilder() to construct.
+    private Signature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Signature() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Signature(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              messages.Messages.AraId.Builder subBuilder = null;
+              if (araId_ != null) {
+                subBuilder = araId_.toBuilder();
+              }
+              araId_ = input.readMessage(messages.Messages.AraId.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(araId_);
+                araId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+
+              data_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return messages.Messages.internal_static_messages_Signature_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return messages.Messages.internal_static_messages_Signature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              messages.Messages.Signature.class, messages.Messages.Signature.Builder.class);
+    }
+
+    public static final int ARA_ID_FIELD_NUMBER = 1;
+    private messages.Messages.AraId araId_;
+    /**
+     * <code>.messages.AraId ara_id = 1;</code>
+     */
+    public boolean hasAraId() {
+      return araId_ != null;
+    }
+    /**
+     * <code>.messages.AraId ara_id = 1;</code>
+     */
+    public messages.Messages.AraId getAraId() {
+      return araId_ == null ? messages.Messages.AraId.getDefaultInstance() : araId_;
+    }
+    /**
+     * <code>.messages.AraId ara_id = 1;</code>
+     */
+    public messages.Messages.AraIdOrBuilder getAraIdOrBuilder() {
+      return getAraId();
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_;
+    /**
+     * <code>bytes data = 2;</code>
+     */
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (araId_ != null) {
+        output.writeMessage(1, getAraId());
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (araId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAraId());
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, data_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof messages.Messages.Signature)) {
+        return super.equals(obj);
+      }
+      messages.Messages.Signature other = (messages.Messages.Signature) obj;
+
+      boolean result = true;
+      result = result && (hasAraId() == other.hasAraId());
+      if (hasAraId()) {
+        result = result && getAraId()
+            .equals(other.getAraId());
+      }
+      result = result && getData()
+          .equals(other.getData());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAraId()) {
+        hash = (37 * hash) + ARA_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAraId().hashCode();
+      }
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static messages.Messages.Signature parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static messages.Messages.Signature parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static messages.Messages.Signature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static messages.Messages.Signature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static messages.Messages.Signature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static messages.Messages.Signature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static messages.Messages.Signature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static messages.Messages.Signature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static messages.Messages.Signature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static messages.Messages.Signature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static messages.Messages.Signature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static messages.Messages.Signature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(messages.Messages.Signature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A signed piece of data that can be used to validate a peer.
+     * </pre>
+     *
+     * Protobuf type {@code messages.Signature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:messages.Signature)
+        messages.Messages.SignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return messages.Messages.internal_static_messages_Signature_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return messages.Messages.internal_static_messages_Signature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                messages.Messages.Signature.class, messages.Messages.Signature.Builder.class);
+      }
+
+      // Construct using messages.Messages.Signature.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (araIdBuilder_ == null) {
+          araId_ = null;
+        } else {
+          araId_ = null;
+          araIdBuilder_ = null;
+        }
+        data_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return messages.Messages.internal_static_messages_Signature_descriptor;
+      }
+
+      public messages.Messages.Signature getDefaultInstanceForType() {
+        return messages.Messages.Signature.getDefaultInstance();
+      }
+
+      public messages.Messages.Signature build() {
+        messages.Messages.Signature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public messages.Messages.Signature buildPartial() {
+        messages.Messages.Signature result = new messages.Messages.Signature(this);
+        if (araIdBuilder_ == null) {
+          result.araId_ = araId_;
+        } else {
+          result.araId_ = araIdBuilder_.build();
+        }
+        result.data_ = data_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof messages.Messages.Signature) {
+          return mergeFrom((messages.Messages.Signature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(messages.Messages.Signature other) {
+        if (other == messages.Messages.Signature.getDefaultInstance()) return this;
+        if (other.hasAraId()) {
+          mergeAraId(other.getAraId());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        messages.Messages.Signature parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (messages.Messages.Signature) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private messages.Messages.AraId araId_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          messages.Messages.AraId, messages.Messages.AraId.Builder, messages.Messages.AraIdOrBuilder> araIdBuilder_;
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public boolean hasAraId() {
+        return araIdBuilder_ != null || araId_ != null;
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public messages.Messages.AraId getAraId() {
+        if (araIdBuilder_ == null) {
+          return araId_ == null ? messages.Messages.AraId.getDefaultInstance() : araId_;
+        } else {
+          return araIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public Builder setAraId(messages.Messages.AraId value) {
+        if (araIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          araId_ = value;
+          onChanged();
+        } else {
+          araIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public Builder setAraId(
+          messages.Messages.AraId.Builder builderForValue) {
+        if (araIdBuilder_ == null) {
+          araId_ = builderForValue.build();
+          onChanged();
+        } else {
+          araIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public Builder mergeAraId(messages.Messages.AraId value) {
+        if (araIdBuilder_ == null) {
+          if (araId_ != null) {
+            araId_ =
+              messages.Messages.AraId.newBuilder(araId_).mergeFrom(value).buildPartial();
+          } else {
+            araId_ = value;
+          }
+          onChanged();
+        } else {
+          araIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public Builder clearAraId() {
+        if (araIdBuilder_ == null) {
+          araId_ = null;
+          onChanged();
+        } else {
+          araId_ = null;
+          araIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public messages.Messages.AraId.Builder getAraIdBuilder() {
+        
+        onChanged();
+        return getAraIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      public messages.Messages.AraIdOrBuilder getAraIdOrBuilder() {
+        if (araIdBuilder_ != null) {
+          return araIdBuilder_.getMessageOrBuilder();
+        } else {
+          return araId_ == null ?
+              messages.Messages.AraId.getDefaultInstance() : araId_;
+        }
+      }
+      /**
+       * <code>.messages.AraId ara_id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          messages.Messages.AraId, messages.Messages.AraId.Builder, messages.Messages.AraIdOrBuilder> 
+          getAraIdFieldBuilder() {
+        if (araIdBuilder_ == null) {
+          araIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              messages.Messages.AraId, messages.Messages.AraId.Builder, messages.Messages.AraIdOrBuilder>(
+                  getAraId(),
+                  getParentForChildren(),
+                  isClean());
+          araId_ = null;
+        }
+        return araIdBuilder_;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 2;</code>
+       */
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 2;</code>
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 2;</code>
+       */
+      public Builder clearData() {
+        
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:messages.Signature)
+    }
+
+    // @@protoc_insertion_point(class_scope:messages.Signature)
+    private static final messages.Messages.Signature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new messages.Messages.Signature();
+    }
+
+    public static messages.Messages.Signature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Signature>
+        PARSER = new com.google.protobuf.AbstractParser<Signature>() {
+      public Signature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Signature(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Signature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Signature> getParserForType() {
+      return PARSER;
+    }
+
+    public messages.Messages.Signature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SOWOrBuilder extends
       // @@protoc_insertion_point(interface_extends:messages.SOW)
       com.google.protobuf.MessageOrBuilder {
@@ -50,10 +1239,20 @@ public final class Messages {
      * <code>bytes data = 4;</code>
      */
     com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>string currency_unit = 5;</code>
+     */
+    java.lang.String getCurrencyUnit();
+    /**
+     * <code>string currency_unit = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getCurrencyUnitBytes();
   }
   /**
    * <pre>
-   * A statement of work for a specific job
+   * A statement of work for a specific task.
    * </pre>
    *
    * Protobuf type {@code messages.SOW}
@@ -71,6 +1270,7 @@ public final class Messages {
       nonce_ = com.google.protobuf.ByteString.EMPTY;
       workUnit_ = "";
       data_ = com.google.protobuf.ByteString.EMPTY;
+      currencyUnit_ = "";
     }
 
     @java.lang.Override
@@ -131,6 +1331,12 @@ public final class Messages {
             case 34: {
 
               data_ = input.readBytes();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              currencyUnit_ = s;
               break;
             }
           }
@@ -230,6 +1436,40 @@ public final class Messages {
       return data_;
     }
 
+    public static final int CURRENCY_UNIT_FIELD_NUMBER = 5;
+    private volatile java.lang.Object currencyUnit_;
+    /**
+     * <code>string currency_unit = 5;</code>
+     */
+    public java.lang.String getCurrencyUnit() {
+      java.lang.Object ref = currencyUnit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currencyUnit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string currency_unit = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCurrencyUnitBytes() {
+      java.lang.Object ref = currencyUnit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currencyUnit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -254,6 +1494,9 @@ public final class Messages {
       if (!data_.isEmpty()) {
         output.writeBytes(4, data_);
       }
+      if (!getCurrencyUnitBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, currencyUnit_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -276,6 +1519,9 @@ public final class Messages {
       if (!data_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, data_);
+      }
+      if (!getCurrencyUnitBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, currencyUnit_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -304,6 +1550,8 @@ public final class Messages {
       }
       result = result && getData()
           .equals(other.getData());
+      result = result && getCurrencyUnit()
+          .equals(other.getCurrencyUnit());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -325,6 +1573,8 @@ public final class Messages {
       }
       hash = (37 * hash) + DATA_FIELD_NUMBER;
       hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + CURRENCY_UNIT_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrencyUnit().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -420,7 +1670,7 @@ public final class Messages {
     }
     /**
      * <pre>
-     * A statement of work for a specific job
+     * A statement of work for a specific task.
      * </pre>
      *
      * Protobuf type {@code messages.SOW}
@@ -470,6 +1720,8 @@ public final class Messages {
         }
         data_ = com.google.protobuf.ByteString.EMPTY;
 
+        currencyUnit_ = "";
+
         return this;
       }
 
@@ -500,6 +1752,7 @@ public final class Messages {
           result.requester_ = requesterBuilder_.build();
         }
         result.data_ = data_;
+        result.currencyUnit_ = currencyUnit_;
         onBuilt();
         return result;
       }
@@ -553,6 +1806,10 @@ public final class Messages {
         }
         if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
           setData(other.getData());
+        }
+        if (!other.getCurrencyUnit().isEmpty()) {
+          currencyUnit_ = other.currencyUnit_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -824,6 +2081,75 @@ public final class Messages {
         onChanged();
         return this;
       }
+
+      private java.lang.Object currencyUnit_ = "";
+      /**
+       * <code>string currency_unit = 5;</code>
+       */
+      public java.lang.String getCurrencyUnit() {
+        java.lang.Object ref = currencyUnit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          currencyUnit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string currency_unit = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCurrencyUnitBytes() {
+        java.lang.Object ref = currencyUnit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currencyUnit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string currency_unit = 5;</code>
+       */
+      public Builder setCurrencyUnit(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        currencyUnit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string currency_unit = 5;</code>
+       */
+      public Builder clearCurrencyUnit() {
+        
+        currencyUnit_ = getDefaultInstance().getCurrencyUnit();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string currency_unit = 5;</code>
+       */
+      public Builder setCurrencyUnitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        currencyUnit_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -915,7 +2241,7 @@ public final class Messages {
   }
   /**
    * <pre>
-   * A quote from a specific farmer for a specific job
+   * A quote from a specific farmer for a specific SOW.
    * </pre>
    *
    * Protobuf type {@code messages.Quote}
@@ -1282,7 +2608,7 @@ public final class Messages {
     }
     /**
      * <pre>
-     * A quote from a specific farmer for a specific job
+     * A quote from a specific farmer for a specific SOW.
      * </pre>
      *
      * Protobuf type {@code messages.Quote}
@@ -1843,8 +3169,8 @@ public final class Messages {
   /**
    * <pre>
    **
-   * An abstract agreement between two parties (a requester and a farmer)
-   * spelling out the terms of a specific job 
+   * An abstract agreement between two peers (a farmer and a requester) 
+   * spelling out the terms of a task.
    * </pre>
    *
    * Protobuf type {@code messages.Agreement}
@@ -2261,8 +3587,8 @@ public final class Messages {
     /**
      * <pre>
      **
-     * An abstract agreement between two parties (a requester and a farmer)
-     * spelling out the terms of a specific job 
+     * An abstract agreement between two peers (a farmer and a requester) 
+     * spelling out the terms of a task.
      * </pre>
      *
      * Protobuf type {@code messages.Agreement}
@@ -2948,7 +4274,7 @@ public final class Messages {
   }
   /**
    * <pre>
-   * Details of the reward for a specific agreement
+   * A reward for a specific agreement, sent by a verifiable peer.
    * </pre>
    *
    * Protobuf type {@code messages.Reward}
@@ -3341,7 +4667,7 @@ public final class Messages {
     }
     /**
      * <pre>
-     * Details of the reward for a specific agreement
+     * A reward for a specific agreement, sent by a verifiable peer.
      * </pre>
      *
      * Protobuf type {@code messages.Reward}
@@ -3918,7 +5244,7 @@ public final class Messages {
   }
   /**
    * <pre>
-   * A receipt of reward
+   * A receipt for a reward, sent by a verifiable peer.
    * </pre>
    *
    * Protobuf type {@code messages.Receipt}
@@ -4258,7 +5584,7 @@ public final class Messages {
     }
     /**
      * <pre>
-     * A receipt of reward
+     * A receipt for a reward, sent by a verifiable peer.
      * </pre>
      *
      * Protobuf type {@code messages.Receipt}
@@ -4731,1195 +6057,16 @@ public final class Messages {
 
   }
 
-  public interface SignatureOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:messages.Signature)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.messages.AraId ara_id = 1;</code>
-     */
-    boolean hasAraId();
-    /**
-     * <code>.messages.AraId ara_id = 1;</code>
-     */
-    messages.Messages.AraId getAraId();
-    /**
-     * <code>.messages.AraId ara_id = 1;</code>
-     */
-    messages.Messages.AraIdOrBuilder getAraIdOrBuilder();
-
-    /**
-     * <code>bytes data = 2;</code>
-     */
-    com.google.protobuf.ByteString getData();
-  }
-  /**
-   * <pre>
-   * A signature of a peer associated with an ARAid
-   * </pre>
-   *
-   * Protobuf type {@code messages.Signature}
-   */
-  public  static final class Signature extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:messages.Signature)
-      SignatureOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Signature.newBuilder() to construct.
-    private Signature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Signature() {
-      data_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Signature(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              messages.Messages.AraId.Builder subBuilder = null;
-              if (araId_ != null) {
-                subBuilder = araId_.toBuilder();
-              }
-              araId_ = input.readMessage(messages.Messages.AraId.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(araId_);
-                araId_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-
-              data_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return messages.Messages.internal_static_messages_Signature_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return messages.Messages.internal_static_messages_Signature_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              messages.Messages.Signature.class, messages.Messages.Signature.Builder.class);
-    }
-
-    public static final int ARA_ID_FIELD_NUMBER = 1;
-    private messages.Messages.AraId araId_;
-    /**
-     * <code>.messages.AraId ara_id = 1;</code>
-     */
-    public boolean hasAraId() {
-      return araId_ != null;
-    }
-    /**
-     * <code>.messages.AraId ara_id = 1;</code>
-     */
-    public messages.Messages.AraId getAraId() {
-      return araId_ == null ? messages.Messages.AraId.getDefaultInstance() : araId_;
-    }
-    /**
-     * <code>.messages.AraId ara_id = 1;</code>
-     */
-    public messages.Messages.AraIdOrBuilder getAraIdOrBuilder() {
-      return getAraId();
-    }
-
-    public static final int DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString data_;
-    /**
-     * <code>bytes data = 2;</code>
-     */
-    public com.google.protobuf.ByteString getData() {
-      return data_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (araId_ != null) {
-        output.writeMessage(1, getAraId());
-      }
-      if (!data_.isEmpty()) {
-        output.writeBytes(2, data_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (araId_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getAraId());
-      }
-      if (!data_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, data_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof messages.Messages.Signature)) {
-        return super.equals(obj);
-      }
-      messages.Messages.Signature other = (messages.Messages.Signature) obj;
-
-      boolean result = true;
-      result = result && (hasAraId() == other.hasAraId());
-      if (hasAraId()) {
-        result = result && getAraId()
-            .equals(other.getAraId());
-      }
-      result = result && getData()
-          .equals(other.getData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasAraId()) {
-        hash = (37 * hash) + ARA_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getAraId().hashCode();
-      }
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static messages.Messages.Signature parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static messages.Messages.Signature parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static messages.Messages.Signature parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static messages.Messages.Signature parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static messages.Messages.Signature parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static messages.Messages.Signature parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static messages.Messages.Signature parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static messages.Messages.Signature parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static messages.Messages.Signature parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static messages.Messages.Signature parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static messages.Messages.Signature parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static messages.Messages.Signature parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(messages.Messages.Signature prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * A signature of a peer associated with an ARAid
-     * </pre>
-     *
-     * Protobuf type {@code messages.Signature}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:messages.Signature)
-        messages.Messages.SignatureOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return messages.Messages.internal_static_messages_Signature_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return messages.Messages.internal_static_messages_Signature_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                messages.Messages.Signature.class, messages.Messages.Signature.Builder.class);
-      }
-
-      // Construct using messages.Messages.Signature.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (araIdBuilder_ == null) {
-          araId_ = null;
-        } else {
-          araId_ = null;
-          araIdBuilder_ = null;
-        }
-        data_ = com.google.protobuf.ByteString.EMPTY;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return messages.Messages.internal_static_messages_Signature_descriptor;
-      }
-
-      public messages.Messages.Signature getDefaultInstanceForType() {
-        return messages.Messages.Signature.getDefaultInstance();
-      }
-
-      public messages.Messages.Signature build() {
-        messages.Messages.Signature result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public messages.Messages.Signature buildPartial() {
-        messages.Messages.Signature result = new messages.Messages.Signature(this);
-        if (araIdBuilder_ == null) {
-          result.araId_ = araId_;
-        } else {
-          result.araId_ = araIdBuilder_.build();
-        }
-        result.data_ = data_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof messages.Messages.Signature) {
-          return mergeFrom((messages.Messages.Signature)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(messages.Messages.Signature other) {
-        if (other == messages.Messages.Signature.getDefaultInstance()) return this;
-        if (other.hasAraId()) {
-          mergeAraId(other.getAraId());
-        }
-        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
-          setData(other.getData());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        messages.Messages.Signature parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (messages.Messages.Signature) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private messages.Messages.AraId araId_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          messages.Messages.AraId, messages.Messages.AraId.Builder, messages.Messages.AraIdOrBuilder> araIdBuilder_;
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public boolean hasAraId() {
-        return araIdBuilder_ != null || araId_ != null;
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public messages.Messages.AraId getAraId() {
-        if (araIdBuilder_ == null) {
-          return araId_ == null ? messages.Messages.AraId.getDefaultInstance() : araId_;
-        } else {
-          return araIdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public Builder setAraId(messages.Messages.AraId value) {
-        if (araIdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          araId_ = value;
-          onChanged();
-        } else {
-          araIdBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public Builder setAraId(
-          messages.Messages.AraId.Builder builderForValue) {
-        if (araIdBuilder_ == null) {
-          araId_ = builderForValue.build();
-          onChanged();
-        } else {
-          araIdBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public Builder mergeAraId(messages.Messages.AraId value) {
-        if (araIdBuilder_ == null) {
-          if (araId_ != null) {
-            araId_ =
-              messages.Messages.AraId.newBuilder(araId_).mergeFrom(value).buildPartial();
-          } else {
-            araId_ = value;
-          }
-          onChanged();
-        } else {
-          araIdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public Builder clearAraId() {
-        if (araIdBuilder_ == null) {
-          araId_ = null;
-          onChanged();
-        } else {
-          araId_ = null;
-          araIdBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public messages.Messages.AraId.Builder getAraIdBuilder() {
-        
-        onChanged();
-        return getAraIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      public messages.Messages.AraIdOrBuilder getAraIdOrBuilder() {
-        if (araIdBuilder_ != null) {
-          return araIdBuilder_.getMessageOrBuilder();
-        } else {
-          return araId_ == null ?
-              messages.Messages.AraId.getDefaultInstance() : araId_;
-        }
-      }
-      /**
-       * <code>.messages.AraId ara_id = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          messages.Messages.AraId, messages.Messages.AraId.Builder, messages.Messages.AraIdOrBuilder> 
-          getAraIdFieldBuilder() {
-        if (araIdBuilder_ == null) {
-          araIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              messages.Messages.AraId, messages.Messages.AraId.Builder, messages.Messages.AraIdOrBuilder>(
-                  getAraId(),
-                  getParentForChildren(),
-                  isClean());
-          araId_ = null;
-        }
-        return araIdBuilder_;
-      }
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes data = 2;</code>
-       */
-      public com.google.protobuf.ByteString getData() {
-        return data_;
-      }
-      /**
-       * <code>bytes data = 2;</code>
-       */
-      public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        data_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes data = 2;</code>
-       */
-      public Builder clearData() {
-        
-        data_ = getDefaultInstance().getData();
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:messages.Signature)
-    }
-
-    // @@protoc_insertion_point(class_scope:messages.Signature)
-    private static final messages.Messages.Signature DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new messages.Messages.Signature();
-    }
-
-    public static messages.Messages.Signature getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Signature>
-        PARSER = new com.google.protobuf.AbstractParser<Signature>() {
-      public Signature parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Signature(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Signature> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Signature> getParserForType() {
-      return PARSER;
-    }
-
-    public messages.Messages.Signature getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AraIdOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:messages.AraId)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string did = 1;</code>
-     */
-    java.lang.String getDid();
-    /**
-     * <code>string did = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getDidBytes();
-  }
-  /**
-   * <pre>
-   * An ARAid
-   * </pre>
-   *
-   * Protobuf type {@code messages.AraId}
-   */
-  public  static final class AraId extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:messages.AraId)
-      AraIdOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AraId.newBuilder() to construct.
-    private AraId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AraId() {
-      did_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AraId(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              did_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return messages.Messages.internal_static_messages_AraId_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return messages.Messages.internal_static_messages_AraId_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              messages.Messages.AraId.class, messages.Messages.AraId.Builder.class);
-    }
-
-    public static final int DID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object did_;
-    /**
-     * <code>string did = 1;</code>
-     */
-    public java.lang.String getDid() {
-      java.lang.Object ref = did_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        did_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string did = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDidBytes() {
-      java.lang.Object ref = did_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        did_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getDidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, did_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getDidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, did_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof messages.Messages.AraId)) {
-        return super.equals(obj);
-      }
-      messages.Messages.AraId other = (messages.Messages.AraId) obj;
-
-      boolean result = true;
-      result = result && getDid()
-          .equals(other.getDid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DID_FIELD_NUMBER;
-      hash = (53 * hash) + getDid().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static messages.Messages.AraId parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static messages.Messages.AraId parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static messages.Messages.AraId parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static messages.Messages.AraId parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static messages.Messages.AraId parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static messages.Messages.AraId parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static messages.Messages.AraId parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static messages.Messages.AraId parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static messages.Messages.AraId parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static messages.Messages.AraId parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static messages.Messages.AraId parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static messages.Messages.AraId parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(messages.Messages.AraId prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * An ARAid
-     * </pre>
-     *
-     * Protobuf type {@code messages.AraId}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:messages.AraId)
-        messages.Messages.AraIdOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return messages.Messages.internal_static_messages_AraId_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return messages.Messages.internal_static_messages_AraId_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                messages.Messages.AraId.class, messages.Messages.AraId.Builder.class);
-      }
-
-      // Construct using messages.Messages.AraId.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        did_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return messages.Messages.internal_static_messages_AraId_descriptor;
-      }
-
-      public messages.Messages.AraId getDefaultInstanceForType() {
-        return messages.Messages.AraId.getDefaultInstance();
-      }
-
-      public messages.Messages.AraId build() {
-        messages.Messages.AraId result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public messages.Messages.AraId buildPartial() {
-        messages.Messages.AraId result = new messages.Messages.AraId(this);
-        result.did_ = did_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof messages.Messages.AraId) {
-          return mergeFrom((messages.Messages.AraId)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(messages.Messages.AraId other) {
-        if (other == messages.Messages.AraId.getDefaultInstance()) return this;
-        if (!other.getDid().isEmpty()) {
-          did_ = other.did_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        messages.Messages.AraId parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (messages.Messages.AraId) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object did_ = "";
-      /**
-       * <code>string did = 1;</code>
-       */
-      public java.lang.String getDid() {
-        java.lang.Object ref = did_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          did_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string did = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDidBytes() {
-        java.lang.Object ref = did_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          did_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string did = 1;</code>
-       */
-      public Builder setDid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        did_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string did = 1;</code>
-       */
-      public Builder clearDid() {
-        
-        did_ = getDefaultInstance().getDid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string did = 1;</code>
-       */
-      public Builder setDidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        did_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:messages.AraId)
-    }
-
-    // @@protoc_insertion_point(class_scope:messages.AraId)
-    private static final messages.Messages.AraId DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new messages.Messages.AraId();
-    }
-
-    public static messages.Messages.AraId getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AraId>
-        PARSER = new com.google.protobuf.AbstractParser<AraId>() {
-      public AraId parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AraId(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AraId> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AraId> getParserForType() {
-      return PARSER;
-    }
-
-    public messages.Messages.AraId getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_messages_AraId_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_messages_AraId_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_messages_Signature_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_messages_Signature_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_messages_SOW_descriptor;
   private static final 
@@ -5945,16 +6092,6 @@ public final class Messages {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_messages_Receipt_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_messages_Signature_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_messages_Signature_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_messages_AraId_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_messages_AraId_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5964,25 +6101,26 @@ public final class Messages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016messages.proto\022\010messages\"Y\n\003SOW\022\r\n\005non" +
-      "ce\030\001 \001(\014\022\021\n\twork_unit\030\002 \001(\t\022\"\n\trequester" +
-      "\030\003 \001(\0132\017.messages.AraId\022\014\n\004data\030\004 \001(\014\"j\n" +
-      "\005Quote\022\r\n\005nonce\030\001 \001(\014\022\025\n\rper_unit_cost\030\002" +
-      " \001(\003\022\032\n\003sow\030\003 \001(\0132\r.messages.SOW\022\037\n\006farm" +
-      "er\030\004 \001(\0132\017.messages.AraId\"\251\001\n\tAgreement\022" +
-      "\r\n\005nonce\030\001 \001(\014\022\036\n\005quote\030\002 \001(\0132\017.messages" +
-      ".Quote\0220\n\023requester_signature\030\003 \001(\0132\023.me" +
-      "ssages.Signature\022-\n\020farmer_signature\030\004 \001" +
-      "(\0132\023.messages.Signature\022\014\n\004data\030\005 \001(\014\"\217\001" +
-      "\n\006Reward\022\r\n\005nonce\030\001 \001(\014\022&\n\tagreement\030\002 \001" +
-      "(\0132\023.messages.Agreement\022\016\n\006amount\030\003 \001(\003\022" +
-      "0\n\023requester_signature\030\004 \001(\0132\023.messages." +
-      "Signature\022\014\n\004data\030\005 \001(\014\"i\n\007Receipt\022\r\n\005no" +
-      "nce\030\001 \001(\014\022 \n\006reward\030\002 \001(\0132\020.messages.Rew" +
-      "ard\022-\n\020farmer_signature\030\003 \001(\0132\023.messages" +
-      ".Signature\":\n\tSignature\022\037\n\006ara_id\030\001 \001(\0132" +
-      "\017.messages.AraId\022\014\n\004data\030\002 \001(\014\"\024\n\005AraId\022" +
-      "\013\n\003did\030\001 \001(\tb\006proto3"
+      "\n\016messages.proto\022\010messages\"\024\n\005AraId\022\013\n\003d" +
+      "id\030\001 \001(\t\":\n\tSignature\022\037\n\006ara_id\030\001 \001(\0132\017." +
+      "messages.AraId\022\014\n\004data\030\002 \001(\014\"p\n\003SOW\022\r\n\005n" +
+      "once\030\001 \001(\014\022\021\n\twork_unit\030\002 \001(\t\022\"\n\trequest" +
+      "er\030\003 \001(\0132\017.messages.AraId\022\014\n\004data\030\004 \001(\014\022" +
+      "\025\n\rcurrency_unit\030\005 \001(\t\"j\n\005Quote\022\r\n\005nonce" +
+      "\030\001 \001(\014\022\025\n\rper_unit_cost\030\002 \001(\003\022\032\n\003sow\030\003 \001" +
+      "(\0132\r.messages.SOW\022\037\n\006farmer\030\004 \001(\0132\017.mess" +
+      "ages.AraId\"\251\001\n\tAgreement\022\r\n\005nonce\030\001 \001(\014\022" +
+      "\036\n\005quote\030\002 \001(\0132\017.messages.Quote\0220\n\023reque" +
+      "ster_signature\030\003 \001(\0132\023.messages.Signatur" +
+      "e\022-\n\020farmer_signature\030\004 \001(\0132\023.messages.S" +
+      "ignature\022\014\n\004data\030\005 \001(\014\"\217\001\n\006Reward\022\r\n\005non" +
+      "ce\030\001 \001(\014\022&\n\tagreement\030\002 \001(\0132\023.messages.A" +
+      "greement\022\016\n\006amount\030\003 \001(\003\0220\n\023requester_si" +
+      "gnature\030\004 \001(\0132\023.messages.Signature\022\014\n\004da" +
+      "ta\030\005 \001(\014\"i\n\007Receipt\022\r\n\005nonce\030\001 \001(\014\022 \n\006re" +
+      "ward\030\002 \001(\0132\020.messages.Reward\022-\n\020farmer_s" +
+      "ignature\030\003 \001(\0132\023.messages.Signatureb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5996,48 +6134,48 @@ public final class Messages {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_messages_SOW_descriptor =
+    internal_static_messages_AraId_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_messages_AraId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_messages_AraId_descriptor,
+        new java.lang.String[] { "Did", });
+    internal_static_messages_Signature_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_messages_Signature_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_messages_Signature_descriptor,
+        new java.lang.String[] { "AraId", "Data", });
+    internal_static_messages_SOW_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_messages_SOW_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_messages_SOW_descriptor,
-        new java.lang.String[] { "Nonce", "WorkUnit", "Requester", "Data", });
+        new java.lang.String[] { "Nonce", "WorkUnit", "Requester", "Data", "CurrencyUnit", });
     internal_static_messages_Quote_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_messages_Quote_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_messages_Quote_descriptor,
         new java.lang.String[] { "Nonce", "PerUnitCost", "Sow", "Farmer", });
     internal_static_messages_Agreement_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_messages_Agreement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_messages_Agreement_descriptor,
         new java.lang.String[] { "Nonce", "Quote", "RequesterSignature", "FarmerSignature", "Data", });
     internal_static_messages_Reward_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_messages_Reward_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_messages_Reward_descriptor,
         new java.lang.String[] { "Nonce", "Agreement", "Amount", "RequesterSignature", "Data", });
     internal_static_messages_Receipt_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_messages_Receipt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_messages_Receipt_descriptor,
         new java.lang.String[] { "Nonce", "Reward", "FarmerSignature", });
-    internal_static_messages_Signature_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_messages_Signature_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_messages_Signature_descriptor,
-        new java.lang.String[] { "AraId", "Data", });
-    internal_static_messages_AraId_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_messages_AraId_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_messages_AraId_descriptor,
-        new java.lang.String[] { "Did", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

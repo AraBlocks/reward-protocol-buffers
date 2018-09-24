@@ -18,6 +18,7 @@ message SOW {
   string work_unit = 2;
   AraId requester = 3;
   bytes data = 4;
+  string currency_unit = 5;
 }
 
 // A quote from a specific farmer for a specific SOW.

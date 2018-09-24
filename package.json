@@ -1,6 +1,6 @@
 {
   "name": "farming-protocol-buffers",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Protocol buffers for Farming",
   "main": "index.js",
   "bin": {},
@@ -10,7 +10,7 @@
     "lint-fix": "eslint . --fix",
     "coverage": "npm run nyc",
     "nyc": "nyc npm test",
-    "release-version": "./scripts/changelog",
+    "changelog": "conventional-changelog --same-file --preset angular --release-count 0 --infile CHANGELOG.md",
     "build": "sh ./scripts/build.sh"
   },
   "repository": {
@@ -36,6 +36,7 @@
   "optionalDependencies": {},
   "devDependencies": {
     "ava": "^0.25.0",
+    "conventional-changelog-cli": "^2.0.5",
     "eslint": "^4.19.1",
     "eslint-config-ara": "github:arablocks/eslint-config-ara",
     "eslint-plugin-import": "^2.12.0",

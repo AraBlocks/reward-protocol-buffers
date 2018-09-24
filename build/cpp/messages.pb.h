@@ -42,6 +42,10 @@ struct TableStruct {
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors();
+void InitDefaultsAraIdImpl();
+void InitDefaultsAraId();
+void InitDefaultsSignatureImpl();
+void InitDefaultsSignature();
 void InitDefaultsSOWImpl();
 void InitDefaultsSOW();
 void InitDefaultsQuoteImpl();
@@ -52,18 +56,14 @@ void InitDefaultsRewardImpl();
 void InitDefaultsReward();
 void InitDefaultsReceiptImpl();
 void InitDefaultsReceipt();
-void InitDefaultsSignatureImpl();
-void InitDefaultsSignature();
-void InitDefaultsAraIdImpl();
-void InitDefaultsAraId();
 inline void InitDefaults() {
+  InitDefaultsAraId();
+  InitDefaultsSignature();
   InitDefaultsSOW();
   InitDefaultsQuote();
   InitDefaultsAgreement();
   InitDefaultsReward();
   InitDefaultsReceipt();
-  InitDefaultsSignature();
-  InitDefaultsAraId();
 }
 }  // namespace protobuf_messages_2eproto
 namespace messages {
@@ -92,6 +92,230 @@ extern SignatureDefaultTypeInternal _Signature_default_instance_;
 namespace messages {
 
 // ===================================================================
+
+class AraId : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:messages.AraId) */ {
+ public:
+  AraId();
+  virtual ~AraId();
+
+  AraId(const AraId& from);
+
+  inline AraId& operator=(const AraId& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  AraId(AraId&& from) noexcept
+    : AraId() {
+    *this = ::std::move(from);
+  }
+
+  inline AraId& operator=(AraId&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const AraId& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AraId* internal_default_instance() {
+    return reinterpret_cast<const AraId*>(
+               &_AraId_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    0;
+
+  void Swap(AraId* other);
+  friend void swap(AraId& a, AraId& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AraId* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  AraId* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const AraId& from);
+  void MergeFrom(const AraId& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(AraId* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string did = 1;
+  void clear_did();
+  static const int kDidFieldNumber = 1;
+  const ::std::string& did() const;
+  void set_did(const ::std::string& value);
+  #if LANG_CXX11
+  void set_did(::std::string&& value);
+  #endif
+  void set_did(const char* value);
+  void set_did(const char* value, size_t size);
+  ::std::string* mutable_did();
+  ::std::string* release_did();
+  void set_allocated_did(::std::string* did);
+
+  // @@protoc_insertion_point(class_scope:messages.AraId)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr did_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_messages_2eproto::TableStruct;
+  friend void ::protobuf_messages_2eproto::InitDefaultsAraIdImpl();
+};
+// -------------------------------------------------------------------
+
+class Signature : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:messages.Signature) */ {
+ public:
+  Signature();
+  virtual ~Signature();
+
+  Signature(const Signature& from);
+
+  inline Signature& operator=(const Signature& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Signature(Signature&& from) noexcept
+    : Signature() {
+    *this = ::std::move(from);
+  }
+
+  inline Signature& operator=(Signature&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Signature& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Signature* internal_default_instance() {
+    return reinterpret_cast<const Signature*>(
+               &_Signature_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
+
+  void Swap(Signature* other);
+  friend void swap(Signature& a, Signature& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Signature* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Signature* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Signature& from);
+  void MergeFrom(const Signature& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Signature* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes data = 2;
+  void clear_data();
+  static const int kDataFieldNumber = 2;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // .messages.AraId ara_id = 1;
+  bool has_ara_id() const;
+  void clear_ara_id();
+  static const int kAraIdFieldNumber = 1;
+  const ::messages::AraId& ara_id() const;
+  ::messages::AraId* release_ara_id();
+  ::messages::AraId* mutable_ara_id();
+  void set_allocated_ara_id(::messages::AraId* ara_id);
+
+  // @@protoc_insertion_point(class_scope:messages.Signature)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::messages::AraId* ara_id_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_messages_2eproto::TableStruct;
+  friend void ::protobuf_messages_2eproto::InitDefaultsSignatureImpl();
+};
+// -------------------------------------------------------------------
 
 class SOW : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:messages.SOW) */ {
  public:
@@ -128,7 +352,7 @@ class SOW : public ::google::protobuf::Message /* @@protoc_insertion_point(class
                &_SOW_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    0;
+    2;
 
   void Swap(SOW* other);
   friend void swap(SOW& a, SOW& b) {
@@ -217,6 +441,20 @@ class SOW : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
 
+  // string currency_unit = 5;
+  void clear_currency_unit();
+  static const int kCurrencyUnitFieldNumber = 5;
+  const ::std::string& currency_unit() const;
+  void set_currency_unit(const ::std::string& value);
+  #if LANG_CXX11
+  void set_currency_unit(::std::string&& value);
+  #endif
+  void set_currency_unit(const char* value);
+  void set_currency_unit(const char* value, size_t size);
+  ::std::string* mutable_currency_unit();
+  ::std::string* release_currency_unit();
+  void set_allocated_currency_unit(::std::string* currency_unit);
+
   // .messages.AraId requester = 3;
   bool has_requester() const;
   void clear_requester();
@@ -233,6 +471,7 @@ class SOW : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::google::protobuf::internal::ArenaStringPtr nonce_;
   ::google::protobuf::internal::ArenaStringPtr work_unit_;
   ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::internal::ArenaStringPtr currency_unit_;
   ::messages::AraId* requester_;
   mutable int _cached_size_;
   friend struct ::protobuf_messages_2eproto::TableStruct;
@@ -275,7 +514,7 @@ class Quote : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Quote_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
+    3;
 
   void Swap(Quote* other);
   friend void swap(Quote& a, Quote& b) {
@@ -409,7 +648,7 @@ class Agreement : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_Agreement_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    4;
 
   void Swap(Agreement* other);
   friend void swap(Agreement& a, Agreement& b) {
@@ -561,7 +800,7 @@ class Reward : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
                &_Reward_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    5;
 
   void Swap(Reward* other);
   friend void swap(Reward& a, Reward& b) {
@@ -710,7 +949,7 @@ class Receipt : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Receipt_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    6;
 
   void Swap(Receipt* other);
   friend void swap(Receipt& a, Receipt& b) {
@@ -800,230 +1039,6 @@ class Receipt : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   friend struct ::protobuf_messages_2eproto::TableStruct;
   friend void ::protobuf_messages_2eproto::InitDefaultsReceiptImpl();
 };
-// -------------------------------------------------------------------
-
-class Signature : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:messages.Signature) */ {
- public:
-  Signature();
-  virtual ~Signature();
-
-  Signature(const Signature& from);
-
-  inline Signature& operator=(const Signature& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  Signature(Signature&& from) noexcept
-    : Signature() {
-    *this = ::std::move(from);
-  }
-
-  inline Signature& operator=(Signature&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const Signature& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Signature* internal_default_instance() {
-    return reinterpret_cast<const Signature*>(
-               &_Signature_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
-
-  void Swap(Signature* other);
-  friend void swap(Signature& a, Signature& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Signature* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  Signature* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const Signature& from);
-  void MergeFrom(const Signature& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(Signature* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // bytes data = 2;
-  void clear_data();
-  static const int kDataFieldNumber = 2;
-  const ::std::string& data() const;
-  void set_data(const ::std::string& value);
-  #if LANG_CXX11
-  void set_data(::std::string&& value);
-  #endif
-  void set_data(const char* value);
-  void set_data(const void* value, size_t size);
-  ::std::string* mutable_data();
-  ::std::string* release_data();
-  void set_allocated_data(::std::string* data);
-
-  // .messages.AraId ara_id = 1;
-  bool has_ara_id() const;
-  void clear_ara_id();
-  static const int kAraIdFieldNumber = 1;
-  const ::messages::AraId& ara_id() const;
-  ::messages::AraId* release_ara_id();
-  ::messages::AraId* mutable_ara_id();
-  void set_allocated_ara_id(::messages::AraId* ara_id);
-
-  // @@protoc_insertion_point(class_scope:messages.Signature)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr data_;
-  ::messages::AraId* ara_id_;
-  mutable int _cached_size_;
-  friend struct ::protobuf_messages_2eproto::TableStruct;
-  friend void ::protobuf_messages_2eproto::InitDefaultsSignatureImpl();
-};
-// -------------------------------------------------------------------
-
-class AraId : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:messages.AraId) */ {
- public:
-  AraId();
-  virtual ~AraId();
-
-  AraId(const AraId& from);
-
-  inline AraId& operator=(const AraId& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  AraId(AraId&& from) noexcept
-    : AraId() {
-    *this = ::std::move(from);
-  }
-
-  inline AraId& operator=(AraId&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const AraId& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AraId* internal_default_instance() {
-    return reinterpret_cast<const AraId*>(
-               &_AraId_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
-
-  void Swap(AraId* other);
-  friend void swap(AraId& a, AraId& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AraId* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  AraId* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const AraId& from);
-  void MergeFrom(const AraId& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(AraId* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // string did = 1;
-  void clear_did();
-  static const int kDidFieldNumber = 1;
-  const ::std::string& did() const;
-  void set_did(const ::std::string& value);
-  #if LANG_CXX11
-  void set_did(::std::string&& value);
-  #endif
-  void set_did(const char* value);
-  void set_did(const char* value, size_t size);
-  ::std::string* mutable_did();
-  ::std::string* release_did();
-  void set_allocated_did(::std::string* did);
-
-  // @@protoc_insertion_point(class_scope:messages.AraId)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr did_;
-  mutable int _cached_size_;
-  friend struct ::protobuf_messages_2eproto::TableStruct;
-  friend void ::protobuf_messages_2eproto::InitDefaultsAraIdImpl();
-};
 // ===================================================================
 
 
@@ -1033,6 +1048,170 @@ class AraId : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// AraId
+
+// string did = 1;
+inline void AraId::clear_did() {
+  did_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& AraId::did() const {
+  // @@protoc_insertion_point(field_get:messages.AraId.did)
+  return did_.GetNoArena();
+}
+inline void AraId::set_did(const ::std::string& value) {
+  
+  did_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:messages.AraId.did)
+}
+#if LANG_CXX11
+inline void AraId::set_did(::std::string&& value) {
+  
+  did_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:messages.AraId.did)
+}
+#endif
+inline void AraId::set_did(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  did_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:messages.AraId.did)
+}
+inline void AraId::set_did(const char* value, size_t size) {
+  
+  did_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:messages.AraId.did)
+}
+inline ::std::string* AraId::mutable_did() {
+  
+  // @@protoc_insertion_point(field_mutable:messages.AraId.did)
+  return did_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* AraId::release_did() {
+  // @@protoc_insertion_point(field_release:messages.AraId.did)
+  
+  return did_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void AraId::set_allocated_did(::std::string* did) {
+  if (did != NULL) {
+    
+  } else {
+    
+  }
+  did_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), did);
+  // @@protoc_insertion_point(field_set_allocated:messages.AraId.did)
+}
+
+// -------------------------------------------------------------------
+
+// Signature
+
+// .messages.AraId ara_id = 1;
+inline bool Signature::has_ara_id() const {
+  return this != internal_default_instance() && ara_id_ != NULL;
+}
+inline void Signature::clear_ara_id() {
+  if (GetArenaNoVirtual() == NULL && ara_id_ != NULL) {
+    delete ara_id_;
+  }
+  ara_id_ = NULL;
+}
+inline const ::messages::AraId& Signature::ara_id() const {
+  const ::messages::AraId* p = ara_id_;
+  // @@protoc_insertion_point(field_get:messages.Signature.ara_id)
+  return p != NULL ? *p : *reinterpret_cast<const ::messages::AraId*>(
+      &::messages::_AraId_default_instance_);
+}
+inline ::messages::AraId* Signature::release_ara_id() {
+  // @@protoc_insertion_point(field_release:messages.Signature.ara_id)
+  
+  ::messages::AraId* temp = ara_id_;
+  ara_id_ = NULL;
+  return temp;
+}
+inline ::messages::AraId* Signature::mutable_ara_id() {
+  
+  if (ara_id_ == NULL) {
+    ara_id_ = new ::messages::AraId;
+  }
+  // @@protoc_insertion_point(field_mutable:messages.Signature.ara_id)
+  return ara_id_;
+}
+inline void Signature::set_allocated_ara_id(::messages::AraId* ara_id) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete ara_id_;
+  }
+  if (ara_id) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      ara_id = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, ara_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  ara_id_ = ara_id;
+  // @@protoc_insertion_point(field_set_allocated:messages.Signature.ara_id)
+}
+
+// bytes data = 2;
+inline void Signature::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Signature::data() const {
+  // @@protoc_insertion_point(field_get:messages.Signature.data)
+  return data_.GetNoArena();
+}
+inline void Signature::set_data(const ::std::string& value) {
+  
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:messages.Signature.data)
+}
+#if LANG_CXX11
+inline void Signature::set_data(::std::string&& value) {
+  
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:messages.Signature.data)
+}
+#endif
+inline void Signature::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:messages.Signature.data)
+}
+inline void Signature::set_data(const void* value, size_t size) {
+  
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:messages.Signature.data)
+}
+inline ::std::string* Signature::mutable_data() {
+  
+  // @@protoc_insertion_point(field_mutable:messages.Signature.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Signature::release_data() {
+  // @@protoc_insertion_point(field_release:messages.Signature.data)
+  
+  return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Signature::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    
+  } else {
+    
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:messages.Signature.data)
+}
+
+// -------------------------------------------------------------------
+
 // SOW
 
 // bytes nonce = 1;
@@ -1242,6 +1421,59 @@ inline void SOW::set_allocated_data(::std::string* data) {
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
   // @@protoc_insertion_point(field_set_allocated:messages.SOW.data)
+}
+
+// string currency_unit = 5;
+inline void SOW::clear_currency_unit() {
+  currency_unit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& SOW::currency_unit() const {
+  // @@protoc_insertion_point(field_get:messages.SOW.currency_unit)
+  return currency_unit_.GetNoArena();
+}
+inline void SOW::set_currency_unit(const ::std::string& value) {
+  
+  currency_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:messages.SOW.currency_unit)
+}
+#if LANG_CXX11
+inline void SOW::set_currency_unit(::std::string&& value) {
+  
+  currency_unit_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:messages.SOW.currency_unit)
+}
+#endif
+inline void SOW::set_currency_unit(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  currency_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:messages.SOW.currency_unit)
+}
+inline void SOW::set_currency_unit(const char* value, size_t size) {
+  
+  currency_unit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:messages.SOW.currency_unit)
+}
+inline ::std::string* SOW::mutable_currency_unit() {
+  
+  // @@protoc_insertion_point(field_mutable:messages.SOW.currency_unit)
+  return currency_unit_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* SOW::release_currency_unit() {
+  // @@protoc_insertion_point(field_release:messages.SOW.currency_unit)
+  
+  return currency_unit_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void SOW::set_allocated_currency_unit(::std::string* currency_unit) {
+  if (currency_unit != NULL) {
+    
+  } else {
+    
+  }
+  currency_unit_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), currency_unit);
+  // @@protoc_insertion_point(field_set_allocated:messages.SOW.currency_unit)
 }
 
 // -------------------------------------------------------------------
@@ -2054,170 +2286,6 @@ inline void Receipt::set_allocated_farmer_signature(::messages::Signature* farme
   }
   farmer_signature_ = farmer_signature;
   // @@protoc_insertion_point(field_set_allocated:messages.Receipt.farmer_signature)
-}
-
-// -------------------------------------------------------------------
-
-// Signature
-
-// .messages.AraId ara_id = 1;
-inline bool Signature::has_ara_id() const {
-  return this != internal_default_instance() && ara_id_ != NULL;
-}
-inline void Signature::clear_ara_id() {
-  if (GetArenaNoVirtual() == NULL && ara_id_ != NULL) {
-    delete ara_id_;
-  }
-  ara_id_ = NULL;
-}
-inline const ::messages::AraId& Signature::ara_id() const {
-  const ::messages::AraId* p = ara_id_;
-  // @@protoc_insertion_point(field_get:messages.Signature.ara_id)
-  return p != NULL ? *p : *reinterpret_cast<const ::messages::AraId*>(
-      &::messages::_AraId_default_instance_);
-}
-inline ::messages::AraId* Signature::release_ara_id() {
-  // @@protoc_insertion_point(field_release:messages.Signature.ara_id)
-  
-  ::messages::AraId* temp = ara_id_;
-  ara_id_ = NULL;
-  return temp;
-}
-inline ::messages::AraId* Signature::mutable_ara_id() {
-  
-  if (ara_id_ == NULL) {
-    ara_id_ = new ::messages::AraId;
-  }
-  // @@protoc_insertion_point(field_mutable:messages.Signature.ara_id)
-  return ara_id_;
-}
-inline void Signature::set_allocated_ara_id(::messages::AraId* ara_id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete ara_id_;
-  }
-  if (ara_id) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      ara_id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, ara_id, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  ara_id_ = ara_id;
-  // @@protoc_insertion_point(field_set_allocated:messages.Signature.ara_id)
-}
-
-// bytes data = 2;
-inline void Signature::clear_data() {
-  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& Signature::data() const {
-  // @@protoc_insertion_point(field_get:messages.Signature.data)
-  return data_.GetNoArena();
-}
-inline void Signature::set_data(const ::std::string& value) {
-  
-  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:messages.Signature.data)
-}
-#if LANG_CXX11
-inline void Signature::set_data(::std::string&& value) {
-  
-  data_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:messages.Signature.data)
-}
-#endif
-inline void Signature::set_data(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:messages.Signature.data)
-}
-inline void Signature::set_data(const void* value, size_t size) {
-  
-  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:messages.Signature.data)
-}
-inline ::std::string* Signature::mutable_data() {
-  
-  // @@protoc_insertion_point(field_mutable:messages.Signature.data)
-  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* Signature::release_data() {
-  // @@protoc_insertion_point(field_release:messages.Signature.data)
-  
-  return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void Signature::set_allocated_data(::std::string* data) {
-  if (data != NULL) {
-    
-  } else {
-    
-  }
-  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
-  // @@protoc_insertion_point(field_set_allocated:messages.Signature.data)
-}
-
-// -------------------------------------------------------------------
-
-// AraId
-
-// string did = 1;
-inline void AraId::clear_did() {
-  did_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& AraId::did() const {
-  // @@protoc_insertion_point(field_get:messages.AraId.did)
-  return did_.GetNoArena();
-}
-inline void AraId::set_did(const ::std::string& value) {
-  
-  did_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:messages.AraId.did)
-}
-#if LANG_CXX11
-inline void AraId::set_did(::std::string&& value) {
-  
-  did_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:messages.AraId.did)
-}
-#endif
-inline void AraId::set_did(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  did_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:messages.AraId.did)
-}
-inline void AraId::set_did(const char* value, size_t size) {
-  
-  did_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:messages.AraId.did)
-}
-inline ::std::string* AraId::mutable_did() {
-  
-  // @@protoc_insertion_point(field_mutable:messages.AraId.did)
-  return did_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* AraId::release_did() {
-  // @@protoc_insertion_point(field_release:messages.AraId.did)
-  
-  return did_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void AraId::set_allocated_did(::std::string* did) {
-  if (did != NULL) {
-    
-  } else {
-    
-  }
-  did_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), did);
-  // @@protoc_insertion_point(field_set_allocated:messages.AraId.did)
 }
 
 #ifdef __GNUC__

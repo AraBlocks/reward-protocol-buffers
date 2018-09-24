@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * A signature of a peer associated with an ARAid
+ * A signed piece of data that can be used to validate a peer.
  *
  * Generated from protobuf message <code>messages.Signature</code>
  */
