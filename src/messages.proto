@@ -22,7 +22,7 @@ message Quote {
   int64 per_unit_cost = 2;
   SOW sow = 3;
   Signature signature  = 4;
-  bytes data = 5
+  bytes data = 5;
 }
 
 /**
