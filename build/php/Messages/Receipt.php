@@ -24,13 +24,24 @@ class Receipt extends \Google\Protobuf\Internal\Message
      */
     private $reward = null;
     /**
-     * Generated from protobuf field <code>.messages.Signature farmer_signature = 3;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 3;</code>
      */
-    private $farmer_signature = null;
+    private $signature = null;
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $nonce
+     *     @type \Messages\Reward $reward
+     *     @type \Messages\Signature $signature
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -78,23 +89,23 @@ class Receipt extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.messages.Signature farmer_signature = 3;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 3;</code>
      * @return \Messages\Signature
      */
-    public function getFarmerSignature()
+    public function getSignature()
     {
-        return $this->farmer_signature;
+        return $this->signature;
     }
 
     /**
-     * Generated from protobuf field <code>.messages.Signature farmer_signature = 3;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 3;</code>
      * @param \Messages\Signature $var
      * @return $this
      */
-    public function setFarmerSignature($var)
+    public function setSignature($var)
     {
         GPBUtil::checkMessage($var, \Messages\Signature::class);
-        $this->farmer_signature = $var;
+        $this->signature = $var;
 
         return $this;
     }

@@ -10,10 +10,11 @@ message Signature {
 // A statement of work for a specific task.
 message SOW {
   bytes nonce = 1;
-  string work_unit = 2;
-  string currency_unit = 3;
-  Signature signature = 4;
-  bytes data = 5;
+  string topic = 2;
+  string work_unit = 3;
+  string currency_unit = 4;
+  Signature signature = 5;
+  bytes data = 6;
 }
 
 // A quote from a specific farmer for a specific SOW.
@@ -39,7 +40,7 @@ message Agreement {
 // A reward for a specific agreement, sent by a verifiable peer.
 message Reward {
   bytes nonce = 1;
-	Agreement agreement = 2;
+  Agreement agreement = 2;
   int64 amount = 3;
   Signature signature  = 4;
   bytes data = 5;

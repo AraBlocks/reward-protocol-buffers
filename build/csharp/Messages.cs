@@ -24,171 +24,37 @@ namespace Messages {
     static MessagesReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5tZXNzYWdlcy5wcm90bxIIbWVzc2FnZXMiFAoFQXJhSWQSCwoDZGlkGAEg",
-            "ASgJIjoKCVNpZ25hdHVyZRIfCgZhcmFfaWQYASABKAsyDy5tZXNzYWdlcy5B",
-            "cmFJZBIMCgRkYXRhGAIgASgMInAKA1NPVxINCgVub25jZRgBIAEoDBIRCgl3",
-            "b3JrX3VuaXQYAiABKAkSIgoJcmVxdWVzdGVyGAMgASgLMg8ubWVzc2FnZXMu",
-            "QXJhSWQSDAoEZGF0YRgEIAEoDBIVCg1jdXJyZW5jeV91bml0GAUgASgJImoK",
-            "BVF1b3RlEg0KBW5vbmNlGAEgASgMEhUKDXBlcl91bml0X2Nvc3QYAiABKAMS",
-            "GgoDc293GAMgASgLMg0ubWVzc2FnZXMuU09XEh8KBmZhcm1lchgEIAEoCzIP",
-            "Lm1lc3NhZ2VzLkFyYUlkIqkBCglBZ3JlZW1lbnQSDQoFbm9uY2UYASABKAwS",
-            "HgoFcXVvdGUYAiABKAsyDy5tZXNzYWdlcy5RdW90ZRIwChNyZXF1ZXN0ZXJf",
-            "c2lnbmF0dXJlGAMgASgLMhMubWVzc2FnZXMuU2lnbmF0dXJlEi0KEGZhcm1l",
-            "cl9zaWduYXR1cmUYBCABKAsyEy5tZXNzYWdlcy5TaWduYXR1cmUSDAoEZGF0",
-            "YRgFIAEoDCKPAQoGUmV3YXJkEg0KBW5vbmNlGAEgASgMEiYKCWFncmVlbWVu",
-            "dBgCIAEoCzITLm1lc3NhZ2VzLkFncmVlbWVudBIOCgZhbW91bnQYAyABKAMS",
-            "MAoTcmVxdWVzdGVyX3NpZ25hdHVyZRgEIAEoCzITLm1lc3NhZ2VzLlNpZ25h",
-            "dHVyZRIMCgRkYXRhGAUgASgMImkKB1JlY2VpcHQSDQoFbm9uY2UYASABKAwS",
-            "IAoGcmV3YXJkGAIgASgLMhAubWVzc2FnZXMuUmV3YXJkEi0KEGZhcm1lcl9z",
-            "aWduYXR1cmUYAyABKAsyEy5tZXNzYWdlcy5TaWduYXR1cmViBnByb3RvMw=="));
+            "Cg5tZXNzYWdlcy5wcm90bxIIbWVzc2FnZXMiJgoJU2lnbmF0dXJlEgsKA2Rp",
+            "ZBgBIAEoCRIMCgRkYXRhGAIgASgMIoMBCgNTT1cSDQoFbm9uY2UYASABKAwS",
+            "DQoFdG9waWMYAiABKAkSEQoJd29ya191bml0GAMgASgJEhUKDWN1cnJlbmN5",
+            "X3VuaXQYBCABKAkSJgoJc2lnbmF0dXJlGAUgASgLMhMubWVzc2FnZXMuU2ln",
+            "bmF0dXJlEgwKBGRhdGEYBiABKAwifwoFUXVvdGUSDQoFbm9uY2UYASABKAwS",
+            "FQoNcGVyX3VuaXRfY29zdBgCIAEoAxIaCgNzb3cYAyABKAsyDS5tZXNzYWdl",
+            "cy5TT1cSJgoJc2lnbmF0dXJlGAQgASgLMhMubWVzc2FnZXMuU2lnbmF0dXJl",
+            "EgwKBGRhdGEYBSABKAwicAoJQWdyZWVtZW50Eg0KBW5vbmNlGAEgASgMEh4K",
+            "BXF1b3RlGAIgASgLMg8ubWVzc2FnZXMuUXVvdGUSJgoJc2lnbmF0dXJlGAMg",
+            "ASgLMhMubWVzc2FnZXMuU2lnbmF0dXJlEgwKBGRhdGEYBCABKAwihQEKBlJl",
+            "d2FyZBINCgVub25jZRgBIAEoDBImCglhZ3JlZW1lbnQYAiABKAsyEy5tZXNz",
+            "YWdlcy5BZ3JlZW1lbnQSDgoGYW1vdW50GAMgASgDEiYKCXNpZ25hdHVyZRgE",
+            "IAEoCzITLm1lc3NhZ2VzLlNpZ25hdHVyZRIMCgRkYXRhGAUgASgMImIKB1Jl",
+            "Y2VpcHQSDQoFbm9uY2UYASABKAwSIAoGcmV3YXJkGAIgASgLMhAubWVzc2Fn",
+            "ZXMuUmV3YXJkEiYKCXNpZ25hdHVyZRgDIAEoCzITLm1lc3NhZ2VzLlNpZ25h",
+            "dHVyZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.AraId), global::Messages.AraId.Parser, new[]{ "Did" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Signature), global::Messages.Signature.Parser, new[]{ "AraId", "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.SOW), global::Messages.SOW.Parser, new[]{ "Nonce", "WorkUnit", "Requester", "Data", "CurrencyUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Quote), global::Messages.Quote.Parser, new[]{ "Nonce", "PerUnitCost", "Sow", "Farmer" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Agreement), global::Messages.Agreement.Parser, new[]{ "Nonce", "Quote", "RequesterSignature", "FarmerSignature", "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Reward), global::Messages.Reward.Parser, new[]{ "Nonce", "Agreement", "Amount", "RequesterSignature", "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Receipt), global::Messages.Receipt.Parser, new[]{ "Nonce", "Reward", "FarmerSignature" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Signature), global::Messages.Signature.Parser, new[]{ "Did", "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.SOW), global::Messages.SOW.Parser, new[]{ "Nonce", "Topic", "WorkUnit", "CurrencyUnit", "Signature", "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Quote), global::Messages.Quote.Parser, new[]{ "Nonce", "PerUnitCost", "Sow", "Signature", "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Agreement), global::Messages.Agreement.Parser, new[]{ "Nonce", "Quote", "Signature", "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Reward), global::Messages.Reward.Parser, new[]{ "Nonce", "Agreement", "Amount", "Signature", "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Messages.Receipt), global::Messages.Receipt.Parser, new[]{ "Nonce", "Reward", "Signature" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  /// <summary>
-  /// The Ara Identity associated with a peer.
-  /// </summary>
-  public sealed partial class AraId : pb::IMessage<AraId> {
-    private static readonly pb::MessageParser<AraId> _parser = new pb::MessageParser<AraId>(() => new AraId());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AraId> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AraId() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AraId(AraId other) : this() {
-      did_ = other.did_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AraId Clone() {
-      return new AraId(this);
-    }
-
-    /// <summary>Field number for the "did" field.</summary>
-    public const int DidFieldNumber = 1;
-    private string did_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Did {
-      get { return did_; }
-      set {
-        did_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as AraId);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AraId other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Did != other.Did) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Did.Length != 0) hash ^= Did.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Did.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Did);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Did.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Did);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AraId other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Did.Length != 0) {
-        Did = other.Did;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Did = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   /// <summary>
   /// A signed piece of data that can be used to validate a peer.
   /// </summary>
@@ -200,7 +66,7 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -217,7 +83,7 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Signature(Signature other) : this() {
-      AraId = other.araId_ != null ? other.AraId.Clone() : null;
+      did_ = other.did_;
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -227,14 +93,14 @@ namespace Messages {
       return new Signature(this);
     }
 
-    /// <summary>Field number for the "ara_id" field.</summary>
-    public const int AraIdFieldNumber = 1;
-    private global::Messages.AraId araId_;
+    /// <summary>Field number for the "did" field.</summary>
+    public const int DidFieldNumber = 1;
+    private string did_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Messages.AraId AraId {
-      get { return araId_; }
+    public string Did {
+      get { return did_; }
       set {
-        araId_ = value;
+        did_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -262,7 +128,7 @@ namespace Messages {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(AraId, other.AraId)) return false;
+      if (Did != other.Did) return false;
       if (Data != other.Data) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -270,7 +136,7 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (araId_ != null) hash ^= AraId.GetHashCode();
+      if (Did.Length != 0) hash ^= Did.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -285,9 +151,9 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (araId_ != null) {
+      if (Did.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteMessage(AraId);
+        output.WriteString(Did);
       }
       if (Data.Length != 0) {
         output.WriteRawTag(18);
@@ -301,8 +167,8 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (araId_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AraId);
+      if (Did.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Did);
       }
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
@@ -318,11 +184,8 @@ namespace Messages {
       if (other == null) {
         return;
       }
-      if (other.araId_ != null) {
-        if (araId_ == null) {
-          araId_ = new global::Messages.AraId();
-        }
-        AraId.MergeFrom(other.AraId);
+      if (other.Did.Length != 0) {
+        Did = other.Did;
       }
       if (other.Data.Length != 0) {
         Data = other.Data;
@@ -339,10 +202,7 @@ namespace Messages {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (araId_ == null) {
-              araId_ = new global::Messages.AraId();
-            }
-            input.ReadMessage(araId_);
+            Did = input.ReadString();
             break;
           }
           case 18: {
@@ -366,7 +226,7 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -384,10 +244,11 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SOW(SOW other) : this() {
       nonce_ = other.nonce_;
+      topic_ = other.topic_;
       workUnit_ = other.workUnit_;
-      Requester = other.requester_ != null ? other.Requester.Clone() : null;
-      data_ = other.data_;
       currencyUnit_ = other.currencyUnit_;
+      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
+      data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -407,8 +268,19 @@ namespace Messages {
       }
     }
 
+    /// <summary>Field number for the "topic" field.</summary>
+    public const int TopicFieldNumber = 2;
+    private string topic_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Topic {
+      get { return topic_; }
+      set {
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "work_unit" field.</summary>
-    public const int WorkUnitFieldNumber = 2;
+    public const int WorkUnitFieldNumber = 3;
     private string workUnit_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string WorkUnit {
@@ -418,36 +290,36 @@ namespace Messages {
       }
     }
 
-    /// <summary>Field number for the "requester" field.</summary>
-    public const int RequesterFieldNumber = 3;
-    private global::Messages.AraId requester_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Messages.AraId Requester {
-      get { return requester_; }
-      set {
-        requester_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 4;
-    private pb::ByteString data_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString Data {
-      get { return data_; }
-      set {
-        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "currency_unit" field.</summary>
-    public const int CurrencyUnitFieldNumber = 5;
+    public const int CurrencyUnitFieldNumber = 4;
     private string currencyUnit_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CurrencyUnit {
       get { return currencyUnit_; }
       set {
         currencyUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 5;
+    private global::Messages.Signature signature_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Messages.Signature Signature {
+      get { return signature_; }
+      set {
+        signature_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 6;
+    private pb::ByteString data_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Data {
+      get { return data_; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -465,10 +337,11 @@ namespace Messages {
         return true;
       }
       if (Nonce != other.Nonce) return false;
+      if (Topic != other.Topic) return false;
       if (WorkUnit != other.WorkUnit) return false;
-      if (!object.Equals(Requester, other.Requester)) return false;
-      if (Data != other.Data) return false;
       if (CurrencyUnit != other.CurrencyUnit) return false;
+      if (!object.Equals(Signature, other.Signature)) return false;
+      if (Data != other.Data) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -476,10 +349,11 @@ namespace Messages {
     public override int GetHashCode() {
       int hash = 1;
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
+      if (Topic.Length != 0) hash ^= Topic.GetHashCode();
       if (WorkUnit.Length != 0) hash ^= WorkUnit.GetHashCode();
-      if (requester_ != null) hash ^= Requester.GetHashCode();
-      if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (CurrencyUnit.Length != 0) hash ^= CurrencyUnit.GetHashCode();
+      if (signature_ != null) hash ^= Signature.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -497,21 +371,25 @@ namespace Messages {
         output.WriteRawTag(10);
         output.WriteBytes(Nonce);
       }
-      if (WorkUnit.Length != 0) {
+      if (Topic.Length != 0) {
         output.WriteRawTag(18);
+        output.WriteString(Topic);
+      }
+      if (WorkUnit.Length != 0) {
+        output.WriteRawTag(26);
         output.WriteString(WorkUnit);
       }
-      if (requester_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Requester);
+      if (CurrencyUnit.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CurrencyUnit);
+      }
+      if (signature_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Signature);
       }
       if (Data.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteBytes(Data);
-      }
-      if (CurrencyUnit.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(CurrencyUnit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -524,17 +402,20 @@ namespace Messages {
       if (Nonce.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nonce);
       }
+      if (Topic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
+      }
       if (WorkUnit.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkUnit);
       }
-      if (requester_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Requester);
+      if (CurrencyUnit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyUnit);
+      }
+      if (signature_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Signature);
       }
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
-      }
-      if (CurrencyUnit.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyUnit);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -550,20 +431,23 @@ namespace Messages {
       if (other.Nonce.Length != 0) {
         Nonce = other.Nonce;
       }
+      if (other.Topic.Length != 0) {
+        Topic = other.Topic;
+      }
       if (other.WorkUnit.Length != 0) {
         WorkUnit = other.WorkUnit;
       }
-      if (other.requester_ != null) {
-        if (requester_ == null) {
-          requester_ = new global::Messages.AraId();
+      if (other.CurrencyUnit.Length != 0) {
+        CurrencyUnit = other.CurrencyUnit;
+      }
+      if (other.signature_ != null) {
+        if (signature_ == null) {
+          signature_ = new global::Messages.Signature();
         }
-        Requester.MergeFrom(other.Requester);
+        Signature.MergeFrom(other.Signature);
       }
       if (other.Data.Length != 0) {
         Data = other.Data;
-      }
-      if (other.CurrencyUnit.Length != 0) {
-        CurrencyUnit = other.CurrencyUnit;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -581,22 +465,26 @@ namespace Messages {
             break;
           }
           case 18: {
-            WorkUnit = input.ReadString();
+            Topic = input.ReadString();
             break;
           }
           case 26: {
-            if (requester_ == null) {
-              requester_ = new global::Messages.AraId();
-            }
-            input.ReadMessage(requester_);
+            WorkUnit = input.ReadString();
             break;
           }
           case 34: {
-            Data = input.ReadBytes();
+            CurrencyUnit = input.ReadString();
             break;
           }
           case 42: {
-            CurrencyUnit = input.ReadString();
+            if (signature_ == null) {
+              signature_ = new global::Messages.Signature();
+            }
+            input.ReadMessage(signature_);
+            break;
+          }
+          case 50: {
+            Data = input.ReadBytes();
             break;
           }
         }
@@ -616,7 +504,7 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -635,8 +523,9 @@ namespace Messages {
     public Quote(Quote other) : this() {
       nonce_ = other.nonce_;
       perUnitCost_ = other.perUnitCost_;
-      Sow = other.sow_ != null ? other.Sow.Clone() : null;
-      Farmer = other.farmer_ != null ? other.Farmer.Clone() : null;
+      sow_ = other.sow_ != null ? other.sow_.Clone() : null;
+      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
+      data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -678,14 +567,25 @@ namespace Messages {
       }
     }
 
-    /// <summary>Field number for the "farmer" field.</summary>
-    public const int FarmerFieldNumber = 4;
-    private global::Messages.AraId farmer_;
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 4;
+    private global::Messages.Signature signature_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Messages.AraId Farmer {
-      get { return farmer_; }
+    public global::Messages.Signature Signature {
+      get { return signature_; }
       set {
-        farmer_ = value;
+        signature_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 5;
+    private pb::ByteString data_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Data {
+      get { return data_; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -705,7 +605,8 @@ namespace Messages {
       if (Nonce != other.Nonce) return false;
       if (PerUnitCost != other.PerUnitCost) return false;
       if (!object.Equals(Sow, other.Sow)) return false;
-      if (!object.Equals(Farmer, other.Farmer)) return false;
+      if (!object.Equals(Signature, other.Signature)) return false;
+      if (Data != other.Data) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -715,7 +616,8 @@ namespace Messages {
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
       if (PerUnitCost != 0L) hash ^= PerUnitCost.GetHashCode();
       if (sow_ != null) hash ^= Sow.GetHashCode();
-      if (farmer_ != null) hash ^= Farmer.GetHashCode();
+      if (signature_ != null) hash ^= Signature.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -741,9 +643,13 @@ namespace Messages {
         output.WriteRawTag(26);
         output.WriteMessage(Sow);
       }
-      if (farmer_ != null) {
+      if (signature_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(Farmer);
+        output.WriteMessage(Signature);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Data);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -762,8 +668,11 @@ namespace Messages {
       if (sow_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sow);
       }
-      if (farmer_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Farmer);
+      if (signature_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Signature);
+      }
+      if (Data.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -788,11 +697,14 @@ namespace Messages {
         }
         Sow.MergeFrom(other.Sow);
       }
-      if (other.farmer_ != null) {
-        if (farmer_ == null) {
-          farmer_ = new global::Messages.AraId();
+      if (other.signature_ != null) {
+        if (signature_ == null) {
+          signature_ = new global::Messages.Signature();
         }
-        Farmer.MergeFrom(other.Farmer);
+        Signature.MergeFrom(other.Signature);
+      }
+      if (other.Data.Length != 0) {
+        Data = other.Data;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -821,10 +733,14 @@ namespace Messages {
             break;
           }
           case 34: {
-            if (farmer_ == null) {
-              farmer_ = new global::Messages.AraId();
+            if (signature_ == null) {
+              signature_ = new global::Messages.Signature();
             }
-            input.ReadMessage(farmer_);
+            input.ReadMessage(signature_);
+            break;
+          }
+          case 42: {
+            Data = input.ReadBytes();
             break;
           }
         }
@@ -835,7 +751,7 @@ namespace Messages {
 
   /// <summary>
   ///*
-  /// An abstract agreement between two peers (a farmer and a requester) 
+  /// An abstract agreement between two peers (a farmer and a requester)
   /// spelling out the terms of a task.
   /// </summary>
   public sealed partial class Agreement : pb::IMessage<Agreement> {
@@ -846,7 +762,7 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -864,9 +780,8 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Agreement(Agreement other) : this() {
       nonce_ = other.nonce_;
-      Quote = other.quote_ != null ? other.Quote.Clone() : null;
-      RequesterSignature = other.requesterSignature_ != null ? other.RequesterSignature.Clone() : null;
-      FarmerSignature = other.farmerSignature_ != null ? other.FarmerSignature.Clone() : null;
+      quote_ = other.quote_ != null ? other.quote_.Clone() : null;
+      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -898,30 +813,19 @@ namespace Messages {
       }
     }
 
-    /// <summary>Field number for the "requester_signature" field.</summary>
-    public const int RequesterSignatureFieldNumber = 3;
-    private global::Messages.Signature requesterSignature_;
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 3;
+    private global::Messages.Signature signature_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Messages.Signature RequesterSignature {
-      get { return requesterSignature_; }
+    public global::Messages.Signature Signature {
+      get { return signature_; }
       set {
-        requesterSignature_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "farmer_signature" field.</summary>
-    public const int FarmerSignatureFieldNumber = 4;
-    private global::Messages.Signature farmerSignature_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Messages.Signature FarmerSignature {
-      get { return farmerSignature_; }
-      set {
-        farmerSignature_ = value;
+        signature_ = value;
       }
     }
 
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 5;
+    public const int DataFieldNumber = 4;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
@@ -946,8 +850,7 @@ namespace Messages {
       }
       if (Nonce != other.Nonce) return false;
       if (!object.Equals(Quote, other.Quote)) return false;
-      if (!object.Equals(RequesterSignature, other.RequesterSignature)) return false;
-      if (!object.Equals(FarmerSignature, other.FarmerSignature)) return false;
+      if (!object.Equals(Signature, other.Signature)) return false;
       if (Data != other.Data) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -957,8 +860,7 @@ namespace Messages {
       int hash = 1;
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
       if (quote_ != null) hash ^= Quote.GetHashCode();
-      if (requesterSignature_ != null) hash ^= RequesterSignature.GetHashCode();
-      if (farmerSignature_ != null) hash ^= FarmerSignature.GetHashCode();
+      if (signature_ != null) hash ^= Signature.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -981,16 +883,12 @@ namespace Messages {
         output.WriteRawTag(18);
         output.WriteMessage(Quote);
       }
-      if (requesterSignature_ != null) {
+      if (signature_ != null) {
         output.WriteRawTag(26);
-        output.WriteMessage(RequesterSignature);
-      }
-      if (farmerSignature_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(FarmerSignature);
+        output.WriteMessage(Signature);
       }
       if (Data.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteBytes(Data);
       }
       if (_unknownFields != null) {
@@ -1007,11 +905,8 @@ namespace Messages {
       if (quote_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Quote);
       }
-      if (requesterSignature_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequesterSignature);
-      }
-      if (farmerSignature_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FarmerSignature);
+      if (signature_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Signature);
       }
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
@@ -1036,17 +931,11 @@ namespace Messages {
         }
         Quote.MergeFrom(other.Quote);
       }
-      if (other.requesterSignature_ != null) {
-        if (requesterSignature_ == null) {
-          requesterSignature_ = new global::Messages.Signature();
+      if (other.signature_ != null) {
+        if (signature_ == null) {
+          signature_ = new global::Messages.Signature();
         }
-        RequesterSignature.MergeFrom(other.RequesterSignature);
-      }
-      if (other.farmerSignature_ != null) {
-        if (farmerSignature_ == null) {
-          farmerSignature_ = new global::Messages.Signature();
-        }
-        FarmerSignature.MergeFrom(other.FarmerSignature);
+        Signature.MergeFrom(other.Signature);
       }
       if (other.Data.Length != 0) {
         Data = other.Data;
@@ -1074,20 +963,13 @@ namespace Messages {
             break;
           }
           case 26: {
-            if (requesterSignature_ == null) {
-              requesterSignature_ = new global::Messages.Signature();
+            if (signature_ == null) {
+              signature_ = new global::Messages.Signature();
             }
-            input.ReadMessage(requesterSignature_);
+            input.ReadMessage(signature_);
             break;
           }
           case 34: {
-            if (farmerSignature_ == null) {
-              farmerSignature_ = new global::Messages.Signature();
-            }
-            input.ReadMessage(farmerSignature_);
-            break;
-          }
-          case 42: {
             Data = input.ReadBytes();
             break;
           }
@@ -1108,7 +990,7 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1126,9 +1008,9 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Reward(Reward other) : this() {
       nonce_ = other.nonce_;
-      Agreement = other.agreement_ != null ? other.Agreement.Clone() : null;
+      agreement_ = other.agreement_ != null ? other.agreement_.Clone() : null;
       amount_ = other.amount_;
-      RequesterSignature = other.requesterSignature_ != null ? other.RequesterSignature.Clone() : null;
+      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1171,14 +1053,14 @@ namespace Messages {
       }
     }
 
-    /// <summary>Field number for the "requester_signature" field.</summary>
-    public const int RequesterSignatureFieldNumber = 4;
-    private global::Messages.Signature requesterSignature_;
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 4;
+    private global::Messages.Signature signature_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Messages.Signature RequesterSignature {
-      get { return requesterSignature_; }
+    public global::Messages.Signature Signature {
+      get { return signature_; }
       set {
-        requesterSignature_ = value;
+        signature_ = value;
       }
     }
 
@@ -1209,7 +1091,7 @@ namespace Messages {
       if (Nonce != other.Nonce) return false;
       if (!object.Equals(Agreement, other.Agreement)) return false;
       if (Amount != other.Amount) return false;
-      if (!object.Equals(RequesterSignature, other.RequesterSignature)) return false;
+      if (!object.Equals(Signature, other.Signature)) return false;
       if (Data != other.Data) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1220,7 +1102,7 @@ namespace Messages {
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
       if (agreement_ != null) hash ^= Agreement.GetHashCode();
       if (Amount != 0L) hash ^= Amount.GetHashCode();
-      if (requesterSignature_ != null) hash ^= RequesterSignature.GetHashCode();
+      if (signature_ != null) hash ^= Signature.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1247,9 +1129,9 @@ namespace Messages {
         output.WriteRawTag(24);
         output.WriteInt64(Amount);
       }
-      if (requesterSignature_ != null) {
+      if (signature_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(RequesterSignature);
+        output.WriteMessage(Signature);
       }
       if (Data.Length != 0) {
         output.WriteRawTag(42);
@@ -1272,8 +1154,8 @@ namespace Messages {
       if (Amount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
       }
-      if (requesterSignature_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequesterSignature);
+      if (signature_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Signature);
       }
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
@@ -1301,11 +1183,11 @@ namespace Messages {
       if (other.Amount != 0L) {
         Amount = other.Amount;
       }
-      if (other.requesterSignature_ != null) {
-        if (requesterSignature_ == null) {
-          requesterSignature_ = new global::Messages.Signature();
+      if (other.signature_ != null) {
+        if (signature_ == null) {
+          signature_ = new global::Messages.Signature();
         }
-        RequesterSignature.MergeFrom(other.RequesterSignature);
+        Signature.MergeFrom(other.Signature);
       }
       if (other.Data.Length != 0) {
         Data = other.Data;
@@ -1337,10 +1219,10 @@ namespace Messages {
             break;
           }
           case 34: {
-            if (requesterSignature_ == null) {
-              requesterSignature_ = new global::Messages.Signature();
+            if (signature_ == null) {
+              signature_ = new global::Messages.Signature();
             }
-            input.ReadMessage(requesterSignature_);
+            input.ReadMessage(signature_);
             break;
           }
           case 42: {
@@ -1364,7 +1246,7 @@ namespace Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Messages.MessagesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1382,8 +1264,8 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Receipt(Receipt other) : this() {
       nonce_ = other.nonce_;
-      Reward = other.reward_ != null ? other.Reward.Clone() : null;
-      FarmerSignature = other.farmerSignature_ != null ? other.FarmerSignature.Clone() : null;
+      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
+      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1414,14 +1296,14 @@ namespace Messages {
       }
     }
 
-    /// <summary>Field number for the "farmer_signature" field.</summary>
-    public const int FarmerSignatureFieldNumber = 3;
-    private global::Messages.Signature farmerSignature_;
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 3;
+    private global::Messages.Signature signature_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Messages.Signature FarmerSignature {
-      get { return farmerSignature_; }
+    public global::Messages.Signature Signature {
+      get { return signature_; }
       set {
-        farmerSignature_ = value;
+        signature_ = value;
       }
     }
 
@@ -1440,7 +1322,7 @@ namespace Messages {
       }
       if (Nonce != other.Nonce) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
-      if (!object.Equals(FarmerSignature, other.FarmerSignature)) return false;
+      if (!object.Equals(Signature, other.Signature)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1449,7 +1331,7 @@ namespace Messages {
       int hash = 1;
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
-      if (farmerSignature_ != null) hash ^= FarmerSignature.GetHashCode();
+      if (signature_ != null) hash ^= Signature.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1471,9 +1353,9 @@ namespace Messages {
         output.WriteRawTag(18);
         output.WriteMessage(Reward);
       }
-      if (farmerSignature_ != null) {
+      if (signature_ != null) {
         output.WriteRawTag(26);
-        output.WriteMessage(FarmerSignature);
+        output.WriteMessage(Signature);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1489,8 +1371,8 @@ namespace Messages {
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
       }
-      if (farmerSignature_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FarmerSignature);
+      if (signature_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Signature);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1512,11 +1394,11 @@ namespace Messages {
         }
         Reward.MergeFrom(other.Reward);
       }
-      if (other.farmerSignature_ != null) {
-        if (farmerSignature_ == null) {
-          farmerSignature_ = new global::Messages.Signature();
+      if (other.signature_ != null) {
+        if (signature_ == null) {
+          signature_ = new global::Messages.Signature();
         }
-        FarmerSignature.MergeFrom(other.FarmerSignature);
+        Signature.MergeFrom(other.Signature);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1541,10 +1423,10 @@ namespace Messages {
             break;
           }
           case 26: {
-            if (farmerSignature_ == null) {
-              farmerSignature_ = new global::Messages.Signature();
+            if (signature_ == null) {
+              signature_ = new global::Messages.Signature();
             }
-            input.ReadMessage(farmerSignature_);
+            input.ReadMessage(signature_);
             break;
           }
         }

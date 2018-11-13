@@ -28,13 +28,30 @@ class Quote extends \Google\Protobuf\Internal\Message
      */
     private $sow = null;
     /**
-     * Generated from protobuf field <code>.messages.AraId farmer = 4;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 4;</code>
      */
-    private $farmer = null;
+    private $signature = null;
+    /**
+     * Generated from protobuf field <code>bytes data = 5;</code>
+     */
+    private $data = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $nonce
+     *     @type int|string $per_unit_cost
+     *     @type \Messages\SOW $sow
+     *     @type \Messages\Signature $signature
+     *     @type string $data
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -104,23 +121,45 @@ class Quote extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.messages.AraId farmer = 4;</code>
-     * @return \Messages\AraId
+     * Generated from protobuf field <code>.messages.Signature signature = 4;</code>
+     * @return \Messages\Signature
      */
-    public function getFarmer()
+    public function getSignature()
     {
-        return $this->farmer;
+        return $this->signature;
     }
 
     /**
-     * Generated from protobuf field <code>.messages.AraId farmer = 4;</code>
-     * @param \Messages\AraId $var
+     * Generated from protobuf field <code>.messages.Signature signature = 4;</code>
+     * @param \Messages\Signature $var
      * @return $this
      */
-    public function setFarmer($var)
+    public function setSignature($var)
     {
-        GPBUtil::checkMessage($var, \Messages\AraId::class);
-        $this->farmer = $var;
+        GPBUtil::checkMessage($var, \Messages\Signature::class);
+        $this->signature = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes data = 5;</code>
+     * @return string
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes data = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setData($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->data = $var;
 
         return $this;
     }

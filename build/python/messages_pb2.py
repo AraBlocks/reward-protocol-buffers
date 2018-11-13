@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -19,41 +18,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='messages.proto',
   package='messages',
   syntax='proto3',
-  serialized_pb=_b('\n\x0emessages.proto\x12\x08messages\"\x14\n\x05\x41raId\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\":\n\tSignature\x12\x1f\n\x06\x61ra_id\x18\x01 \x01(\x0b\x32\x0f.messages.AraId\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"p\n\x03SOW\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x11\n\twork_unit\x18\x02 \x01(\t\x12\"\n\trequester\x18\x03 \x01(\x0b\x32\x0f.messages.AraId\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\x12\x15\n\rcurrency_unit\x18\x05 \x01(\t\"j\n\x05Quote\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x15\n\rper_unit_cost\x18\x02 \x01(\x03\x12\x1a\n\x03sow\x18\x03 \x01(\x0b\x32\r.messages.SOW\x12\x1f\n\x06\x66\x61rmer\x18\x04 \x01(\x0b\x32\x0f.messages.AraId\"\xa9\x01\n\tAgreement\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x1e\n\x05quote\x18\x02 \x01(\x0b\x32\x0f.messages.Quote\x12\x30\n\x13requester_signature\x18\x03 \x01(\x0b\x32\x13.messages.Signature\x12-\n\x10\x66\x61rmer_signature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"\x8f\x01\n\x06Reward\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\tagreement\x18\x02 \x01(\x0b\x32\x13.messages.Agreement\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\x12\x30\n\x13requester_signature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"i\n\x07Receipt\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12 \n\x06reward\x18\x02 \x01(\x0b\x32\x10.messages.Reward\x12-\n\x10\x66\x61rmer_signature\x18\x03 \x01(\x0b\x32\x13.messages.Signatureb\x06proto3')
+  serialized_options=None,
+  serialized_pb=_b('\n\x0emessages.proto\x12\x08messages\"&\n\tSignature\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x83\x01\n\x03SOW\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\r\n\x05topic\x18\x02 \x01(\t\x12\x11\n\twork_unit\x18\x03 \x01(\t\x12\x15\n\rcurrency_unit\x18\x04 \x01(\t\x12&\n\tsignature\x18\x05 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x06 \x01(\x0c\"\x7f\n\x05Quote\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x15\n\rper_unit_cost\x18\x02 \x01(\x03\x12\x1a\n\x03sow\x18\x03 \x01(\x0b\x32\r.messages.SOW\x12&\n\tsignature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"p\n\tAgreement\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x1e\n\x05quote\x18\x02 \x01(\x0b\x32\x0f.messages.Quote\x12&\n\tsignature\x18\x03 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\"\x85\x01\n\x06Reward\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\tagreement\x18\x02 \x01(\x0b\x32\x13.messages.Agreement\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\x12&\n\tsignature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"b\n\x07Receipt\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12 \n\x06reward\x18\x02 \x01(\x0b\x32\x10.messages.Reward\x12&\n\tsignature\x18\x03 \x01(\x0b\x32\x13.messages.Signatureb\x06proto3')
 )
 
 
-
-
-_ARAID = _descriptor.Descriptor(
-  name='AraId',
-  full_name='messages.AraId',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='did', full_name='messages.AraId.did', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=28,
-  serialized_end=48,
-)
 
 
 _SIGNATURE = _descriptor.Descriptor(
@@ -64,33 +33,33 @@ _SIGNATURE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ara_id', full_name='messages.Signature.ara_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='did', full_name='messages.Signature.did', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='messages.Signature.data', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50,
-  serialized_end=108,
+  serialized_start=28,
+  serialized_end=66,
 )
 
 
@@ -107,49 +76,56 @@ _SOW = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='work_unit', full_name='messages.SOW.work_unit', index=1,
+      name='topic', full_name='messages.SOW.topic', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='requester', full_name='messages.SOW.requester', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='data', full_name='messages.SOW.data', index=3,
-      number=4, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='currency_unit', full_name='messages.SOW.currency_unit', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='work_unit', full_name='messages.SOW.work_unit', index=2,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='currency_unit', full_name='messages.SOW.currency_unit', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='messages.SOW.signature', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='messages.SOW.data', index=5,
+      number=6, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=222,
+  serialized_start=69,
+  serialized_end=200,
 )
 
 
@@ -166,42 +142,49 @@ _QUOTE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='per_unit_cost', full_name='messages.Quote.per_unit_cost', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='sow', full_name='messages.Quote.sow', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='farmer', full_name='messages.Quote.farmer', index=3,
+      name='signature', full_name='messages.Quote.signature', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='messages.Quote.data', index=4,
+      number=5, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=224,
-  serialized_end=330,
+  serialized_start=202,
+  serialized_end=329,
 )
 
 
@@ -218,49 +201,42 @@ _AGREEMENT = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='quote', full_name='messages.Agreement.quote', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='requester_signature', full_name='messages.Agreement.requester_signature', index=2,
+      name='signature', full_name='messages.Agreement.signature', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='farmer_signature', full_name='messages.Agreement.farmer_signature', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='data', full_name='messages.Agreement.data', index=4,
-      number=5, type=12, cpp_type=9, label=1,
+      name='data', full_name='messages.Agreement.data', index=3,
+      number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=333,
-  serialized_end=502,
+  serialized_start=331,
+  serialized_end=443,
 )
 
 
@@ -277,49 +253,49 @@ _REWARD = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='agreement', full_name='messages.Reward.agreement', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='amount', full_name='messages.Reward.amount', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='requester_signature', full_name='messages.Reward.requester_signature', index=3,
+      name='signature', full_name='messages.Reward.signature', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='messages.Reward.data', index=4,
       number=5, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=505,
-  serialized_end=648,
+  serialized_start=446,
+  serialized_end=579,
 )
 
 
@@ -336,49 +312,46 @@ _RECEIPT = _descriptor.Descriptor(
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='reward', full_name='messages.Receipt.reward', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='farmer_signature', full_name='messages.Receipt.farmer_signature', index=2,
+      name='signature', full_name='messages.Receipt.signature', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=650,
-  serialized_end=755,
+  serialized_start=581,
+  serialized_end=679,
 )
 
-_SIGNATURE.fields_by_name['ara_id'].message_type = _ARAID
-_SOW.fields_by_name['requester'].message_type = _ARAID
+_SOW.fields_by_name['signature'].message_type = _SIGNATURE
 _QUOTE.fields_by_name['sow'].message_type = _SOW
-_QUOTE.fields_by_name['farmer'].message_type = _ARAID
+_QUOTE.fields_by_name['signature'].message_type = _SIGNATURE
 _AGREEMENT.fields_by_name['quote'].message_type = _QUOTE
-_AGREEMENT.fields_by_name['requester_signature'].message_type = _SIGNATURE
-_AGREEMENT.fields_by_name['farmer_signature'].message_type = _SIGNATURE
+_AGREEMENT.fields_by_name['signature'].message_type = _SIGNATURE
 _REWARD.fields_by_name['agreement'].message_type = _AGREEMENT
-_REWARD.fields_by_name['requester_signature'].message_type = _SIGNATURE
+_REWARD.fields_by_name['signature'].message_type = _SIGNATURE
 _RECEIPT.fields_by_name['reward'].message_type = _REWARD
-_RECEIPT.fields_by_name['farmer_signature'].message_type = _SIGNATURE
-DESCRIPTOR.message_types_by_name['AraId'] = _ARAID
+_RECEIPT.fields_by_name['signature'].message_type = _SIGNATURE
 DESCRIPTOR.message_types_by_name['Signature'] = _SIGNATURE
 DESCRIPTOR.message_types_by_name['SOW'] = _SOW
 DESCRIPTOR.message_types_by_name['Quote'] = _QUOTE
@@ -386,13 +359,6 @@ DESCRIPTOR.message_types_by_name['Agreement'] = _AGREEMENT
 DESCRIPTOR.message_types_by_name['Reward'] = _REWARD
 DESCRIPTOR.message_types_by_name['Receipt'] = _RECEIPT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-AraId = _reflection.GeneratedProtocolMessageType('AraId', (_message.Message,), dict(
-  DESCRIPTOR = _ARAID,
-  __module__ = 'messages_pb2'
-  # @@protoc_insertion_point(class_scope:messages.AraId)
-  ))
-_sym_db.RegisterMessage(AraId)
 
 Signature = _reflection.GeneratedProtocolMessageType('Signature', (_message.Message,), dict(
   DESCRIPTOR = _SIGNATURE,

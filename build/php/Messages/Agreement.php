@@ -10,7 +10,7 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- * An abstract agreement between two peers (a farmer and a requester) 
+ * An abstract agreement between two peers (a farmer and a requester)
  * spelling out the terms of a task.
  *
  * Generated from protobuf message <code>messages.Agreement</code>
@@ -26,21 +26,29 @@ class Agreement extends \Google\Protobuf\Internal\Message
      */
     private $quote = null;
     /**
-     * Generated from protobuf field <code>.messages.Signature requester_signature = 3;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 3;</code>
      */
-    private $requester_signature = null;
+    private $signature = null;
     /**
-     * Generated from protobuf field <code>.messages.Signature farmer_signature = 4;</code>
-     */
-    private $farmer_signature = null;
-    /**
-     * Generated from protobuf field <code>bytes data = 5;</code>
+     * Generated from protobuf field <code>bytes data = 4;</code>
      */
     private $data = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $nonce
+     *     @type \Messages\Quote $quote
+     *     @type \Messages\Signature $signature
+     *     @type string $data
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -88,51 +96,29 @@ class Agreement extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.messages.Signature requester_signature = 3;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 3;</code>
      * @return \Messages\Signature
      */
-    public function getRequesterSignature()
+    public function getSignature()
     {
-        return $this->requester_signature;
+        return $this->signature;
     }
 
     /**
-     * Generated from protobuf field <code>.messages.Signature requester_signature = 3;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 3;</code>
      * @param \Messages\Signature $var
      * @return $this
      */
-    public function setRequesterSignature($var)
+    public function setSignature($var)
     {
         GPBUtil::checkMessage($var, \Messages\Signature::class);
-        $this->requester_signature = $var;
+        $this->signature = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>.messages.Signature farmer_signature = 4;</code>
-     * @return \Messages\Signature
-     */
-    public function getFarmerSignature()
-    {
-        return $this->farmer_signature;
-    }
-
-    /**
-     * Generated from protobuf field <code>.messages.Signature farmer_signature = 4;</code>
-     * @param \Messages\Signature $var
-     * @return $this
-     */
-    public function setFarmerSignature($var)
-    {
-        GPBUtil::checkMessage($var, \Messages\Signature::class);
-        $this->farmer_signature = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>bytes data = 5;</code>
+     * Generated from protobuf field <code>bytes data = 4;</code>
      * @return string
      */
     public function getData()
@@ -141,7 +127,7 @@ class Agreement extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bytes data = 5;</code>
+     * Generated from protobuf field <code>bytes data = 4;</code>
      * @param string $var
      * @return $this
      */

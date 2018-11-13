@@ -7,7 +7,6 @@ const {
   Reward,
   Quote,
   SOW,
-  AraId,
   Signature
 } = messages
 
@@ -15,56 +14,46 @@ const testString = 'testString'
 const testBytes = Buffer.from(testString, 'ascii')
 const testNumber = 42
 
-const id = new AraId()
-id.setDid(testString)
-
 const sig = new Signature()
-sig.setAraId(id)
+sig.setDid(testString)
 sig.setData(testBytes)
 
 const sow = new SOW()
 sow.setNonce(testBytes)
+sow.setTopic(testString)
 sow.setData(testBytes)
-sow.setRequester(id)
+sow.setSignature(sig)
 sow.setWorkUnit(testString)
 
 const quote = new Quote()
 quote.setNonce(testBytes)
 quote.setSow(sow)
-quote.setFarmer(id)
+quote.setSignature(sig)
 quote.setPerUnitCost(testNumber)
 
 const agreement = new Agreement()
 agreement.setNonce(testBytes)
 agreement.setData(testBytes)
 agreement.setQuote(quote)
-agreement.setRequesterSignature(sig)
-agreement.setFarmerSignature(sig)
+agreement.setSignature(sig)
 
 const reward = new Reward()
 reward.setNonce(testBytes)
 reward.setData(testBytes)
 reward.setAgreement(agreement)
 reward.setAmount(testNumber)
-reward.setRequesterSignature(sig)
+reward.setSignature(sig)
 
 const receipt = new Receipt()
 receipt.setNonce(testBytes)
 receipt.setReward(reward)
-receipt.setFarmerSignature(sig)
-
-test('id', (t) => {
-  const bin = id.serializeBinary()
-  const debin = AraId.deserializeBinary(bin)
-
-  t.true(debin.getDid() === testString)
-})
+receipt.setSignature(sig)
 
 test('signature', (t) => {
   const bin = sig.serializeBinary()
   const debin = Signature.deserializeBinary(bin)
 
-  t.true(debin.getAraId().getDid() === testString)
+  t.true(debin.getDid() === testString)
   t.true(Buffer.from(debin.getData()).toString('ascii') === testString)
 })
 
@@ -74,8 +63,9 @@ test('sow', (t) => {
 
   t.true(Buffer.from(debin.getNonce()).toString('ascii') === testString)
   t.true(Buffer.from(debin.getData()).toString('ascii') === testString)
-  t.true(debin.getRequester().getDid() === testString)
+  t.true(debin.getSignature().getDid() === testString)
   t.true(debin.getWorkUnit() === testString)
+  t.true(debin.getTopic() === testString)
 })
 
 test('quote', (t) => {
@@ -84,7 +74,7 @@ test('quote', (t) => {
 
   t.true(Buffer.from(debin.getNonce()).toString('ascii') === testString)
   t.true(Buffer.from(debin.getSow().getNonce()).toString('ascii') === testString)
-  t.true(debin.getFarmer().getDid() === testString)
+  t.true(debin.getSignature().getDid() === testString)
   t.true(debin.getPerUnitCost() === testNumber)
 })
 
@@ -95,8 +85,7 @@ test('agreement', (t) => {
   t.true(Buffer.from(debin.getNonce()).toString('ascii') === testString)
   t.true(Buffer.from(debin.getData()).toString('ascii') === testString)
   t.true(Buffer.from(debin.getQuote().getNonce()).toString('ascii') === testString)
-  t.true(debin.getRequesterSignature().getAraId().getDid() === testString)
-  t.true(debin.getFarmerSignature().getAraId().getDid() === testString)
+  t.true(debin.getSignature().getDid() === testString)
 })
 
 test('reward', (t) => {
@@ -107,7 +96,7 @@ test('reward', (t) => {
   t.true(Buffer.from(debin.getData()).toString('ascii') === testString)
   t.true(Buffer.from(debin.getAgreement().getNonce()).toString('ascii') === testString)
   t.true(debin.getAmount() === testNumber)
-  t.true(debin.getRequesterSignature().getAraId().getDid() === testString)
+  t.true(debin.getSignature().getDid() === testString)
 })
 
 test('receipt', (t) => {
@@ -116,5 +105,5 @@ test('receipt', (t) => {
 
   t.true(Buffer.from(debin.getNonce()).toString('ascii') === testString)
   t.true(Buffer.from(debin.getReward().getNonce()).toString('ascii') === testString)
-  t.true(debin.getFarmerSignature().getAraId().getDid() === testString)
+  t.true(debin.getSignature().getDid() === testString)
 })
