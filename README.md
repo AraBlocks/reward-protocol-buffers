@@ -1,4 +1,4 @@
-<img src="https://github.com/arablocks/farming-protocol-buffers/blob/master/ara.png" width="30" height="30" /> farming-protocol-buffers
+<img src="https://github.com/arablocks/ara-module-template/blob/master/ara.png" width="30" height="30" /> farming-protocol-buffers
 ========
 
 [![Build Status](https://travis-ci.com/AraBlocks/farming-protocol-buffers.svg?token=6WjTyCg41y8MBmCzro5x&branch=master)](https://travis-ci.com/AraBlocks/farming-protocol-buffers)
@@ -34,6 +34,7 @@ A statement of work for a specific task.
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | nonce | bytes | Identifier for the SOW |
+| topic | string | The topic of interest |
 | work_unit | string | An individual unit of work (i.e GB, Frame, etc.) |
 | currency_unit | string | An individual unit of currency (i.e. Ara^-18, USD, wei, etc.) |
 | signature | [Signature](#signature) | The signature associated with a peer |

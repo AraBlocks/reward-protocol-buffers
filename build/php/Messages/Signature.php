@@ -16,37 +16,47 @@ use Google\Protobuf\Internal\GPBUtil;
 class Signature extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.messages.AraId ara_id = 1;</code>
+     * Generated from protobuf field <code>string did = 1;</code>
      */
-    private $ara_id = null;
+    private $did = '';
     /**
      * Generated from protobuf field <code>bytes data = 2;</code>
      */
     private $data = '';
 
-    public function __construct() {
-        \GPBMetadata\Messages::initOnce();
-        parent::__construct();
-    }
-
     /**
-     * Generated from protobuf field <code>.messages.AraId ara_id = 1;</code>
-     * @return \Messages\AraId
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $did
+     *     @type string $data
+     * }
      */
-    public function getAraId()
-    {
-        return $this->ara_id;
+    public function __construct($data = NULL) {
+        \GPBMetadata\Messages::initOnce();
+        parent::__construct($data);
     }
 
     /**
-     * Generated from protobuf field <code>.messages.AraId ara_id = 1;</code>
-     * @param \Messages\AraId $var
+     * Generated from protobuf field <code>string did = 1;</code>
+     * @return string
+     */
+    public function getDid()
+    {
+        return $this->did;
+    }
+
+    /**
+     * Generated from protobuf field <code>string did = 1;</code>
+     * @param string $var
      * @return $this
      */
-    public function setAraId($var)
+    public function setDid($var)
     {
-        GPBUtil::checkMessage($var, \Messages\AraId::class);
-        $this->ara_id = $var;
+        GPBUtil::checkString($var, True);
+        $this->did = $var;
 
         return $this;
     }

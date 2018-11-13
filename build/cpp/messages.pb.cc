@@ -7,7 +7,6 @@
 
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/stubs/port.h>
-#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
@@ -19,12 +18,15 @@
 #include "third_party/protobuf/version.h"
 #endif
 // @@protoc_insertion_point(includes)
+
+namespace protobuf_messages_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Signature;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_SOW;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Agreement;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Quote;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_messages_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Reward;
+}  // namespace protobuf_messages_2eproto
 namespace messages {
-class AraIdDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<AraId>
-      _instance;
-} _AraId_default_instance_;
 class SignatureDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Signature>
@@ -57,36 +59,9 @@ class ReceiptDefaultTypeInternal {
 } _Receipt_default_instance_;
 }  // namespace messages
 namespace protobuf_messages_2eproto {
-void InitDefaultsAraIdImpl() {
+static void InitDefaultsSignature() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::messages::_AraId_default_instance_;
-    new (ptr) ::messages::AraId();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::messages::AraId::InitAsDefaultInstance();
-}
-
-void InitDefaultsAraId() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAraIdImpl);
-}
-
-void InitDefaultsSignatureImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_messages_2eproto::InitDefaultsAraId();
   {
     void* ptr = &::messages::_Signature_default_instance_;
     new (ptr) ::messages::Signature();
@@ -95,20 +70,12 @@ void InitDefaultsSignatureImpl() {
   ::messages::Signature::InitAsDefaultInstance();
 }
 
-void InitDefaultsSignature() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsSignatureImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_Signature =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsSignature}, {}};
 
-void InitDefaultsSOWImpl() {
+static void InitDefaultsSOW() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_messages_2eproto::InitDefaultsAraId();
   {
     void* ptr = &::messages::_SOW_default_instance_;
     new (ptr) ::messages::SOW();
@@ -117,21 +84,13 @@ void InitDefaultsSOWImpl() {
   ::messages::SOW::InitAsDefaultInstance();
 }
 
-void InitDefaultsSOW() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsSOWImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_SOW =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSOW}, {
+      &protobuf_messages_2eproto::scc_info_Signature.base,}};
 
-void InitDefaultsQuoteImpl() {
+static void InitDefaultsQuote() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_messages_2eproto::InitDefaultsSOW();
-  protobuf_messages_2eproto::InitDefaultsAraId();
   {
     void* ptr = &::messages::_Quote_default_instance_;
     new (ptr) ::messages::Quote();
@@ -140,21 +99,14 @@ void InitDefaultsQuoteImpl() {
   ::messages::Quote::InitAsDefaultInstance();
 }
 
-void InitDefaultsQuote() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsQuoteImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_Quote =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsQuote}, {
+      &protobuf_messages_2eproto::scc_info_SOW.base,
+      &protobuf_messages_2eproto::scc_info_Signature.base,}};
 
-void InitDefaultsAgreementImpl() {
+static void InitDefaultsAgreement() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_messages_2eproto::InitDefaultsQuote();
-  protobuf_messages_2eproto::InitDefaultsSignature();
   {
     void* ptr = &::messages::_Agreement_default_instance_;
     new (ptr) ::messages::Agreement();
@@ -163,21 +115,14 @@ void InitDefaultsAgreementImpl() {
   ::messages::Agreement::InitAsDefaultInstance();
 }
 
-void InitDefaultsAgreement() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAgreementImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_Agreement =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsAgreement}, {
+      &protobuf_messages_2eproto::scc_info_Quote.base,
+      &protobuf_messages_2eproto::scc_info_Signature.base,}};
 
-void InitDefaultsRewardImpl() {
+static void InitDefaultsReward() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_messages_2eproto::InitDefaultsAgreement();
-  protobuf_messages_2eproto::InitDefaultsSignature();
   {
     void* ptr = &::messages::_Reward_default_instance_;
     new (ptr) ::messages::Reward();
@@ -186,21 +131,14 @@ void InitDefaultsRewardImpl() {
   ::messages::Reward::InitAsDefaultInstance();
 }
 
-void InitDefaultsReward() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRewardImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_Reward =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsReward}, {
+      &protobuf_messages_2eproto::scc_info_Agreement.base,
+      &protobuf_messages_2eproto::scc_info_Signature.base,}};
 
-void InitDefaultsReceiptImpl() {
+static void InitDefaultsReceipt() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_messages_2eproto::InitDefaultsReward();
-  protobuf_messages_2eproto::InitDefaultsSignature();
   {
     void* ptr = &::messages::_Receipt_default_instance_;
     new (ptr) ::messages::Receipt();
@@ -209,26 +147,29 @@ void InitDefaultsReceiptImpl() {
   ::messages::Receipt::InitAsDefaultInstance();
 }
 
-void InitDefaultsReceipt() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsReceiptImpl);
+::google::protobuf::internal::SCCInfo<2> scc_info_Receipt =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsReceipt}, {
+      &protobuf_messages_2eproto::scc_info_Reward.base,
+      &protobuf_messages_2eproto::scc_info_Signature.base,}};
+
+void InitDefaults() {
+  ::google::protobuf::internal::InitSCC(&scc_info_Signature.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_SOW.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Quote.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Agreement.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Reward.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Receipt.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[7];
+::google::protobuf::Metadata file_level_metadata[6];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::AraId, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::AraId, did_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Signature, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Signature, ara_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Signature, did_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Signature, data_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, _internal_metadata_),
@@ -236,10 +177,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, nonce_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, topic_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, work_unit_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, requester_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, data_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, currency_unit_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, signature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::SOW, data_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Quote, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -248,7 +190,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Quote, nonce_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Quote, per_unit_cost_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Quote, sow_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Quote, farmer_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Quote, signature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Quote, data_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Agreement, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -256,8 +199,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Agreement, nonce_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Agreement, quote_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Agreement, requester_signature_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Agreement, farmer_signature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Agreement, signature_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Agreement, data_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Reward, _internal_metadata_),
@@ -267,7 +209,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Reward, nonce_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Reward, agreement_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Reward, amount_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Reward, requester_signature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Reward, signature_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Reward, data_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Receipt, _internal_metadata_),
@@ -276,20 +218,18 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Receipt, nonce_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Receipt, reward_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Receipt, farmer_signature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::messages::Receipt, signature_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::messages::AraId)},
-  { 6, -1, sizeof(::messages::Signature)},
-  { 13, -1, sizeof(::messages::SOW)},
-  { 23, -1, sizeof(::messages::Quote)},
-  { 32, -1, sizeof(::messages::Agreement)},
-  { 42, -1, sizeof(::messages::Reward)},
-  { 52, -1, sizeof(::messages::Receipt)},
+  { 0, -1, sizeof(::messages::Signature)},
+  { 7, -1, sizeof(::messages::SOW)},
+  { 18, -1, sizeof(::messages::Quote)},
+  { 28, -1, sizeof(::messages::Agreement)},
+  { 37, -1, sizeof(::messages::Reward)},
+  { 47, -1, sizeof(::messages::Receipt)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::messages::_AraId_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::messages::_Signature_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::messages::_SOW_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::messages::_Quote_default_instance_),
@@ -300,56 +240,53 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 
 void protobuf_AssignDescriptors() {
   AddDescriptors();
-  ::google::protobuf::MessageFactory* factory = NULL;
   AssignDescriptors(
-      "messages.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      "messages.proto", schemas, file_default_instances, TableStruct::offsets,
       file_level_metadata, NULL, NULL);
 }
 
 void protobuf_AssignDescriptorsOnce() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
 }
 
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 7);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
 }
 
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\016messages.proto\022\010messages\"\024\n\005AraId\022\013\n\003d"
-      "id\030\001 \001(\t\":\n\tSignature\022\037\n\006ara_id\030\001 \001(\0132\017."
-      "messages.AraId\022\014\n\004data\030\002 \001(\014\"p\n\003SOW\022\r\n\005n"
-      "once\030\001 \001(\014\022\021\n\twork_unit\030\002 \001(\t\022\"\n\trequest"
-      "er\030\003 \001(\0132\017.messages.AraId\022\014\n\004data\030\004 \001(\014\022"
-      "\025\n\rcurrency_unit\030\005 \001(\t\"j\n\005Quote\022\r\n\005nonce"
-      "\030\001 \001(\014\022\025\n\rper_unit_cost\030\002 \001(\003\022\032\n\003sow\030\003 \001"
-      "(\0132\r.messages.SOW\022\037\n\006farmer\030\004 \001(\0132\017.mess"
-      "ages.AraId\"\251\001\n\tAgreement\022\r\n\005nonce\030\001 \001(\014\022"
-      "\036\n\005quote\030\002 \001(\0132\017.messages.Quote\0220\n\023reque"
-      "ster_signature\030\003 \001(\0132\023.messages.Signatur"
-      "e\022-\n\020farmer_signature\030\004 \001(\0132\023.messages.S"
-      "ignature\022\014\n\004data\030\005 \001(\014\"\217\001\n\006Reward\022\r\n\005non"
-      "ce\030\001 \001(\014\022&\n\tagreement\030\002 \001(\0132\023.messages.A"
-      "greement\022\016\n\006amount\030\003 \001(\003\0220\n\023requester_si"
-      "gnature\030\004 \001(\0132\023.messages.Signature\022\014\n\004da"
-      "ta\030\005 \001(\014\"i\n\007Receipt\022\r\n\005nonce\030\001 \001(\014\022 \n\006re"
-      "ward\030\002 \001(\0132\020.messages.Reward\022-\n\020farmer_s"
-      "ignature\030\003 \001(\0132\023.messages.Signatureb\006pro"
-      "to3"
+      "\n\016messages.proto\022\010messages\"&\n\tSignature\022"
+      "\013\n\003did\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\203\001\n\003SOW\022\r\n\005no"
+      "nce\030\001 \001(\014\022\r\n\005topic\030\002 \001(\t\022\021\n\twork_unit\030\003 "
+      "\001(\t\022\025\n\rcurrency_unit\030\004 \001(\t\022&\n\tsignature\030"
+      "\005 \001(\0132\023.messages.Signature\022\014\n\004data\030\006 \001(\014"
+      "\"\177\n\005Quote\022\r\n\005nonce\030\001 \001(\014\022\025\n\rper_unit_cos"
+      "t\030\002 \001(\003\022\032\n\003sow\030\003 \001(\0132\r.messages.SOW\022&\n\ts"
+      "ignature\030\004 \001(\0132\023.messages.Signature\022\014\n\004d"
+      "ata\030\005 \001(\014\"p\n\tAgreement\022\r\n\005nonce\030\001 \001(\014\022\036\n"
+      "\005quote\030\002 \001(\0132\017.messages.Quote\022&\n\tsignatu"
+      "re\030\003 \001(\0132\023.messages.Signature\022\014\n\004data\030\004 "
+      "\001(\014\"\205\001\n\006Reward\022\r\n\005nonce\030\001 \001(\014\022&\n\tagreeme"
+      "nt\030\002 \001(\0132\023.messages.Agreement\022\016\n\006amount\030"
+      "\003 \001(\003\022&\n\tsignature\030\004 \001(\0132\023.messages.Sign"
+      "ature\022\014\n\004data\030\005 \001(\014\"b\n\007Receipt\022\r\n\005nonce\030"
+      "\001 \001(\014\022 \n\006reward\030\002 \001(\0132\020.messages.Reward\022"
+      "&\n\tsignature\030\003 \001(\0132\023.messages.Signatureb"
+      "\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 763);
+      descriptor, 687);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messages.proto", &protobuf_RegisterTypes);
 }
 
 void AddDescriptors() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
 }
 // Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
@@ -362,86 +299,82 @@ namespace messages {
 
 // ===================================================================
 
-void AraId::InitAsDefaultInstance() {
+void Signature::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int AraId::kDidFieldNumber;
+const int Signature::kDidFieldNumber;
+const int Signature::kDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-AraId::AraId()
+Signature::Signature()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_messages_2eproto::InitDefaultsAraId();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_Signature.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:messages.AraId)
+  // @@protoc_insertion_point(constructor:messages.Signature)
 }
-AraId::AraId(const AraId& from)
+Signature::Signature(const Signature& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   did_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.did().size() > 0) {
     did_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.did_);
   }
-  // @@protoc_insertion_point(copy_constructor:messages.AraId)
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.data().size() > 0) {
+    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  }
+  // @@protoc_insertion_point(copy_constructor:messages.Signature)
 }
 
-void AraId::SharedCtor() {
+void Signature::SharedCtor() {
   did_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-AraId::~AraId() {
-  // @@protoc_insertion_point(destructor:messages.AraId)
+Signature::~Signature() {
+  // @@protoc_insertion_point(destructor:messages.Signature)
   SharedDtor();
 }
 
-void AraId::SharedDtor() {
+void Signature::SharedDtor() {
   did_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void AraId::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+void Signature::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* AraId::descriptor() {
+const ::google::protobuf::Descriptor* Signature::descriptor() {
   ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_messages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const AraId& AraId::default_instance() {
-  ::protobuf_messages_2eproto::InitDefaultsAraId();
+const Signature& Signature::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_Signature.base);
   return *internal_default_instance();
 }
 
-AraId* AraId::New(::google::protobuf::Arena* arena) const {
-  AraId* n = new AraId;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
-void AraId::Clear() {
-// @@protoc_insertion_point(message_clear_start:messages.AraId)
+void Signature::Clear() {
+// @@protoc_insertion_point(message_clear_start:messages.Signature)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   did_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
-bool AraId::MergePartialFromCodedStream(
+bool Signature::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:messages.AraId)
+  // @@protoc_insertion_point(parse_start:messages.Signature)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -454,273 +387,7 @@ bool AraId::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->did().data(), static_cast<int>(this->did().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "messages.AraId.did"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:messages.AraId)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:messages.AraId)
-  return false;
-#undef DO_
-}
-
-void AraId::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:messages.AraId)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string did = 1;
-  if (this->did().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->did().data(), static_cast<int>(this->did().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "messages.AraId.did");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->did(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:messages.AraId)
-}
-
-::google::protobuf::uint8* AraId::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:messages.AraId)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string did = 1;
-  if (this->did().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->did().data(), static_cast<int>(this->did().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "messages.AraId.did");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->did(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:messages.AraId)
-  return target;
-}
-
-size_t AraId::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:messages.AraId)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // string did = 1;
-  if (this->did().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->did());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void AraId::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:messages.AraId)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AraId* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const AraId>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:messages.AraId)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:messages.AraId)
-    MergeFrom(*source);
-  }
-}
-
-void AraId::MergeFrom(const AraId& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:messages.AraId)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.did().size() > 0) {
-
-    did_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.did_);
-  }
-}
-
-void AraId::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:messages.AraId)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AraId::CopyFrom(const AraId& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:messages.AraId)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AraId::IsInitialized() const {
-  return true;
-}
-
-void AraId::Swap(AraId* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void AraId::InternalSwap(AraId* other) {
-  using std::swap;
-  did_.Swap(&other->did_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata AraId::GetMetadata() const {
-  protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_messages_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void Signature::InitAsDefaultInstance() {
-  ::messages::_Signature_default_instance_._instance.get_mutable()->ara_id_ = const_cast< ::messages::AraId*>(
-      ::messages::AraId::internal_default_instance());
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Signature::kAraIdFieldNumber;
-const int Signature::kDataFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Signature::Signature()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_messages_2eproto::InitDefaultsSignature();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:messages.Signature)
-}
-Signature::Signature(const Signature& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.data().size() > 0) {
-    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
-  }
-  if (from.has_ara_id()) {
-    ara_id_ = new ::messages::AraId(*from.ara_id_);
-  } else {
-    ara_id_ = NULL;
-  }
-  // @@protoc_insertion_point(copy_constructor:messages.Signature)
-}
-
-void Signature::SharedCtor() {
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ara_id_ = NULL;
-  _cached_size_ = 0;
-}
-
-Signature::~Signature() {
-  // @@protoc_insertion_point(destructor:messages.Signature)
-  SharedDtor();
-}
-
-void Signature::SharedDtor() {
-  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete ara_id_;
-}
-
-void Signature::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* Signature::descriptor() {
-  ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_messages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const Signature& Signature::default_instance() {
-  ::protobuf_messages_2eproto::InitDefaultsSignature();
-  return *internal_default_instance();
-}
-
-Signature* Signature::New(::google::protobuf::Arena* arena) const {
-  Signature* n = new Signature;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void Signature::Clear() {
-// @@protoc_insertion_point(message_clear_start:messages.Signature)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && ara_id_ != NULL) {
-    delete ara_id_;
-  }
-  ara_id_ = NULL;
-  _internal_metadata_.Clear();
-}
-
-bool Signature::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:messages.Signature)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .messages.AraId ara_id = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ara_id()));
+            "messages.Signature.did"));
         } else {
           goto handle_unusual;
         }
@@ -765,10 +432,14 @@ void Signature::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .messages.AraId ara_id = 1;
-  if (this->has_ara_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->ara_id_, output);
+  // string did = 1;
+  if (this->did().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->did().data(), static_cast<int>(this->did().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "messages.Signature.did");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->did(), output);
   }
 
   // bytes data = 2;
@@ -791,11 +462,15 @@ void Signature::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .messages.AraId ara_id = 1;
-  if (this->has_ara_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, *this->ara_id_, deterministic, target);
+  // string did = 1;
+  if (this->did().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->did().data(), static_cast<int>(this->did().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "messages.Signature.did");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->did(), target);
   }
 
   // bytes data = 2;
@@ -822,6 +497,13 @@ size_t Signature::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
+  // string did = 1;
+  if (this->did().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->did());
+  }
+
   // bytes data = 2;
   if (this->data().size() > 0) {
     total_size += 1 +
@@ -829,17 +511,8 @@ size_t Signature::ByteSizeLong() const {
         this->data());
   }
 
-  // .messages.AraId ara_id = 1;
-  if (this->has_ara_id()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->ara_id_);
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -865,12 +538,13 @@ void Signature::MergeFrom(const Signature& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.did().size() > 0) {
+
+    did_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.did_);
+  }
   if (from.data().size() > 0) {
 
     data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
-  }
-  if (from.has_ara_id()) {
-    mutable_ara_id()->::messages::AraId::MergeFrom(from.ara_id());
   }
 }
 
@@ -898,10 +572,11 @@ void Signature::Swap(Signature* other) {
 }
 void Signature::InternalSwap(Signature* other) {
   using std::swap;
-  data_.Swap(&other->data_);
-  swap(ara_id_, other->ara_id_);
+  did_.Swap(&other->did_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Signature::GetMetadata() const {
@@ -913,61 +588,64 @@ void Signature::InternalSwap(Signature* other) {
 // ===================================================================
 
 void SOW::InitAsDefaultInstance() {
-  ::messages::_SOW_default_instance_._instance.get_mutable()->requester_ = const_cast< ::messages::AraId*>(
-      ::messages::AraId::internal_default_instance());
+  ::messages::_SOW_default_instance_._instance.get_mutable()->signature_ = const_cast< ::messages::Signature*>(
+      ::messages::Signature::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SOW::kNonceFieldNumber;
+const int SOW::kTopicFieldNumber;
 const int SOW::kWorkUnitFieldNumber;
-const int SOW::kRequesterFieldNumber;
-const int SOW::kDataFieldNumber;
 const int SOW::kCurrencyUnitFieldNumber;
+const int SOW::kSignatureFieldNumber;
+const int SOW::kDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 SOW::SOW()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_messages_2eproto::InitDefaultsSOW();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_SOW.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:messages.SOW)
 }
 SOW::SOW(const SOW& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.nonce().size() > 0) {
     nonce_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nonce_);
   }
+  topic_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.topic().size() > 0) {
+    topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
+  }
   work_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.work_unit().size() > 0) {
     work_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.work_unit_);
-  }
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.data().size() > 0) {
-    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
   currency_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.currency_unit().size() > 0) {
     currency_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.currency_unit_);
   }
-  if (from.has_requester()) {
-    requester_ = new ::messages::AraId(*from.requester_);
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.data().size() > 0) {
+    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  }
+  if (from.has_signature()) {
+    signature_ = new ::messages::Signature(*from.signature_);
   } else {
-    requester_ = NULL;
+    signature_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:messages.SOW)
 }
 
 void SOW::SharedCtor() {
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   work_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   currency_unit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  requester_ = NULL;
-  _cached_size_ = 0;
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  signature_ = NULL;
 }
 
 SOW::~SOW() {
@@ -977,16 +655,15 @@ SOW::~SOW() {
 
 void SOW::SharedDtor() {
   nonce_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   work_unit_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   currency_unit_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete requester_;
+  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete signature_;
 }
 
 void SOW::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* SOW::descriptor() {
   ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
@@ -994,17 +671,10 @@ const ::google::protobuf::Descriptor* SOW::descriptor() {
 }
 
 const SOW& SOW::default_instance() {
-  ::protobuf_messages_2eproto::InitDefaultsSOW();
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_SOW.base);
   return *internal_default_instance();
 }
 
-SOW* SOW::New(::google::protobuf::Arena* arena) const {
-  SOW* n = new SOW;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void SOW::Clear() {
 // @@protoc_insertion_point(message_clear_start:messages.SOW)
@@ -1013,13 +683,14 @@ void SOW::Clear() {
   (void) cached_has_bits;
 
   nonce_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  topic_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   work_unit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   currency_unit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && requester_ != NULL) {
-    delete requester_;
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == NULL && signature_ != NULL) {
+    delete signature_;
   }
-  requester_ = NULL;
+  signature_ = NULL;
   _internal_metadata_.Clear();
 }
 
@@ -1029,7 +700,7 @@ bool SOW::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:messages.SOW)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -1045,10 +716,26 @@ bool SOW::MergePartialFromCodedStream(
         break;
       }
 
-      // string work_unit = 2;
+      // string topic = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_topic()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->topic().data(), static_cast<int>(this->topic().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "messages.SOW.topic"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string work_unit = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_work_unit()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1061,40 +748,40 @@ bool SOW::MergePartialFromCodedStream(
         break;
       }
 
-      // .messages.AraId requester = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_requester()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes data = 4;
+      // string currency_unit = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string currency_unit = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_currency_unit()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->currency_unit().data(), static_cast<int>(this->currency_unit().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "messages.SOW.currency_unit"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .messages.Signature signature = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_signature()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes data = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_data()));
         } else {
           goto handle_unusual;
         }
@@ -1133,36 +820,46 @@ void SOW::SerializeWithCachedSizes(
       1, this->nonce(), output);
   }
 
-  // string work_unit = 2;
+  // string topic = 2;
+  if (this->topic().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->topic().data(), static_cast<int>(this->topic().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "messages.SOW.topic");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->topic(), output);
+  }
+
+  // string work_unit = 3;
   if (this->work_unit().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->work_unit().data(), static_cast<int>(this->work_unit().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "messages.SOW.work_unit");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->work_unit(), output);
+      3, this->work_unit(), output);
   }
 
-  // .messages.AraId requester = 3;
-  if (this->has_requester()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->requester_, output);
-  }
-
-  // bytes data = 4;
-  if (this->data().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      4, this->data(), output);
-  }
-
-  // string currency_unit = 5;
+  // string currency_unit = 4;
   if (this->currency_unit().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->currency_unit().data(), static_cast<int>(this->currency_unit().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "messages.SOW.currency_unit");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->currency_unit(), output);
+      4, this->currency_unit(), output);
+  }
+
+  // .messages.Signature signature = 5;
+  if (this->has_signature()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, this->_internal_signature(), output);
+  }
+
+  // bytes data = 6;
+  if (this->data().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      6, this->data(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1186,7 +883,18 @@ void SOW::SerializeWithCachedSizes(
         1, this->nonce(), target);
   }
 
-  // string work_unit = 2;
+  // string topic = 2;
+  if (this->topic().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->topic().data(), static_cast<int>(this->topic().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "messages.SOW.topic");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->topic(), target);
+  }
+
+  // string work_unit = 3;
   if (this->work_unit().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->work_unit().data(), static_cast<int>(this->work_unit().length()),
@@ -1194,24 +902,10 @@ void SOW::SerializeWithCachedSizes(
       "messages.SOW.work_unit");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->work_unit(), target);
+        3, this->work_unit(), target);
   }
 
-  // .messages.AraId requester = 3;
-  if (this->has_requester()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, *this->requester_, deterministic, target);
-  }
-
-  // bytes data = 4;
-  if (this->data().size() > 0) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        4, this->data(), target);
-  }
-
-  // string currency_unit = 5;
+  // string currency_unit = 4;
   if (this->currency_unit().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->currency_unit().data(), static_cast<int>(this->currency_unit().length()),
@@ -1219,7 +913,21 @@ void SOW::SerializeWithCachedSizes(
       "messages.SOW.currency_unit");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        5, this->currency_unit(), target);
+        4, this->currency_unit(), target);
+  }
+
+  // .messages.Signature signature = 5;
+  if (this->has_signature()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, this->_internal_signature(), deterministic, target);
+  }
+
+  // bytes data = 6;
+  if (this->data().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        6, this->data(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1246,38 +954,43 @@ size_t SOW::ByteSizeLong() const {
         this->nonce());
   }
 
-  // string work_unit = 2;
+  // string topic = 2;
+  if (this->topic().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->topic());
+  }
+
+  // string work_unit = 3;
   if (this->work_unit().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->work_unit());
   }
 
-  // bytes data = 4;
-  if (this->data().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->data());
-  }
-
-  // string currency_unit = 5;
+  // string currency_unit = 4;
   if (this->currency_unit().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->currency_unit());
   }
 
-  // .messages.AraId requester = 3;
-  if (this->has_requester()) {
+  // bytes data = 6;
+  if (this->data().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->data());
+  }
+
+  // .messages.Signature signature = 5;
+  if (this->has_signature()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->requester_);
+        *signature_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1307,20 +1020,24 @@ void SOW::MergeFrom(const SOW& from) {
 
     nonce_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nonce_);
   }
+  if (from.topic().size() > 0) {
+
+    topic_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.topic_);
+  }
   if (from.work_unit().size() > 0) {
 
     work_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.work_unit_);
-  }
-  if (from.data().size() > 0) {
-
-    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
   if (from.currency_unit().size() > 0) {
 
     currency_unit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.currency_unit_);
   }
-  if (from.has_requester()) {
-    mutable_requester()->::messages::AraId::MergeFrom(from.requester());
+  if (from.data().size() > 0) {
+
+    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  }
+  if (from.has_signature()) {
+    mutable_signature()->::messages::Signature::MergeFrom(from.signature());
   }
 }
 
@@ -1348,13 +1065,18 @@ void SOW::Swap(SOW* other) {
 }
 void SOW::InternalSwap(SOW* other) {
   using std::swap;
-  nonce_.Swap(&other->nonce_);
-  work_unit_.Swap(&other->work_unit_);
-  data_.Swap(&other->data_);
-  currency_unit_.Swap(&other->currency_unit_);
-  swap(requester_, other->requester_);
+  nonce_.Swap(&other->nonce_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  topic_.Swap(&other->topic_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  work_unit_.Swap(&other->work_unit_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  currency_unit_.Swap(&other->currency_unit_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(signature_, other->signature_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SOW::GetMetadata() const {
@@ -1368,42 +1090,45 @@ void SOW::InternalSwap(SOW* other) {
 void Quote::InitAsDefaultInstance() {
   ::messages::_Quote_default_instance_._instance.get_mutable()->sow_ = const_cast< ::messages::SOW*>(
       ::messages::SOW::internal_default_instance());
-  ::messages::_Quote_default_instance_._instance.get_mutable()->farmer_ = const_cast< ::messages::AraId*>(
-      ::messages::AraId::internal_default_instance());
+  ::messages::_Quote_default_instance_._instance.get_mutable()->signature_ = const_cast< ::messages::Signature*>(
+      ::messages::Signature::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Quote::kNonceFieldNumber;
 const int Quote::kPerUnitCostFieldNumber;
 const int Quote::kSowFieldNumber;
-const int Quote::kFarmerFieldNumber;
+const int Quote::kSignatureFieldNumber;
+const int Quote::kDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Quote::Quote()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_messages_2eproto::InitDefaultsQuote();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_Quote.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:messages.Quote)
 }
 Quote::Quote(const Quote& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.nonce().size() > 0) {
     nonce_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nonce_);
+  }
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.data().size() > 0) {
+    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
   if (from.has_sow()) {
     sow_ = new ::messages::SOW(*from.sow_);
   } else {
     sow_ = NULL;
   }
-  if (from.has_farmer()) {
-    farmer_ = new ::messages::AraId(*from.farmer_);
+  if (from.has_signature()) {
+    signature_ = new ::messages::Signature(*from.signature_);
   } else {
-    farmer_ = NULL;
+    signature_ = NULL;
   }
   per_unit_cost_ = from.per_unit_cost_;
   // @@protoc_insertion_point(copy_constructor:messages.Quote)
@@ -1411,10 +1136,10 @@ Quote::Quote(const Quote& from)
 
 void Quote::SharedCtor() {
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&sow_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&per_unit_cost_) -
       reinterpret_cast<char*>(&sow_)) + sizeof(per_unit_cost_));
-  _cached_size_ = 0;
 }
 
 Quote::~Quote() {
@@ -1424,14 +1149,13 @@ Quote::~Quote() {
 
 void Quote::SharedDtor() {
   nonce_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete sow_;
-  if (this != internal_default_instance()) delete farmer_;
+  if (this != internal_default_instance()) delete signature_;
 }
 
 void Quote::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Quote::descriptor() {
   ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
@@ -1439,17 +1163,10 @@ const ::google::protobuf::Descriptor* Quote::descriptor() {
 }
 
 const Quote& Quote::default_instance() {
-  ::protobuf_messages_2eproto::InitDefaultsQuote();
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_Quote.base);
   return *internal_default_instance();
 }
 
-Quote* Quote::New(::google::protobuf::Arena* arena) const {
-  Quote* n = new Quote;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Quote::Clear() {
 // @@protoc_insertion_point(message_clear_start:messages.Quote)
@@ -1458,14 +1175,15 @@ void Quote::Clear() {
   (void) cached_has_bits;
 
   nonce_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && sow_ != NULL) {
     delete sow_;
   }
   sow_ = NULL;
-  if (GetArenaNoVirtual() == NULL && farmer_ != NULL) {
-    delete farmer_;
+  if (GetArenaNoVirtual() == NULL && signature_ != NULL) {
+    delete signature_;
   }
-  farmer_ = NULL;
+  signature_ = NULL;
   per_unit_cost_ = GOOGLE_LONGLONG(0);
   _internal_metadata_.Clear();
 }
@@ -1476,7 +1194,7 @@ bool Quote::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:messages.Quote)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -1518,12 +1236,24 @@ bool Quote::MergePartialFromCodedStream(
         break;
       }
 
-      // .messages.AraId farmer = 4;
+      // .messages.Signature signature = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_farmer()));
+               input, mutable_signature()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes data = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_data()));
         } else {
           goto handle_unusual;
         }
@@ -1570,13 +1300,19 @@ void Quote::SerializeWithCachedSizes(
   // .messages.SOW sow = 3;
   if (this->has_sow()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->sow_, output);
+      3, this->_internal_sow(), output);
   }
 
-  // .messages.AraId farmer = 4;
-  if (this->has_farmer()) {
+  // .messages.Signature signature = 4;
+  if (this->has_signature()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->farmer_, output);
+      4, this->_internal_signature(), output);
+  }
+
+  // bytes data = 5;
+  if (this->data().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      5, this->data(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1609,14 +1345,21 @@ void Quote::SerializeWithCachedSizes(
   if (this->has_sow()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->sow_, deterministic, target);
+        3, this->_internal_sow(), deterministic, target);
   }
 
-  // .messages.AraId farmer = 4;
-  if (this->has_farmer()) {
+  // .messages.Signature signature = 4;
+  if (this->has_signature()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        4, *this->farmer_, deterministic, target);
+        4, this->_internal_signature(), deterministic, target);
+  }
+
+  // bytes data = 5;
+  if (this->data().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        5, this->data(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1643,18 +1386,25 @@ size_t Quote::ByteSizeLong() const {
         this->nonce());
   }
 
+  // bytes data = 5;
+  if (this->data().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->data());
+  }
+
   // .messages.SOW sow = 3;
   if (this->has_sow()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->sow_);
+        *sow_);
   }
 
-  // .messages.AraId farmer = 4;
-  if (this->has_farmer()) {
+  // .messages.Signature signature = 4;
+  if (this->has_signature()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->farmer_);
+        *signature_);
   }
 
   // int64 per_unit_cost = 2;
@@ -1665,9 +1415,7 @@ size_t Quote::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1697,11 +1445,15 @@ void Quote::MergeFrom(const Quote& from) {
 
     nonce_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.nonce_);
   }
+  if (from.data().size() > 0) {
+
+    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  }
   if (from.has_sow()) {
     mutable_sow()->::messages::SOW::MergeFrom(from.sow());
   }
-  if (from.has_farmer()) {
-    mutable_farmer()->::messages::AraId::MergeFrom(from.farmer());
+  if (from.has_signature()) {
+    mutable_signature()->::messages::Signature::MergeFrom(from.signature());
   }
   if (from.per_unit_cost() != 0) {
     set_per_unit_cost(from.per_unit_cost());
@@ -1732,12 +1484,14 @@ void Quote::Swap(Quote* other) {
 }
 void Quote::InternalSwap(Quote* other) {
   using std::swap;
-  nonce_.Swap(&other->nonce_);
+  nonce_.Swap(&other->nonce_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(sow_, other->sow_);
-  swap(farmer_, other->farmer_);
+  swap(signature_, other->signature_);
   swap(per_unit_cost_, other->per_unit_cost_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Quote::GetMetadata() const {
@@ -1751,31 +1505,26 @@ void Quote::InternalSwap(Quote* other) {
 void Agreement::InitAsDefaultInstance() {
   ::messages::_Agreement_default_instance_._instance.get_mutable()->quote_ = const_cast< ::messages::Quote*>(
       ::messages::Quote::internal_default_instance());
-  ::messages::_Agreement_default_instance_._instance.get_mutable()->requester_signature_ = const_cast< ::messages::Signature*>(
-      ::messages::Signature::internal_default_instance());
-  ::messages::_Agreement_default_instance_._instance.get_mutable()->farmer_signature_ = const_cast< ::messages::Signature*>(
+  ::messages::_Agreement_default_instance_._instance.get_mutable()->signature_ = const_cast< ::messages::Signature*>(
       ::messages::Signature::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Agreement::kNonceFieldNumber;
 const int Agreement::kQuoteFieldNumber;
-const int Agreement::kRequesterSignatureFieldNumber;
-const int Agreement::kFarmerSignatureFieldNumber;
+const int Agreement::kSignatureFieldNumber;
 const int Agreement::kDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Agreement::Agreement()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_messages_2eproto::InitDefaultsAgreement();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_Agreement.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:messages.Agreement)
 }
 Agreement::Agreement(const Agreement& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.nonce().size() > 0) {
@@ -1790,15 +1539,10 @@ Agreement::Agreement(const Agreement& from)
   } else {
     quote_ = NULL;
   }
-  if (from.has_requester_signature()) {
-    requester_signature_ = new ::messages::Signature(*from.requester_signature_);
+  if (from.has_signature()) {
+    signature_ = new ::messages::Signature(*from.signature_);
   } else {
-    requester_signature_ = NULL;
-  }
-  if (from.has_farmer_signature()) {
-    farmer_signature_ = new ::messages::Signature(*from.farmer_signature_);
-  } else {
-    farmer_signature_ = NULL;
+    signature_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:messages.Agreement)
 }
@@ -1807,9 +1551,8 @@ void Agreement::SharedCtor() {
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&quote_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&farmer_signature_) -
-      reinterpret_cast<char*>(&quote_)) + sizeof(farmer_signature_));
-  _cached_size_ = 0;
+      reinterpret_cast<char*>(&signature_) -
+      reinterpret_cast<char*>(&quote_)) + sizeof(signature_));
 }
 
 Agreement::~Agreement() {
@@ -1821,14 +1564,11 @@ void Agreement::SharedDtor() {
   nonce_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete quote_;
-  if (this != internal_default_instance()) delete requester_signature_;
-  if (this != internal_default_instance()) delete farmer_signature_;
+  if (this != internal_default_instance()) delete signature_;
 }
 
 void Agreement::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Agreement::descriptor() {
   ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
@@ -1836,17 +1576,10 @@ const ::google::protobuf::Descriptor* Agreement::descriptor() {
 }
 
 const Agreement& Agreement::default_instance() {
-  ::protobuf_messages_2eproto::InitDefaultsAgreement();
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_Agreement.base);
   return *internal_default_instance();
 }
 
-Agreement* Agreement::New(::google::protobuf::Arena* arena) const {
-  Agreement* n = new Agreement;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Agreement::Clear() {
 // @@protoc_insertion_point(message_clear_start:messages.Agreement)
@@ -1860,14 +1593,10 @@ void Agreement::Clear() {
     delete quote_;
   }
   quote_ = NULL;
-  if (GetArenaNoVirtual() == NULL && requester_signature_ != NULL) {
-    delete requester_signature_;
+  if (GetArenaNoVirtual() == NULL && signature_ != NULL) {
+    delete signature_;
   }
-  requester_signature_ = NULL;
-  if (GetArenaNoVirtual() == NULL && farmer_signature_ != NULL) {
-    delete farmer_signature_;
-  }
-  farmer_signature_ = NULL;
+  signature_ = NULL;
   _internal_metadata_.Clear();
 }
 
@@ -1877,7 +1606,7 @@ bool Agreement::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:messages.Agreement)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -1905,34 +1634,22 @@ bool Agreement::MergePartialFromCodedStream(
         break;
       }
 
-      // .messages.Signature requester_signature = 3;
+      // .messages.Signature signature = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_requester_signature()));
+               input, mutable_signature()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .messages.Signature farmer_signature = 4;
+      // bytes data = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_farmer_signature()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes data = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_data()));
         } else {
@@ -1976,25 +1693,19 @@ void Agreement::SerializeWithCachedSizes(
   // .messages.Quote quote = 2;
   if (this->has_quote()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->quote_, output);
+      2, this->_internal_quote(), output);
   }
 
-  // .messages.Signature requester_signature = 3;
-  if (this->has_requester_signature()) {
+  // .messages.Signature signature = 3;
+  if (this->has_signature()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->requester_signature_, output);
+      3, this->_internal_signature(), output);
   }
 
-  // .messages.Signature farmer_signature = 4;
-  if (this->has_farmer_signature()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->farmer_signature_, output);
-  }
-
-  // bytes data = 5;
+  // bytes data = 4;
   if (this->data().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      5, this->data(), output);
+      4, this->data(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2022,28 +1733,21 @@ void Agreement::SerializeWithCachedSizes(
   if (this->has_quote()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->quote_, deterministic, target);
+        2, this->_internal_quote(), deterministic, target);
   }
 
-  // .messages.Signature requester_signature = 3;
-  if (this->has_requester_signature()) {
+  // .messages.Signature signature = 3;
+  if (this->has_signature()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->requester_signature_, deterministic, target);
+        3, this->_internal_signature(), deterministic, target);
   }
 
-  // .messages.Signature farmer_signature = 4;
-  if (this->has_farmer_signature()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, *this->farmer_signature_, deterministic, target);
-  }
-
-  // bytes data = 5;
+  // bytes data = 4;
   if (this->data().size() > 0) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        5, this->data(), target);
+        4, this->data(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2070,7 +1774,7 @@ size_t Agreement::ByteSizeLong() const {
         this->nonce());
   }
 
-  // bytes data = 5;
+  // bytes data = 4;
   if (this->data().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
@@ -2081,27 +1785,18 @@ size_t Agreement::ByteSizeLong() const {
   if (this->has_quote()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->quote_);
+        *quote_);
   }
 
-  // .messages.Signature requester_signature = 3;
-  if (this->has_requester_signature()) {
+  // .messages.Signature signature = 3;
+  if (this->has_signature()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->requester_signature_);
-  }
-
-  // .messages.Signature farmer_signature = 4;
-  if (this->has_farmer_signature()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->farmer_signature_);
+        *signature_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -2138,11 +1833,8 @@ void Agreement::MergeFrom(const Agreement& from) {
   if (from.has_quote()) {
     mutable_quote()->::messages::Quote::MergeFrom(from.quote());
   }
-  if (from.has_requester_signature()) {
-    mutable_requester_signature()->::messages::Signature::MergeFrom(from.requester_signature());
-  }
-  if (from.has_farmer_signature()) {
-    mutable_farmer_signature()->::messages::Signature::MergeFrom(from.farmer_signature());
+  if (from.has_signature()) {
+    mutable_signature()->::messages::Signature::MergeFrom(from.signature());
   }
 }
 
@@ -2170,13 +1862,13 @@ void Agreement::Swap(Agreement* other) {
 }
 void Agreement::InternalSwap(Agreement* other) {
   using std::swap;
-  nonce_.Swap(&other->nonce_);
-  data_.Swap(&other->data_);
+  nonce_.Swap(&other->nonce_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(quote_, other->quote_);
-  swap(requester_signature_, other->requester_signature_);
-  swap(farmer_signature_, other->farmer_signature_);
+  swap(signature_, other->signature_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Agreement::GetMetadata() const {
@@ -2190,29 +1882,27 @@ void Agreement::InternalSwap(Agreement* other) {
 void Reward::InitAsDefaultInstance() {
   ::messages::_Reward_default_instance_._instance.get_mutable()->agreement_ = const_cast< ::messages::Agreement*>(
       ::messages::Agreement::internal_default_instance());
-  ::messages::_Reward_default_instance_._instance.get_mutable()->requester_signature_ = const_cast< ::messages::Signature*>(
+  ::messages::_Reward_default_instance_._instance.get_mutable()->signature_ = const_cast< ::messages::Signature*>(
       ::messages::Signature::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Reward::kNonceFieldNumber;
 const int Reward::kAgreementFieldNumber;
 const int Reward::kAmountFieldNumber;
-const int Reward::kRequesterSignatureFieldNumber;
+const int Reward::kSignatureFieldNumber;
 const int Reward::kDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Reward::Reward()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_messages_2eproto::InitDefaultsReward();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_Reward.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:messages.Reward)
 }
 Reward::Reward(const Reward& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.nonce().size() > 0) {
@@ -2227,10 +1917,10 @@ Reward::Reward(const Reward& from)
   } else {
     agreement_ = NULL;
   }
-  if (from.has_requester_signature()) {
-    requester_signature_ = new ::messages::Signature(*from.requester_signature_);
+  if (from.has_signature()) {
+    signature_ = new ::messages::Signature(*from.signature_);
   } else {
-    requester_signature_ = NULL;
+    signature_ = NULL;
   }
   amount_ = from.amount_;
   // @@protoc_insertion_point(copy_constructor:messages.Reward)
@@ -2242,7 +1932,6 @@ void Reward::SharedCtor() {
   ::memset(&agreement_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&amount_) -
       reinterpret_cast<char*>(&agreement_)) + sizeof(amount_));
-  _cached_size_ = 0;
 }
 
 Reward::~Reward() {
@@ -2254,13 +1943,11 @@ void Reward::SharedDtor() {
   nonce_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete agreement_;
-  if (this != internal_default_instance()) delete requester_signature_;
+  if (this != internal_default_instance()) delete signature_;
 }
 
 void Reward::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Reward::descriptor() {
   ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
@@ -2268,17 +1955,10 @@ const ::google::protobuf::Descriptor* Reward::descriptor() {
 }
 
 const Reward& Reward::default_instance() {
-  ::protobuf_messages_2eproto::InitDefaultsReward();
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_Reward.base);
   return *internal_default_instance();
 }
 
-Reward* Reward::New(::google::protobuf::Arena* arena) const {
-  Reward* n = new Reward;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Reward::Clear() {
 // @@protoc_insertion_point(message_clear_start:messages.Reward)
@@ -2292,10 +1972,10 @@ void Reward::Clear() {
     delete agreement_;
   }
   agreement_ = NULL;
-  if (GetArenaNoVirtual() == NULL && requester_signature_ != NULL) {
-    delete requester_signature_;
+  if (GetArenaNoVirtual() == NULL && signature_ != NULL) {
+    delete signature_;
   }
-  requester_signature_ = NULL;
+  signature_ = NULL;
   amount_ = GOOGLE_LONGLONG(0);
   _internal_metadata_.Clear();
 }
@@ -2306,7 +1986,7 @@ bool Reward::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:messages.Reward)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -2348,12 +2028,12 @@ bool Reward::MergePartialFromCodedStream(
         break;
       }
 
-      // .messages.Signature requester_signature = 4;
+      // .messages.Signature signature = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_requester_signature()));
+               input, mutable_signature()));
         } else {
           goto handle_unusual;
         }
@@ -2407,7 +2087,7 @@ void Reward::SerializeWithCachedSizes(
   // .messages.Agreement agreement = 2;
   if (this->has_agreement()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->agreement_, output);
+      2, this->_internal_agreement(), output);
   }
 
   // int64 amount = 3;
@@ -2415,10 +2095,10 @@ void Reward::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->amount(), output);
   }
 
-  // .messages.Signature requester_signature = 4;
-  if (this->has_requester_signature()) {
+  // .messages.Signature signature = 4;
+  if (this->has_signature()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->requester_signature_, output);
+      4, this->_internal_signature(), output);
   }
 
   // bytes data = 5;
@@ -2452,7 +2132,7 @@ void Reward::SerializeWithCachedSizes(
   if (this->has_agreement()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->agreement_, deterministic, target);
+        2, this->_internal_agreement(), deterministic, target);
   }
 
   // int64 amount = 3;
@@ -2460,11 +2140,11 @@ void Reward::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->amount(), target);
   }
 
-  // .messages.Signature requester_signature = 4;
-  if (this->has_requester_signature()) {
+  // .messages.Signature signature = 4;
+  if (this->has_signature()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        4, *this->requester_signature_, deterministic, target);
+        4, this->_internal_signature(), deterministic, target);
   }
 
   // bytes data = 5;
@@ -2509,14 +2189,14 @@ size_t Reward::ByteSizeLong() const {
   if (this->has_agreement()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->agreement_);
+        *agreement_);
   }
 
-  // .messages.Signature requester_signature = 4;
-  if (this->has_requester_signature()) {
+  // .messages.Signature signature = 4;
+  if (this->has_signature()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->requester_signature_);
+        *signature_);
   }
 
   // int64 amount = 3;
@@ -2527,9 +2207,7 @@ size_t Reward::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -2566,8 +2244,8 @@ void Reward::MergeFrom(const Reward& from) {
   if (from.has_agreement()) {
     mutable_agreement()->::messages::Agreement::MergeFrom(from.agreement());
   }
-  if (from.has_requester_signature()) {
-    mutable_requester_signature()->::messages::Signature::MergeFrom(from.requester_signature());
+  if (from.has_signature()) {
+    mutable_signature()->::messages::Signature::MergeFrom(from.signature());
   }
   if (from.amount() != 0) {
     set_amount(from.amount());
@@ -2598,13 +2276,14 @@ void Reward::Swap(Reward* other) {
 }
 void Reward::InternalSwap(Reward* other) {
   using std::swap;
-  nonce_.Swap(&other->nonce_);
-  data_.Swap(&other->data_);
+  nonce_.Swap(&other->nonce_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(agreement_, other->agreement_);
-  swap(requester_signature_, other->requester_signature_);
+  swap(signature_, other->signature_);
   swap(amount_, other->amount_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Reward::GetMetadata() const {
@@ -2618,27 +2297,25 @@ void Reward::InternalSwap(Reward* other) {
 void Receipt::InitAsDefaultInstance() {
   ::messages::_Receipt_default_instance_._instance.get_mutable()->reward_ = const_cast< ::messages::Reward*>(
       ::messages::Reward::internal_default_instance());
-  ::messages::_Receipt_default_instance_._instance.get_mutable()->farmer_signature_ = const_cast< ::messages::Signature*>(
+  ::messages::_Receipt_default_instance_._instance.get_mutable()->signature_ = const_cast< ::messages::Signature*>(
       ::messages::Signature::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Receipt::kNonceFieldNumber;
 const int Receipt::kRewardFieldNumber;
-const int Receipt::kFarmerSignatureFieldNumber;
+const int Receipt::kSignatureFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Receipt::Receipt()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_messages_2eproto::InitDefaultsReceipt();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_Receipt.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:messages.Receipt)
 }
 Receipt::Receipt(const Receipt& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.nonce().size() > 0) {
@@ -2649,10 +2326,10 @@ Receipt::Receipt(const Receipt& from)
   } else {
     reward_ = NULL;
   }
-  if (from.has_farmer_signature()) {
-    farmer_signature_ = new ::messages::Signature(*from.farmer_signature_);
+  if (from.has_signature()) {
+    signature_ = new ::messages::Signature(*from.signature_);
   } else {
-    farmer_signature_ = NULL;
+    signature_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:messages.Receipt)
 }
@@ -2660,9 +2337,8 @@ Receipt::Receipt(const Receipt& from)
 void Receipt::SharedCtor() {
   nonce_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&reward_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&farmer_signature_) -
-      reinterpret_cast<char*>(&reward_)) + sizeof(farmer_signature_));
-  _cached_size_ = 0;
+      reinterpret_cast<char*>(&signature_) -
+      reinterpret_cast<char*>(&reward_)) + sizeof(signature_));
 }
 
 Receipt::~Receipt() {
@@ -2673,13 +2349,11 @@ Receipt::~Receipt() {
 void Receipt::SharedDtor() {
   nonce_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete reward_;
-  if (this != internal_default_instance()) delete farmer_signature_;
+  if (this != internal_default_instance()) delete signature_;
 }
 
 void Receipt::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Receipt::descriptor() {
   ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
@@ -2687,17 +2361,10 @@ const ::google::protobuf::Descriptor* Receipt::descriptor() {
 }
 
 const Receipt& Receipt::default_instance() {
-  ::protobuf_messages_2eproto::InitDefaultsReceipt();
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_Receipt.base);
   return *internal_default_instance();
 }
 
-Receipt* Receipt::New(::google::protobuf::Arena* arena) const {
-  Receipt* n = new Receipt;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Receipt::Clear() {
 // @@protoc_insertion_point(message_clear_start:messages.Receipt)
@@ -2710,10 +2377,10 @@ void Receipt::Clear() {
     delete reward_;
   }
   reward_ = NULL;
-  if (GetArenaNoVirtual() == NULL && farmer_signature_ != NULL) {
-    delete farmer_signature_;
+  if (GetArenaNoVirtual() == NULL && signature_ != NULL) {
+    delete signature_;
   }
-  farmer_signature_ = NULL;
+  signature_ = NULL;
   _internal_metadata_.Clear();
 }
 
@@ -2723,7 +2390,7 @@ bool Receipt::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:messages.Receipt)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -2751,12 +2418,12 @@ bool Receipt::MergePartialFromCodedStream(
         break;
       }
 
-      // .messages.Signature farmer_signature = 3;
+      // .messages.Signature signature = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_farmer_signature()));
+               input, mutable_signature()));
         } else {
           goto handle_unusual;
         }
@@ -2798,13 +2465,13 @@ void Receipt::SerializeWithCachedSizes(
   // .messages.Reward reward = 2;
   if (this->has_reward()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->reward_, output);
+      2, this->_internal_reward(), output);
   }
 
-  // .messages.Signature farmer_signature = 3;
-  if (this->has_farmer_signature()) {
+  // .messages.Signature signature = 3;
+  if (this->has_signature()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->farmer_signature_, output);
+      3, this->_internal_signature(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2832,14 +2499,14 @@ void Receipt::SerializeWithCachedSizes(
   if (this->has_reward()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->reward_, deterministic, target);
+        2, this->_internal_reward(), deterministic, target);
   }
 
-  // .messages.Signature farmer_signature = 3;
-  if (this->has_farmer_signature()) {
+  // .messages.Signature signature = 3;
+  if (this->has_signature()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->farmer_signature_, deterministic, target);
+        3, this->_internal_signature(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2870,20 +2537,18 @@ size_t Receipt::ByteSizeLong() const {
   if (this->has_reward()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->reward_);
+        *reward_);
   }
 
-  // .messages.Signature farmer_signature = 3;
-  if (this->has_farmer_signature()) {
+  // .messages.Signature signature = 3;
+  if (this->has_signature()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->farmer_signature_);
+        *signature_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -2916,8 +2581,8 @@ void Receipt::MergeFrom(const Receipt& from) {
   if (from.has_reward()) {
     mutable_reward()->::messages::Reward::MergeFrom(from.reward());
   }
-  if (from.has_farmer_signature()) {
-    mutable_farmer_signature()->::messages::Signature::MergeFrom(from.farmer_signature());
+  if (from.has_signature()) {
+    mutable_signature()->::messages::Signature::MergeFrom(from.signature());
   }
 }
 
@@ -2945,11 +2610,11 @@ void Receipt::Swap(Receipt* other) {
 }
 void Receipt::InternalSwap(Receipt* other) {
   using std::swap;
-  nonce_.Swap(&other->nonce_);
+  nonce_.Swap(&other->nonce_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(reward_, other->reward_);
-  swap(farmer_signature_, other->farmer_signature_);
+  swap(signature_, other->signature_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Receipt::GetMetadata() const {
@@ -2960,5 +2625,27 @@ void Receipt::InternalSwap(Receipt* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace messages
+namespace google {
+namespace protobuf {
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::messages::Signature* Arena::CreateMaybeMessage< ::messages::Signature >(Arena* arena) {
+  return Arena::CreateInternal< ::messages::Signature >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::messages::SOW* Arena::CreateMaybeMessage< ::messages::SOW >(Arena* arena) {
+  return Arena::CreateInternal< ::messages::SOW >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::messages::Quote* Arena::CreateMaybeMessage< ::messages::Quote >(Arena* arena) {
+  return Arena::CreateInternal< ::messages::Quote >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::messages::Agreement* Arena::CreateMaybeMessage< ::messages::Agreement >(Arena* arena) {
+  return Arena::CreateInternal< ::messages::Agreement >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::messages::Reward* Arena::CreateMaybeMessage< ::messages::Reward >(Arena* arena) {
+  return Arena::CreateInternal< ::messages::Reward >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::messages::Receipt* Arena::CreateMaybeMessage< ::messages::Receipt >(Arena* arena) {
+  return Arena::CreateInternal< ::messages::Receipt >(arena);
+}
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)

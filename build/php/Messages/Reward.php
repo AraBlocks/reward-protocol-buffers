@@ -28,17 +28,30 @@ class Reward extends \Google\Protobuf\Internal\Message
      */
     private $amount = 0;
     /**
-     * Generated from protobuf field <code>.messages.Signature requester_signature = 4;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 4;</code>
      */
-    private $requester_signature = null;
+    private $signature = null;
     /**
      * Generated from protobuf field <code>bytes data = 5;</code>
      */
     private $data = '';
 
-    public function __construct() {
+    /**
+     * Constructor.
+     *
+     * @param array $data {
+     *     Optional. Data for populating the Message object.
+     *
+     *     @type string $nonce
+     *     @type \Messages\Agreement $agreement
+     *     @type int|string $amount
+     *     @type \Messages\Signature $signature
+     *     @type string $data
+     * }
+     */
+    public function __construct($data = NULL) {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct();
+        parent::__construct($data);
     }
 
     /**
@@ -108,23 +121,23 @@ class Reward extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.messages.Signature requester_signature = 4;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 4;</code>
      * @return \Messages\Signature
      */
-    public function getRequesterSignature()
+    public function getSignature()
     {
-        return $this->requester_signature;
+        return $this->signature;
     }
 
     /**
-     * Generated from protobuf field <code>.messages.Signature requester_signature = 4;</code>
+     * Generated from protobuf field <code>.messages.Signature signature = 4;</code>
      * @param \Messages\Signature $var
      * @return $this
      */
-    public function setRequesterSignature($var)
+    public function setSignature($var)
     {
         GPBUtil::checkMessage($var, \Messages\Signature::class);
-        $this->requester_signature = $var;
+        $this->signature = $var;
 
         return $this;
     }

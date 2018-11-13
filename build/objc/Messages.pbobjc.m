@@ -13,7 +13,7 @@
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
 
- #import "Messages.pbobjc.h"
+#import "Messages.pbobjc.h"
 // @@protoc_insertion_point(imports)
 
 #pragma clang diagnostic push
@@ -42,59 +42,16 @@ static GPBFileDescriptor *MessagesRoot_FileDescriptor(void) {
   return descriptor;
 }
 
-#pragma mark - AraId
-
-@implementation AraId
-
-@dynamic did;
-
-typedef struct AraId__storage_ {
-  uint32_t _has_storage_[1];
-  NSString *did;
-} AraId__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "did",
-        .dataTypeSpecific.className = NULL,
-        .number = AraId_FieldNumber_Did,
-        .hasIndex = 0,
-        .offset = (uint32_t)offsetof(AraId__storage_, did),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[AraId class]
-                                     rootClass:[MessagesRoot class]
-                                          file:MessagesRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(AraId__storage_)
-                                         flags:GPBDescriptorInitializationFlag_None];
-    NSAssert(descriptor == nil, @"Startup recursed!");
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
-
 #pragma mark - Signature
 
 @implementation Signature
 
-@dynamic hasAraId, araId;
+@dynamic did;
 @dynamic data_p;
 
 typedef struct Signature__storage_ {
   uint32_t _has_storage_[1];
-  AraId *araId;
+  NSString *did;
   NSData *data_p;
 } Signature__storage_;
 
@@ -105,13 +62,13 @@ typedef struct Signature__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "araId",
-        .dataTypeSpecific.className = GPBStringifySymbol(AraId),
-        .number = Signature_FieldNumber_AraId,
+        .name = "did",
+        .dataTypeSpecific.className = NULL,
+        .number = Signature_FieldNumber_Did,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(Signature__storage_, araId),
+        .offset = (uint32_t)offsetof(Signature__storage_, did),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
+        .dataType = GPBDataTypeString,
       },
       {
         .name = "data_p",
@@ -144,18 +101,20 @@ typedef struct Signature__storage_ {
 @implementation SOW
 
 @dynamic nonce;
+@dynamic topic;
 @dynamic workUnit;
-@dynamic hasRequester, requester;
-@dynamic data_p;
 @dynamic currencyUnit;
+@dynamic hasSignature, signature;
+@dynamic data_p;
 
 typedef struct SOW__storage_ {
   uint32_t _has_storage_[1];
   NSData *nonce;
+  NSString *topic;
   NSString *workUnit;
-  AraId *requester;
-  NSData *data_p;
   NSString *currencyUnit;
+  Signature *signature;
+  NSData *data_p;
 } SOW__storage_;
 
 // This method is threadsafe because it is initially called
@@ -174,20 +133,38 @@ typedef struct SOW__storage_ {
         .dataType = GPBDataTypeBytes,
       },
       {
+        .name = "topic",
+        .dataTypeSpecific.className = NULL,
+        .number = SOW_FieldNumber_Topic,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(SOW__storage_, topic),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
         .name = "workUnit",
         .dataTypeSpecific.className = NULL,
         .number = SOW_FieldNumber_WorkUnit,
-        .hasIndex = 1,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(SOW__storage_, workUnit),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
-        .name = "requester",
-        .dataTypeSpecific.className = GPBStringifySymbol(AraId),
-        .number = SOW_FieldNumber_Requester,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(SOW__storage_, requester),
+        .name = "currencyUnit",
+        .dataTypeSpecific.className = NULL,
+        .number = SOW_FieldNumber_CurrencyUnit,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(SOW__storage_, currencyUnit),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "signature",
+        .dataTypeSpecific.className = GPBStringifySymbol(Signature),
+        .number = SOW_FieldNumber_Signature,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(SOW__storage_, signature),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -195,19 +172,10 @@ typedef struct SOW__storage_ {
         .name = "data_p",
         .dataTypeSpecific.className = NULL,
         .number = SOW_FieldNumber_Data_p,
-        .hasIndex = 3,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(SOW__storage_, data_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
-      },
-      {
-        .name = "currencyUnit",
-        .dataTypeSpecific.className = NULL,
-        .number = SOW_FieldNumber_CurrencyUnit,
-        .hasIndex = 4,
-        .offset = (uint32_t)offsetof(SOW__storage_, currencyUnit),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -233,13 +201,15 @@ typedef struct SOW__storage_ {
 @dynamic nonce;
 @dynamic perUnitCost;
 @dynamic hasSow, sow;
-@dynamic hasFarmer, farmer;
+@dynamic hasSignature, signature;
+@dynamic data_p;
 
 typedef struct Quote__storage_ {
   uint32_t _has_storage_[1];
   NSData *nonce;
   SOW *sow;
-  AraId *farmer;
+  Signature *signature;
+  NSData *data_p;
   int64_t perUnitCost;
 } Quote__storage_;
 
@@ -277,13 +247,22 @@ typedef struct Quote__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "farmer",
-        .dataTypeSpecific.className = GPBStringifySymbol(AraId),
-        .number = Quote_FieldNumber_Farmer,
+        .name = "signature",
+        .dataTypeSpecific.className = GPBStringifySymbol(Signature),
+        .number = Quote_FieldNumber_Signature,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(Quote__storage_, farmer),
+        .offset = (uint32_t)offsetof(Quote__storage_, signature),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "data_p",
+        .dataTypeSpecific.className = NULL,
+        .number = Quote_FieldNumber_Data_p,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(Quote__storage_, data_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -308,16 +287,14 @@ typedef struct Quote__storage_ {
 
 @dynamic nonce;
 @dynamic hasQuote, quote;
-@dynamic hasRequesterSignature, requesterSignature;
-@dynamic hasFarmerSignature, farmerSignature;
+@dynamic hasSignature, signature;
 @dynamic data_p;
 
 typedef struct Agreement__storage_ {
   uint32_t _has_storage_[1];
   NSData *nonce;
   Quote *quote;
-  Signature *requesterSignature;
-  Signature *farmerSignature;
+  Signature *signature;
   NSData *data_p;
 } Agreement__storage_;
 
@@ -346,20 +323,11 @@ typedef struct Agreement__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "requesterSignature",
+        .name = "signature",
         .dataTypeSpecific.className = GPBStringifySymbol(Signature),
-        .number = Agreement_FieldNumber_RequesterSignature,
+        .number = Agreement_FieldNumber_Signature,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(Agreement__storage_, requesterSignature),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "farmerSignature",
-        .dataTypeSpecific.className = GPBStringifySymbol(Signature),
-        .number = Agreement_FieldNumber_FarmerSignature,
-        .hasIndex = 3,
-        .offset = (uint32_t)offsetof(Agreement__storage_, farmerSignature),
+        .offset = (uint32_t)offsetof(Agreement__storage_, signature),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -367,7 +335,7 @@ typedef struct Agreement__storage_ {
         .name = "data_p",
         .dataTypeSpecific.className = NULL,
         .number = Agreement_FieldNumber_Data_p,
-        .hasIndex = 4,
+        .hasIndex = 3,
         .offset = (uint32_t)offsetof(Agreement__storage_, data_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
@@ -396,14 +364,14 @@ typedef struct Agreement__storage_ {
 @dynamic nonce;
 @dynamic hasAgreement, agreement;
 @dynamic amount;
-@dynamic hasRequesterSignature, requesterSignature;
+@dynamic hasSignature, signature;
 @dynamic data_p;
 
 typedef struct Reward__storage_ {
   uint32_t _has_storage_[1];
   NSData *nonce;
   Agreement *agreement;
-  Signature *requesterSignature;
+  Signature *signature;
   NSData *data_p;
   int64_t amount;
 } Reward__storage_;
@@ -442,11 +410,11 @@ typedef struct Reward__storage_ {
         .dataType = GPBDataTypeInt64,
       },
       {
-        .name = "requesterSignature",
+        .name = "signature",
         .dataTypeSpecific.className = GPBStringifySymbol(Signature),
-        .number = Reward_FieldNumber_RequesterSignature,
+        .number = Reward_FieldNumber_Signature,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(Reward__storage_, requesterSignature),
+        .offset = (uint32_t)offsetof(Reward__storage_, signature),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -482,13 +450,13 @@ typedef struct Reward__storage_ {
 
 @dynamic nonce;
 @dynamic hasReward, reward;
-@dynamic hasFarmerSignature, farmerSignature;
+@dynamic hasSignature, signature;
 
 typedef struct Receipt__storage_ {
   uint32_t _has_storage_[1];
   NSData *nonce;
   Reward *reward;
-  Signature *farmerSignature;
+  Signature *signature;
 } Receipt__storage_;
 
 // This method is threadsafe because it is initially called
@@ -516,11 +484,11 @@ typedef struct Receipt__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "farmerSignature",
+        .name = "signature",
         .dataTypeSpecific.className = GPBStringifySymbol(Signature),
-        .number = Receipt_FieldNumber_FarmerSignature,
+        .number = Receipt_FieldNumber_Signature,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(Receipt__storage_, farmerSignature),
+        .offset = (uint32_t)offsetof(Receipt__storage_, signature),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },

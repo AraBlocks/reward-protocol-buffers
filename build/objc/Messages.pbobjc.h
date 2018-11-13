@@ -28,7 +28,6 @@
 CF_EXTERN_C_BEGIN
 
 @class Agreement;
-@class AraId;
 @class Quote;
 @class Reward;
 @class SOW;
@@ -51,25 +50,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MessagesRoot : GPBRootObject
 @end
 
-#pragma mark - AraId
-
-typedef GPB_ENUM(AraId_FieldNumber) {
-  AraId_FieldNumber_Did = 1,
-};
-
-/**
- * The Ara Identity associated with a peer.
- **/
-@interface AraId : GPBMessage
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *did;
-
-@end
-
 #pragma mark - Signature
 
 typedef GPB_ENUM(Signature_FieldNumber) {
-  Signature_FieldNumber_AraId = 1,
+  Signature_FieldNumber_Did = 1,
   Signature_FieldNumber_Data_p = 2,
 };
 
@@ -78,9 +62,7 @@ typedef GPB_ENUM(Signature_FieldNumber) {
  **/
 @interface Signature : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) AraId *araId;
-/** Test to see if @c araId has been set. */
-@property(nonatomic, readwrite) BOOL hasAraId;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *did;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
 
@@ -90,10 +72,11 @@ typedef GPB_ENUM(Signature_FieldNumber) {
 
 typedef GPB_ENUM(SOW_FieldNumber) {
   SOW_FieldNumber_Nonce = 1,
-  SOW_FieldNumber_WorkUnit = 2,
-  SOW_FieldNumber_Requester = 3,
-  SOW_FieldNumber_Data_p = 4,
-  SOW_FieldNumber_CurrencyUnit = 5,
+  SOW_FieldNumber_Topic = 2,
+  SOW_FieldNumber_WorkUnit = 3,
+  SOW_FieldNumber_CurrencyUnit = 4,
+  SOW_FieldNumber_Signature = 5,
+  SOW_FieldNumber_Data_p = 6,
 };
 
 /**
@@ -103,15 +86,17 @@ typedef GPB_ENUM(SOW_FieldNumber) {
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *nonce;
 
+@property(nonatomic, readwrite, copy, null_resettable) NSString *topic;
+
 @property(nonatomic, readwrite, copy, null_resettable) NSString *workUnit;
 
-@property(nonatomic, readwrite, strong, null_resettable) AraId *requester;
-/** Test to see if @c requester has been set. */
-@property(nonatomic, readwrite) BOOL hasRequester;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *currencyUnit;
+
+@property(nonatomic, readwrite, strong, null_resettable) Signature *signature;
+/** Test to see if @c signature has been set. */
+@property(nonatomic, readwrite) BOOL hasSignature;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *currencyUnit;
 
 @end
 
@@ -121,7 +106,8 @@ typedef GPB_ENUM(Quote_FieldNumber) {
   Quote_FieldNumber_Nonce = 1,
   Quote_FieldNumber_PerUnitCost = 2,
   Quote_FieldNumber_Sow = 3,
-  Quote_FieldNumber_Farmer = 4,
+  Quote_FieldNumber_Signature = 4,
+  Quote_FieldNumber_Data_p = 5,
 };
 
 /**
@@ -137,9 +123,11 @@ typedef GPB_ENUM(Quote_FieldNumber) {
 /** Test to see if @c sow has been set. */
 @property(nonatomic, readwrite) BOOL hasSow;
 
-@property(nonatomic, readwrite, strong, null_resettable) AraId *farmer;
-/** Test to see if @c farmer has been set. */
-@property(nonatomic, readwrite) BOOL hasFarmer;
+@property(nonatomic, readwrite, strong, null_resettable) Signature *signature;
+/** Test to see if @c signature has been set. */
+@property(nonatomic, readwrite) BOOL hasSignature;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
 
 @end
 
@@ -148,9 +136,8 @@ typedef GPB_ENUM(Quote_FieldNumber) {
 typedef GPB_ENUM(Agreement_FieldNumber) {
   Agreement_FieldNumber_Nonce = 1,
   Agreement_FieldNumber_Quote = 2,
-  Agreement_FieldNumber_RequesterSignature = 3,
-  Agreement_FieldNumber_FarmerSignature = 4,
-  Agreement_FieldNumber_Data_p = 5,
+  Agreement_FieldNumber_Signature = 3,
+  Agreement_FieldNumber_Data_p = 4,
 };
 
 /**
@@ -166,13 +153,9 @@ typedef GPB_ENUM(Agreement_FieldNumber) {
 /** Test to see if @c quote has been set. */
 @property(nonatomic, readwrite) BOOL hasQuote;
 
-@property(nonatomic, readwrite, strong, null_resettable) Signature *requesterSignature;
-/** Test to see if @c requesterSignature has been set. */
-@property(nonatomic, readwrite) BOOL hasRequesterSignature;
-
-@property(nonatomic, readwrite, strong, null_resettable) Signature *farmerSignature;
-/** Test to see if @c farmerSignature has been set. */
-@property(nonatomic, readwrite) BOOL hasFarmerSignature;
+@property(nonatomic, readwrite, strong, null_resettable) Signature *signature;
+/** Test to see if @c signature has been set. */
+@property(nonatomic, readwrite) BOOL hasSignature;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
 
@@ -184,7 +167,7 @@ typedef GPB_ENUM(Reward_FieldNumber) {
   Reward_FieldNumber_Nonce = 1,
   Reward_FieldNumber_Agreement = 2,
   Reward_FieldNumber_Amount = 3,
-  Reward_FieldNumber_RequesterSignature = 4,
+  Reward_FieldNumber_Signature = 4,
   Reward_FieldNumber_Data_p = 5,
 };
 
@@ -201,9 +184,9 @@ typedef GPB_ENUM(Reward_FieldNumber) {
 
 @property(nonatomic, readwrite) int64_t amount;
 
-@property(nonatomic, readwrite, strong, null_resettable) Signature *requesterSignature;
-/** Test to see if @c requesterSignature has been set. */
-@property(nonatomic, readwrite) BOOL hasRequesterSignature;
+@property(nonatomic, readwrite, strong, null_resettable) Signature *signature;
+/** Test to see if @c signature has been set. */
+@property(nonatomic, readwrite) BOOL hasSignature;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *data_p;
 
@@ -214,7 +197,7 @@ typedef GPB_ENUM(Reward_FieldNumber) {
 typedef GPB_ENUM(Receipt_FieldNumber) {
   Receipt_FieldNumber_Nonce = 1,
   Receipt_FieldNumber_Reward = 2,
-  Receipt_FieldNumber_FarmerSignature = 3,
+  Receipt_FieldNumber_Signature = 3,
 };
 
 /**
@@ -228,9 +211,9 @@ typedef GPB_ENUM(Receipt_FieldNumber) {
 /** Test to see if @c reward has been set. */
 @property(nonatomic, readwrite) BOOL hasReward;
 
-@property(nonatomic, readwrite, strong, null_resettable) Signature *farmerSignature;
-/** Test to see if @c farmerSignature has been set. */
-@property(nonatomic, readwrite) BOOL hasFarmerSignature;
+@property(nonatomic, readwrite, strong, null_resettable) Signature *signature;
+/** Test to see if @c signature has been set. */
+@property(nonatomic, readwrite) BOOL hasSignature;
 
 @end
 
