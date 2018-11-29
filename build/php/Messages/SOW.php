@@ -40,23 +40,9 @@ class SOW extends \Google\Protobuf\Internal\Message
      */
     private $data = '';
 
-    /**
-     * Constructor.
-     *
-     * @param array $data {
-     *     Optional. Data for populating the Message object.
-     *
-     *     @type string $nonce
-     *     @type string $topic
-     *     @type string $work_unit
-     *     @type string $currency_unit
-     *     @type \Messages\Signature $signature
-     *     @type string $data
-     * }
-     */
-    public function __construct($data = NULL) {
+    public function __construct() {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct($data);
+        parent::__construct();
     }
 
     /**

@@ -1,9 +1,9 @@
-<img src="https://github.com/arablocks/ara-module-template/blob/master/ara.png" width="30" height="30" /> farming-protocol-buffers
+<img src="https://github.com/arablocks/ara-module-template/blob/master/ara.png" width="30" height="30" /> reward-protocol-buffers
 ========
 
-[![Build Status](https://travis-ci.com/AraBlocks/farming-protocol-buffers.svg?token=6WjTyCg41y8MBmCzro5x&branch=master)](https://travis-ci.com/AraBlocks/farming-protocol-buffers)
+[![Build Status](https://travis-ci.com/AraBlocks/reward-protocol-buffers.svg?token=6WjTyCg41y8MBmCzro5x&branch=master)](https://travis-ci.com/AraBlocks/reward-protocol-buffers)
 
-Protocol buffers for Ara Farming
+Protocol buffers for Ara Rewards
 
 ## Status
 **In Active Development**
@@ -41,7 +41,7 @@ A statement of work for a specific task.
 | data | bytes | Miscellaneous data |
 
 ### Quote <a name="quote"></a>
-A quote from a specific farmer for a specific SOW.
+A quote from a peer for a specific SOW.
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
@@ -52,7 +52,7 @@ A quote from a specific farmer for a specific SOW.
 | data | bytes | Miscellaneous data |
 
 ### Agreement <a name="agreement"></a>
-An abstract agreement between two peers (a farmer and a requester) spelling out the terms of a task.
+An abstract agreement between two peers spelling out the terms of a task.
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |

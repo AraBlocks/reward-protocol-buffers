@@ -247,7 +247,7 @@ namespace Messages {
       topic_ = other.topic_;
       workUnit_ = other.workUnit_;
       currencyUnit_ = other.currencyUnit_;
-      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
+      Signature = other.signature_ != null ? other.Signature.Clone() : null;
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -494,7 +494,7 @@ namespace Messages {
   }
 
   /// <summary>
-  /// A quote from a specific farmer for a specific SOW.
+  /// A quote from a peer for a specific SOW.
   /// </summary>
   public sealed partial class Quote : pb::IMessage<Quote> {
     private static readonly pb::MessageParser<Quote> _parser = new pb::MessageParser<Quote>(() => new Quote());
@@ -523,8 +523,8 @@ namespace Messages {
     public Quote(Quote other) : this() {
       nonce_ = other.nonce_;
       perUnitCost_ = other.perUnitCost_;
-      sow_ = other.sow_ != null ? other.sow_.Clone() : null;
-      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
+      Sow = other.sow_ != null ? other.Sow.Clone() : null;
+      Signature = other.signature_ != null ? other.Signature.Clone() : null;
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -751,7 +751,7 @@ namespace Messages {
 
   /// <summary>
   ///*
-  /// An abstract agreement between two peers (a farmer and a requester)
+  /// An abstract agreement between two peers
   /// spelling out the terms of a task.
   /// </summary>
   public sealed partial class Agreement : pb::IMessage<Agreement> {
@@ -780,8 +780,8 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Agreement(Agreement other) : this() {
       nonce_ = other.nonce_;
-      quote_ = other.quote_ != null ? other.quote_.Clone() : null;
-      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
+      Quote = other.quote_ != null ? other.Quote.Clone() : null;
+      Signature = other.signature_ != null ? other.Signature.Clone() : null;
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1008,9 +1008,9 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Reward(Reward other) : this() {
       nonce_ = other.nonce_;
-      agreement_ = other.agreement_ != null ? other.agreement_.Clone() : null;
+      Agreement = other.agreement_ != null ? other.Agreement.Clone() : null;
       amount_ = other.amount_;
-      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
+      Signature = other.signature_ != null ? other.Signature.Clone() : null;
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1264,8 +1264,8 @@ namespace Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Receipt(Receipt other) : this() {
       nonce_ = other.nonce_;
-      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
-      signature_ = other.signature_ != null ? other.signature_.Clone() : null;
+      Reward = other.reward_ != null ? other.Reward.Clone() : null;
+      Signature = other.signature_ != null ? other.Signature.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

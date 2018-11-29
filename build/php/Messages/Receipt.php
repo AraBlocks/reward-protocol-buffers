@@ -28,20 +28,9 @@ class Receipt extends \Google\Protobuf\Internal\Message
      */
     private $signature = null;
 
-    /**
-     * Constructor.
-     *
-     * @param array $data {
-     *     Optional. Data for populating the Message object.
-     *
-     *     @type string $nonce
-     *     @type \Messages\Reward $reward
-     *     @type \Messages\Signature $signature
-     * }
-     */
-    public function __construct($data = NULL) {
+    public function __construct() {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct($data);
+        parent::__construct();
     }
 
     /**

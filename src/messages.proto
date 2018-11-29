@@ -17,7 +17,7 @@ message SOW {
   bytes data = 6;
 }
 
-// A quote from a specific farmer for a specific SOW.
+// A quote from a peer for a specific SOW.
 message Quote {
   bytes nonce = 1;
   int64 per_unit_cost = 2;
@@ -27,7 +27,7 @@ message Quote {
 }
 
 /**
- * An abstract agreement between two peers (a farmer and a requester)
+ * An abstract agreement between two peers
  * spelling out the terms of a task.
  **/
 message Agreement {
