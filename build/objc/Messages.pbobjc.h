@@ -111,7 +111,7 @@ typedef GPB_ENUM(Quote_FieldNumber) {
 };
 
 /**
- * A quote from a specific farmer for a specific SOW.
+ * A quote from a peer for a specific SOW.
  **/
 @interface Quote : GPBMessage
 
@@ -142,7 +142,7 @@ typedef GPB_ENUM(Agreement_FieldNumber) {
 
 /**
  * *
- * An abstract agreement between two peers (a farmer and a requester)
+ * An abstract agreement between two peers
  * spelling out the terms of a task.
  **/
 @interface Agreement : GPBMessage

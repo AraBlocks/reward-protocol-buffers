@@ -78,6 +78,13 @@ public final class Messages {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -87,13 +94,6 @@ public final class Messages {
             case 18: {
 
               data_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
               break;
             }
           }
@@ -113,7 +113,6 @@ public final class Messages {
       return messages.Messages.internal_static_messages_Signature_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return messages.Messages.internal_static_messages_Signature_fieldAccessorTable
@@ -165,7 +164,6 @@ public final class Messages {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -175,7 +173,6 @@ public final class Messages {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getDidBytes().isEmpty()) {
@@ -187,7 +184,6 @@ public final class Messages {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -310,7 +306,6 @@ public final class Messages {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -318,7 +313,6 @@ public final class Messages {
     public static Builder newBuilder(messages.Messages.Signature prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -346,7 +340,6 @@ public final class Messages {
         return messages.Messages.internal_static_messages_Signature_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return messages.Messages.internal_static_messages_Signature_fieldAccessorTable
@@ -369,7 +362,6 @@ public final class Messages {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         did_ = "";
@@ -379,18 +371,15 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return messages.Messages.internal_static_messages_Signature_descriptor;
       }
 
-      @java.lang.Override
       public messages.Messages.Signature getDefaultInstanceForType() {
         return messages.Messages.Signature.getDefaultInstance();
       }
 
-      @java.lang.Override
       public messages.Messages.Signature build() {
         messages.Messages.Signature result = buildPartial();
         if (!result.isInitialized()) {
@@ -399,7 +388,6 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public messages.Messages.Signature buildPartial() {
         messages.Messages.Signature result = new messages.Messages.Signature(this);
         result.did_ = did_;
@@ -408,39 +396,32 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof messages.Messages.Signature) {
           return mergeFrom((messages.Messages.Signature)other);
@@ -464,12 +445,10 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -585,13 +564,11 @@ public final class Messages {
         onChanged();
         return this;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -613,7 +590,6 @@ public final class Messages {
 
     private static final com.google.protobuf.Parser<Signature>
         PARSER = new com.google.protobuf.AbstractParser<Signature>() {
-      @java.lang.Override
       public Signature parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -631,7 +607,6 @@ public final class Messages {
       return PARSER;
     }
 
-    @java.lang.Override
     public messages.Messages.Signature getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -743,6 +718,13 @@ public final class Messages {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 10: {
 
               nonce_ = input.readBytes();
@@ -784,13 +766,6 @@ public final class Messages {
               data_ = input.readBytes();
               break;
             }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -808,7 +783,6 @@ public final class Messages {
       return messages.Messages.internal_static_messages_SOW_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return messages.Messages.internal_static_messages_SOW_fieldAccessorTable
@@ -958,7 +932,6 @@ public final class Messages {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -968,7 +941,6 @@ public final class Messages {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!nonce_.isEmpty()) {
@@ -992,7 +964,6 @@ public final class Messages {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1150,7 +1121,6 @@ public final class Messages {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1158,7 +1128,6 @@ public final class Messages {
     public static Builder newBuilder(messages.Messages.SOW prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1186,7 +1155,6 @@ public final class Messages {
         return messages.Messages.internal_static_messages_SOW_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return messages.Messages.internal_static_messages_SOW_fieldAccessorTable
@@ -1209,7 +1177,6 @@ public final class Messages {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         nonce_ = com.google.protobuf.ByteString.EMPTY;
@@ -1231,18 +1198,15 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return messages.Messages.internal_static_messages_SOW_descriptor;
       }
 
-      @java.lang.Override
       public messages.Messages.SOW getDefaultInstanceForType() {
         return messages.Messages.SOW.getDefaultInstance();
       }
 
-      @java.lang.Override
       public messages.Messages.SOW build() {
         messages.Messages.SOW result = buildPartial();
         if (!result.isInitialized()) {
@@ -1251,7 +1215,6 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public messages.Messages.SOW buildPartial() {
         messages.Messages.SOW result = new messages.Messages.SOW(this);
         result.nonce_ = nonce_;
@@ -1268,39 +1231,32 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof messages.Messages.SOW) {
           return mergeFrom((messages.Messages.SOW)other);
@@ -1338,12 +1294,10 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1743,13 +1697,11 @@ public final class Messages {
         onChanged();
         return this;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1771,7 +1723,6 @@ public final class Messages {
 
     private static final com.google.protobuf.Parser<SOW>
         PARSER = new com.google.protobuf.AbstractParser<SOW>() {
-      @java.lang.Override
       public SOW parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1789,7 +1740,6 @@ public final class Messages {
       return PARSER;
     }
 
-    @java.lang.Override
     public messages.Messages.SOW getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1843,7 +1793,7 @@ public final class Messages {
   }
   /**
    * <pre>
-   * A quote from a specific farmer for a specific SOW.
+   * A quote from a peer for a specific SOW.
    * </pre>
    *
    * Protobuf type {@code messages.Quote}
@@ -1887,6 +1837,13 @@ public final class Messages {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 10: {
 
               nonce_ = input.readBytes();
@@ -1928,13 +1885,6 @@ public final class Messages {
               data_ = input.readBytes();
               break;
             }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1952,7 +1902,6 @@ public final class Messages {
       return messages.Messages.internal_static_messages_Quote_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return messages.Messages.internal_static_messages_Quote_fieldAccessorTable
@@ -2030,7 +1979,6 @@ public final class Messages {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2040,7 +1988,6 @@ public final class Messages {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!nonce_.isEmpty()) {
@@ -2061,7 +2008,6 @@ public final class Messages {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2220,7 +2166,6 @@ public final class Messages {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2228,7 +2173,6 @@ public final class Messages {
     public static Builder newBuilder(messages.Messages.Quote prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2242,7 +2186,7 @@ public final class Messages {
     }
     /**
      * <pre>
-     * A quote from a specific farmer for a specific SOW.
+     * A quote from a peer for a specific SOW.
      * </pre>
      *
      * Protobuf type {@code messages.Quote}
@@ -2256,7 +2200,6 @@ public final class Messages {
         return messages.Messages.internal_static_messages_Quote_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return messages.Messages.internal_static_messages_Quote_fieldAccessorTable
@@ -2279,7 +2222,6 @@ public final class Messages {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         nonce_ = com.google.protobuf.ByteString.EMPTY;
@@ -2303,18 +2245,15 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return messages.Messages.internal_static_messages_Quote_descriptor;
       }
 
-      @java.lang.Override
       public messages.Messages.Quote getDefaultInstanceForType() {
         return messages.Messages.Quote.getDefaultInstance();
       }
 
-      @java.lang.Override
       public messages.Messages.Quote build() {
         messages.Messages.Quote result = buildPartial();
         if (!result.isInitialized()) {
@@ -2323,7 +2262,6 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public messages.Messages.Quote buildPartial() {
         messages.Messages.Quote result = new messages.Messages.Quote(this);
         result.nonce_ = nonce_;
@@ -2343,39 +2281,32 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof messages.Messages.Quote) {
           return mergeFrom((messages.Messages.Quote)other);
@@ -2407,12 +2338,10 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2748,13 +2677,11 @@ public final class Messages {
         onChanged();
         return this;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2776,7 +2703,6 @@ public final class Messages {
 
     private static final com.google.protobuf.Parser<Quote>
         PARSER = new com.google.protobuf.AbstractParser<Quote>() {
-      @java.lang.Override
       public Quote parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2794,7 +2720,6 @@ public final class Messages {
       return PARSER;
     }
 
-    @java.lang.Override
     public messages.Messages.Quote getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2844,7 +2769,7 @@ public final class Messages {
   /**
    * <pre>
    **
-   * An abstract agreement between two peers (a farmer and a requester)
+   * An abstract agreement between two peers
    * spelling out the terms of a task.
    * </pre>
    *
@@ -2888,6 +2813,13 @@ public final class Messages {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 10: {
 
               nonce_ = input.readBytes();
@@ -2924,13 +2856,6 @@ public final class Messages {
               data_ = input.readBytes();
               break;
             }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2948,7 +2873,6 @@ public final class Messages {
       return messages.Messages.internal_static_messages_Agreement_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return messages.Messages.internal_static_messages_Agreement_fieldAccessorTable
@@ -3017,7 +2941,6 @@ public final class Messages {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3027,7 +2950,6 @@ public final class Messages {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!nonce_.isEmpty()) {
@@ -3045,7 +2967,6 @@ public final class Messages {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3195,7 +3116,6 @@ public final class Messages {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3203,7 +3123,6 @@ public final class Messages {
     public static Builder newBuilder(messages.Messages.Agreement prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3218,7 +3137,7 @@ public final class Messages {
     /**
      * <pre>
      **
-     * An abstract agreement between two peers (a farmer and a requester)
+     * An abstract agreement between two peers
      * spelling out the terms of a task.
      * </pre>
      *
@@ -3233,7 +3152,6 @@ public final class Messages {
         return messages.Messages.internal_static_messages_Agreement_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return messages.Messages.internal_static_messages_Agreement_fieldAccessorTable
@@ -3256,7 +3174,6 @@ public final class Messages {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         nonce_ = com.google.protobuf.ByteString.EMPTY;
@@ -3278,18 +3195,15 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return messages.Messages.internal_static_messages_Agreement_descriptor;
       }
 
-      @java.lang.Override
       public messages.Messages.Agreement getDefaultInstanceForType() {
         return messages.Messages.Agreement.getDefaultInstance();
       }
 
-      @java.lang.Override
       public messages.Messages.Agreement build() {
         messages.Messages.Agreement result = buildPartial();
         if (!result.isInitialized()) {
@@ -3298,7 +3212,6 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public messages.Messages.Agreement buildPartial() {
         messages.Messages.Agreement result = new messages.Messages.Agreement(this);
         result.nonce_ = nonce_;
@@ -3317,39 +3230,32 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof messages.Messages.Agreement) {
           return mergeFrom((messages.Messages.Agreement)other);
@@ -3378,12 +3284,10 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3693,13 +3597,11 @@ public final class Messages {
         onChanged();
         return this;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3721,7 +3623,6 @@ public final class Messages {
 
     private static final com.google.protobuf.Parser<Agreement>
         PARSER = new com.google.protobuf.AbstractParser<Agreement>() {
-      @java.lang.Override
       public Agreement parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3739,7 +3640,6 @@ public final class Messages {
       return PARSER;
     }
 
-    @java.lang.Override
     public messages.Messages.Agreement getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3837,6 +3737,13 @@ public final class Messages {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 10: {
 
               nonce_ = input.readBytes();
@@ -3878,13 +3785,6 @@ public final class Messages {
               data_ = input.readBytes();
               break;
             }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3902,7 +3802,6 @@ public final class Messages {
       return messages.Messages.internal_static_messages_Reward_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return messages.Messages.internal_static_messages_Reward_fieldAccessorTable
@@ -3980,7 +3879,6 @@ public final class Messages {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3990,7 +3888,6 @@ public final class Messages {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!nonce_.isEmpty()) {
@@ -4011,7 +3908,6 @@ public final class Messages {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4170,7 +4066,6 @@ public final class Messages {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4178,7 +4073,6 @@ public final class Messages {
     public static Builder newBuilder(messages.Messages.Reward prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4206,7 +4100,6 @@ public final class Messages {
         return messages.Messages.internal_static_messages_Reward_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return messages.Messages.internal_static_messages_Reward_fieldAccessorTable
@@ -4229,7 +4122,6 @@ public final class Messages {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         nonce_ = com.google.protobuf.ByteString.EMPTY;
@@ -4253,18 +4145,15 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return messages.Messages.internal_static_messages_Reward_descriptor;
       }
 
-      @java.lang.Override
       public messages.Messages.Reward getDefaultInstanceForType() {
         return messages.Messages.Reward.getDefaultInstance();
       }
 
-      @java.lang.Override
       public messages.Messages.Reward build() {
         messages.Messages.Reward result = buildPartial();
         if (!result.isInitialized()) {
@@ -4273,7 +4162,6 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public messages.Messages.Reward buildPartial() {
         messages.Messages.Reward result = new messages.Messages.Reward(this);
         result.nonce_ = nonce_;
@@ -4293,39 +4181,32 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof messages.Messages.Reward) {
           return mergeFrom((messages.Messages.Reward)other);
@@ -4357,12 +4238,10 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4698,13 +4577,11 @@ public final class Messages {
         onChanged();
         return this;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4726,7 +4603,6 @@ public final class Messages {
 
     private static final com.google.protobuf.Parser<Reward>
         PARSER = new com.google.protobuf.AbstractParser<Reward>() {
-      @java.lang.Override
       public Reward parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4744,7 +4620,6 @@ public final class Messages {
       return PARSER;
     }
 
-    @java.lang.Override
     public messages.Messages.Reward getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4830,6 +4705,13 @@ public final class Messages {
             case 0:
               done = true;
               break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
             case 10: {
 
               nonce_ = input.readBytes();
@@ -4861,13 +4743,6 @@ public final class Messages {
 
               break;
             }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -4885,7 +4760,6 @@ public final class Messages {
       return messages.Messages.internal_static_messages_Receipt_descriptor;
     }
 
-    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return messages.Messages.internal_static_messages_Receipt_fieldAccessorTable
@@ -4945,7 +4819,6 @@ public final class Messages {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4955,7 +4828,6 @@ public final class Messages {
       return true;
     }
 
-    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!nonce_.isEmpty()) {
@@ -4970,7 +4842,6 @@ public final class Messages {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5112,7 +4983,6 @@ public final class Messages {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5120,7 +4990,6 @@ public final class Messages {
     public static Builder newBuilder(messages.Messages.Receipt prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5148,7 +5017,6 @@ public final class Messages {
         return messages.Messages.internal_static_messages_Receipt_descriptor;
       }
 
-      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return messages.Messages.internal_static_messages_Receipt_fieldAccessorTable
@@ -5171,7 +5039,6 @@ public final class Messages {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
       public Builder clear() {
         super.clear();
         nonce_ = com.google.protobuf.ByteString.EMPTY;
@@ -5191,18 +5058,15 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return messages.Messages.internal_static_messages_Receipt_descriptor;
       }
 
-      @java.lang.Override
       public messages.Messages.Receipt getDefaultInstanceForType() {
         return messages.Messages.Receipt.getDefaultInstance();
       }
 
-      @java.lang.Override
       public messages.Messages.Receipt build() {
         messages.Messages.Receipt result = buildPartial();
         if (!result.isInitialized()) {
@@ -5211,7 +5075,6 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public messages.Messages.Receipt buildPartial() {
         messages.Messages.Receipt result = new messages.Messages.Receipt(this);
         result.nonce_ = nonce_;
@@ -5229,39 +5092,32 @@ public final class Messages {
         return result;
       }
 
-      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof messages.Messages.Receipt) {
           return mergeFrom((messages.Messages.Receipt)other);
@@ -5287,12 +5143,10 @@ public final class Messages {
         return this;
       }
 
-      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5573,13 +5427,11 @@ public final class Messages {
         }
         return signatureBuilder_;
       }
-      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5601,7 +5453,6 @@ public final class Messages {
 
     private static final com.google.protobuf.Parser<Receipt>
         PARSER = new com.google.protobuf.AbstractParser<Receipt>() {
-      @java.lang.Override
       public Receipt parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5619,7 +5470,6 @@ public final class Messages {
       return PARSER;
     }
 
-    @java.lang.Override
     public messages.Messages.Receipt getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }

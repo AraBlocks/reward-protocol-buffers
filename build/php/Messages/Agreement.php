@@ -10,7 +10,7 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  **
- * An abstract agreement between two peers (a farmer and a requester)
+ * An abstract agreement between two peers
  * spelling out the terms of a task.
  *
  * Generated from protobuf message <code>messages.Agreement</code>
@@ -34,21 +34,9 @@ class Agreement extends \Google\Protobuf\Internal\Message
      */
     private $data = '';
 
-    /**
-     * Constructor.
-     *
-     * @param array $data {
-     *     Optional. Data for populating the Message object.
-     *
-     *     @type string $nonce
-     *     @type \Messages\Quote $quote
-     *     @type \Messages\Signature $signature
-     *     @type string $data
-     * }
-     */
-    public function __construct($data = NULL) {
+    public function __construct() {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct($data);
+        parent::__construct();
     }
 
     /**

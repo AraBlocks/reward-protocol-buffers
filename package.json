@@ -1,7 +1,7 @@
 {
-  "name": "farming-protocol-buffers",
+  "name": "reward-protocol-buffers",
   "version": "0.2.0",
-  "description": "Protocol buffers for Farming",
+  "description": "Protocol buffers for Ara Rewards",
   "main": "index.js",
   "bin": {},
   "scripts": {
@@ -16,20 +16,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arablocks/farming-protocol-buffers.git"
+    "url": "git+https://github.com/arablocks/reward-protocol-buffers.git"
   },
   "keywords": [
     "ara",
-    "farming",
-    "farming-protocol",
-    "farming-protocol-buffers"
+    "rewards",
+    "reward-protocol",
+    "reward-protocol-buffers"
   ],
   "author": "Brandon Plaster <brandon@littlstar.com>",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/arablocks/farming-protocol-buffers/issues"
+    "url": "https://github.com/arablocks/reward-protocol-buffers/issues"
   },
-  "homepage": "https://github.com/arablocks/farming-protocol-buffers#readme",
+  "homepage": "https://github.com/arablocks/reward-protocol-buffers#readme",
   "dependencies": {
     "google-protobuf": "^3.6.1"
   },

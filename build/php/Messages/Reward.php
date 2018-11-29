@@ -36,22 +36,9 @@ class Reward extends \Google\Protobuf\Internal\Message
      */
     private $data = '';
 
-    /**
-     * Constructor.
-     *
-     * @param array $data {
-     *     Optional. Data for populating the Message object.
-     *
-     *     @type string $nonce
-     *     @type \Messages\Agreement $agreement
-     *     @type int|string $amount
-     *     @type \Messages\Signature $signature
-     *     @type string $data
-     * }
-     */
-    public function __construct($data = NULL) {
+    public function __construct() {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct($data);
+        parent::__construct();
     }
 
     /**

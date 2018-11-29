@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * A quote from a specific farmer for a specific SOW.
+ * A quote from a peer for a specific SOW.
  *
  * Generated from protobuf message <code>messages.Quote</code>
  */
@@ -36,22 +36,9 @@ class Quote extends \Google\Protobuf\Internal\Message
      */
     private $data = '';
 
-    /**
-     * Constructor.
-     *
-     * @param array $data {
-     *     Optional. Data for populating the Message object.
-     *
-     *     @type string $nonce
-     *     @type int|string $per_unit_cost
-     *     @type \Messages\SOW $sow
-     *     @type \Messages\Signature $signature
-     *     @type string $data
-     * }
-     */
-    public function __construct($data = NULL) {
+    public function __construct() {
         \GPBMetadata\Messages::initOnce();
-        parent::__construct($data);
+        parent::__construct();
     }
 
     /**

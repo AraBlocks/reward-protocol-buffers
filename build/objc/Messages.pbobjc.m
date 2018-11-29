@@ -13,7 +13,7 @@
  #import "GPBProtocolBuffers_RuntimeSupport.h"
 #endif
 
-#import "Messages.pbobjc.h"
+ #import "Messages.pbobjc.h"
 // @@protoc_insertion_point(imports)
 
 #pragma clang diagnostic push
