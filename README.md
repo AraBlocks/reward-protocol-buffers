@@ -20,7 +20,8 @@ Protocol buffers for Ara Rewards
 * [Reward](#reward)
 * [Receipt](#receipt)
 
-### Signature <a name="signature"></a>
+<a name="signature"></a>
+### Signature
 A signed piece of data that can be used to validate a peer.
 
 | Field | Type | Description |
@@ -28,7 +29,8 @@ A signed piece of data that can be used to validate a peer.
 | did | string | The DID associated with a peer |
 | data | bytes | Data signed by the private key of the associated AraId |
 
-### SOW <a name="sow"></a>
+<a name="sow"></a>
+### SOW
 A statement of work for a specific task.
 
 | Field | Type | Description |
@@ -40,7 +42,8 @@ A statement of work for a specific task.
 | signature | [Signature](#signature) | The signature associated with a peer |
 | data | bytes | Miscellaneous data |
 
-### Quote <a name="quote"></a>
+<a name="quote"></a>
+### Quote
 A quote from a peer for a specific SOW.
 
 | Field | Type | Description |
@@ -51,7 +54,8 @@ A quote from a peer for a specific SOW.
 | signature | [Signature](#signature) | The signature associated with a peer |
 | data | bytes | Miscellaneous data |
 
-### Agreement <a name="agreement"></a>
+<a name="agreement"></a>
+### Agreement
 An abstract agreement between two peers spelling out the terms of a task.
 
 | Field | Type | Description |
@@ -61,7 +65,8 @@ An abstract agreement between two peers spelling out the terms of a task.
 | signature | [Signature](#signature) | The signature associated with a peer |
 | data | bytes | Miscellaneous data |
 
-### Reward <a name="reward"></a>
+<a name="reward"></a>
+### Reward
 A reward for a specific agreement, sent by a verifiable peer.
 
 | Field | Type | Description |
@@ -72,7 +77,8 @@ A reward for a specific agreement, sent by a verifiable peer.
 | signature | [Signature](#signature) | The signature associated with a peer |
 | data | bytes | Miscellaneous data |
 
-### Receipt <a name="receipt"></a>
+<a name="receipt"></a>
+### Receipt
 A receipt for a reward, sent by a verifiable peer.
 
 | Field | Type | Description |
