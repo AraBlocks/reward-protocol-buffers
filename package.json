@@ -1,6 +1,6 @@
 {
   "name": "reward-protocol-buffers",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Protocol buffers for Ara Rewards",
   "main": "index.js",
   "bin": {},
