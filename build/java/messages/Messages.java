@@ -1756,9 +1756,14 @@ public final class Messages {
     com.google.protobuf.ByteString getNonce();
 
     /**
-     * <code>int64 per_unit_cost = 2;</code>
+     * <code>string per_unit_cost = 2;</code>
      */
-    long getPerUnitCost();
+    java.lang.String getPerUnitCost();
+    /**
+     * <code>string per_unit_cost = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getPerUnitCostBytes();
 
     /**
      * <code>.messages.SOW sow = 3;</code>
@@ -1809,7 +1814,7 @@ public final class Messages {
     }
     private Quote() {
       nonce_ = com.google.protobuf.ByteString.EMPTY;
-      perUnitCost_ = 0L;
+      perUnitCost_ = "";
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -1849,9 +1854,10 @@ public final class Messages {
               nonce_ = input.readBytes();
               break;
             }
-            case 16: {
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              perUnitCost_ = input.readInt64();
+              perUnitCost_ = s;
               break;
             }
             case 26: {
@@ -1919,12 +1925,37 @@ public final class Messages {
     }
 
     public static final int PER_UNIT_COST_FIELD_NUMBER = 2;
-    private long perUnitCost_;
+    private volatile java.lang.Object perUnitCost_;
     /**
-     * <code>int64 per_unit_cost = 2;</code>
+     * <code>string per_unit_cost = 2;</code>
      */
-    public long getPerUnitCost() {
-      return perUnitCost_;
+    public java.lang.String getPerUnitCost() {
+      java.lang.Object ref = perUnitCost_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        perUnitCost_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string per_unit_cost = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPerUnitCostBytes() {
+      java.lang.Object ref = perUnitCost_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        perUnitCost_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int SOW_FIELD_NUMBER = 3;
@@ -1993,8 +2024,8 @@ public final class Messages {
       if (!nonce_.isEmpty()) {
         output.writeBytes(1, nonce_);
       }
-      if (perUnitCost_ != 0L) {
-        output.writeInt64(2, perUnitCost_);
+      if (!getPerUnitCostBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, perUnitCost_);
       }
       if (sow_ != null) {
         output.writeMessage(3, getSow());
@@ -2017,9 +2048,8 @@ public final class Messages {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, nonce_);
       }
-      if (perUnitCost_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, perUnitCost_);
+      if (!getPerUnitCostBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, perUnitCost_);
       }
       if (sow_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -2051,8 +2081,8 @@ public final class Messages {
       boolean result = true;
       result = result && getNonce()
           .equals(other.getNonce());
-      result = result && (getPerUnitCost()
-          == other.getPerUnitCost());
+      result = result && getPerUnitCost()
+          .equals(other.getPerUnitCost());
       result = result && (hasSow() == other.hasSow());
       if (hasSow()) {
         result = result && getSow()
@@ -2079,8 +2109,7 @@ public final class Messages {
       hash = (37 * hash) + NONCE_FIELD_NUMBER;
       hash = (53 * hash) + getNonce().hashCode();
       hash = (37 * hash) + PER_UNIT_COST_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPerUnitCost());
+      hash = (53 * hash) + getPerUnitCost().hashCode();
       if (hasSow()) {
         hash = (37 * hash) + SOW_FIELD_NUMBER;
         hash = (53 * hash) + getSow().hashCode();
@@ -2226,7 +2255,7 @@ public final class Messages {
         super.clear();
         nonce_ = com.google.protobuf.ByteString.EMPTY;
 
-        perUnitCost_ = 0L;
+        perUnitCost_ = "";
 
         if (sowBuilder_ == null) {
           sow_ = null;
@@ -2321,8 +2350,9 @@ public final class Messages {
         if (other.getNonce() != com.google.protobuf.ByteString.EMPTY) {
           setNonce(other.getNonce());
         }
-        if (other.getPerUnitCost() != 0L) {
-          setPerUnitCost(other.getPerUnitCost());
+        if (!other.getPerUnitCost().isEmpty()) {
+          perUnitCost_ = other.perUnitCost_;
+          onChanged();
         }
         if (other.hasSow()) {
           mergeSow(other.getSow());
@@ -2389,28 +2419,71 @@ public final class Messages {
         return this;
       }
 
-      private long perUnitCost_ ;
+      private java.lang.Object perUnitCost_ = "";
       /**
-       * <code>int64 per_unit_cost = 2;</code>
+       * <code>string per_unit_cost = 2;</code>
        */
-      public long getPerUnitCost() {
-        return perUnitCost_;
+      public java.lang.String getPerUnitCost() {
+        java.lang.Object ref = perUnitCost_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          perUnitCost_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int64 per_unit_cost = 2;</code>
+       * <code>string per_unit_cost = 2;</code>
        */
-      public Builder setPerUnitCost(long value) {
-        
+      public com.google.protobuf.ByteString
+          getPerUnitCostBytes() {
+        java.lang.Object ref = perUnitCost_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          perUnitCost_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string per_unit_cost = 2;</code>
+       */
+      public Builder setPerUnitCost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         perUnitCost_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 per_unit_cost = 2;</code>
+       * <code>string per_unit_cost = 2;</code>
        */
       public Builder clearPerUnitCost() {
         
-        perUnitCost_ = 0L;
+        perUnitCost_ = getDefaultInstance().getPerUnitCost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string per_unit_cost = 2;</code>
+       */
+      public Builder setPerUnitCostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        perUnitCost_ = value;
         onChanged();
         return this;
       }
@@ -3669,9 +3742,14 @@ public final class Messages {
     messages.Messages.AgreementOrBuilder getAgreementOrBuilder();
 
     /**
-     * <code>int64 amount = 3;</code>
+     * <code>string amount = 3;</code>
      */
-    long getAmount();
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
 
     /**
      * <code>.messages.Signature signature = 4;</code>
@@ -3709,7 +3787,7 @@ public final class Messages {
     }
     private Reward() {
       nonce_ = com.google.protobuf.ByteString.EMPTY;
-      amount_ = 0L;
+      amount_ = "";
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -3762,9 +3840,10 @@ public final class Messages {
 
               break;
             }
-            case 24: {
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              amount_ = input.readInt64();
+              amount_ = s;
               break;
             }
             case 34: {
@@ -3840,12 +3919,37 @@ public final class Messages {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 3;
-    private long amount_;
+    private volatile java.lang.Object amount_;
     /**
-     * <code>int64 amount = 3;</code>
+     * <code>string amount = 3;</code>
      */
-    public long getAmount() {
-      return amount_;
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int SIGNATURE_FIELD_NUMBER = 4;
@@ -3896,8 +4000,8 @@ public final class Messages {
       if (agreement_ != null) {
         output.writeMessage(2, getAgreement());
       }
-      if (amount_ != 0L) {
-        output.writeInt64(3, amount_);
+      if (!getAmountBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amount_);
       }
       if (signature_ != null) {
         output.writeMessage(4, getSignature());
@@ -3921,9 +4025,8 @@ public final class Messages {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAgreement());
       }
-      if (amount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, amount_);
+      if (!getAmountBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amount_);
       }
       if (signature_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -3956,8 +4059,8 @@ public final class Messages {
         result = result && getAgreement()
             .equals(other.getAgreement());
       }
-      result = result && (getAmount()
-          == other.getAmount());
+      result = result && getAmount()
+          .equals(other.getAmount());
       result = result && (hasSignature() == other.hasSignature());
       if (hasSignature()) {
         result = result && getSignature()
@@ -3983,8 +4086,7 @@ public final class Messages {
         hash = (53 * hash) + getAgreement().hashCode();
       }
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAmount());
+      hash = (53 * hash) + getAmount().hashCode();
       if (hasSignature()) {
         hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
         hash = (53 * hash) + getSignature().hashCode();
@@ -4132,7 +4234,7 @@ public final class Messages {
           agreement_ = null;
           agreementBuilder_ = null;
         }
-        amount_ = 0L;
+        amount_ = "";
 
         if (signatureBuilder_ == null) {
           signature_ = null;
@@ -4224,8 +4326,9 @@ public final class Messages {
         if (other.hasAgreement()) {
           mergeAgreement(other.getAgreement());
         }
-        if (other.getAmount() != 0L) {
-          setAmount(other.getAmount());
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          onChanged();
         }
         if (other.hasSignature()) {
           mergeSignature(other.getSignature());
@@ -4406,28 +4509,71 @@ public final class Messages {
         return agreementBuilder_;
       }
 
-      private long amount_ ;
+      private java.lang.Object amount_ = "";
       /**
-       * <code>int64 amount = 3;</code>
+       * <code>string amount = 3;</code>
        */
-      public long getAmount() {
-        return amount_;
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int64 amount = 3;</code>
+       * <code>string amount = 3;</code>
        */
-      public Builder setAmount(long value) {
-        
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 3;</code>
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         amount_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 amount = 3;</code>
+       * <code>string amount = 3;</code>
        */
       public Builder clearAmount() {
         
-        amount_ = 0L;
+        amount_ = getDefaultInstance().getAmount();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 3;</code>
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        amount_ = value;
         onChanged();
         return this;
       }
@@ -5521,14 +5667,14 @@ public final class Messages {
       "\001(\t\022\025\n\rcurrency_unit\030\004 \001(\t\022&\n\tsignature\030" +
       "\005 \001(\0132\023.messages.Signature\022\014\n\004data\030\006 \001(\014" +
       "\"\177\n\005Quote\022\r\n\005nonce\030\001 \001(\014\022\025\n\rper_unit_cos" +
-      "t\030\002 \001(\003\022\032\n\003sow\030\003 \001(\0132\r.messages.SOW\022&\n\ts" +
+      "t\030\002 \001(\t\022\032\n\003sow\030\003 \001(\0132\r.messages.SOW\022&\n\ts" +
       "ignature\030\004 \001(\0132\023.messages.Signature\022\014\n\004d" +
       "ata\030\005 \001(\014\"p\n\tAgreement\022\r\n\005nonce\030\001 \001(\014\022\036\n" +
       "\005quote\030\002 \001(\0132\017.messages.Quote\022&\n\tsignatu" +
       "re\030\003 \001(\0132\023.messages.Signature\022\014\n\004data\030\004 " +
       "\001(\014\"\205\001\n\006Reward\022\r\n\005nonce\030\001 \001(\014\022&\n\tagreeme" +
       "nt\030\002 \001(\0132\023.messages.Agreement\022\016\n\006amount\030" +
-      "\003 \001(\003\022&\n\tsignature\030\004 \001(\0132\023.messages.Sign" +
+      "\003 \001(\t\022&\n\tsignature\030\004 \001(\0132\023.messages.Sign" +
       "ature\022\014\n\004data\030\005 \001(\014\"b\n\007Receipt\022\r\n\005nonce\030" +
       "\001 \001(\014\022 \n\006reward\030\002 \001(\0132\020.messages.Reward\022" +
       "&\n\tsignature\030\003 \001(\0132\023.messages.Signatureb" +

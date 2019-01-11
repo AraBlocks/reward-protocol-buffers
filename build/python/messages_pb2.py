@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='messages.proto',
   package='messages',
   syntax='proto3',
-  serialized_pb=_b('\n\x0emessages.proto\x12\x08messages\"&\n\tSignature\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x83\x01\n\x03SOW\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\r\n\x05topic\x18\x02 \x01(\t\x12\x11\n\twork_unit\x18\x03 \x01(\t\x12\x15\n\rcurrency_unit\x18\x04 \x01(\t\x12&\n\tsignature\x18\x05 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x06 \x01(\x0c\"\x7f\n\x05Quote\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x15\n\rper_unit_cost\x18\x02 \x01(\x03\x12\x1a\n\x03sow\x18\x03 \x01(\x0b\x32\r.messages.SOW\x12&\n\tsignature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"p\n\tAgreement\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x1e\n\x05quote\x18\x02 \x01(\x0b\x32\x0f.messages.Quote\x12&\n\tsignature\x18\x03 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\"\x85\x01\n\x06Reward\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\tagreement\x18\x02 \x01(\x0b\x32\x13.messages.Agreement\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x03\x12&\n\tsignature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"b\n\x07Receipt\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12 \n\x06reward\x18\x02 \x01(\x0b\x32\x10.messages.Reward\x12&\n\tsignature\x18\x03 \x01(\x0b\x32\x13.messages.Signatureb\x06proto3')
+  serialized_pb=_b('\n\x0emessages.proto\x12\x08messages\"&\n\tSignature\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\x83\x01\n\x03SOW\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\r\n\x05topic\x18\x02 \x01(\t\x12\x11\n\twork_unit\x18\x03 \x01(\t\x12\x15\n\rcurrency_unit\x18\x04 \x01(\t\x12&\n\tsignature\x18\x05 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x06 \x01(\x0c\"\x7f\n\x05Quote\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x15\n\rper_unit_cost\x18\x02 \x01(\t\x12\x1a\n\x03sow\x18\x03 \x01(\x0b\x32\r.messages.SOW\x12&\n\tsignature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"p\n\tAgreement\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12\x1e\n\x05quote\x18\x02 \x01(\x0b\x32\x0f.messages.Quote\x12&\n\tsignature\x18\x03 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\"\x85\x01\n\x06Reward\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12&\n\tagreement\x18\x02 \x01(\x0b\x32\x13.messages.Agreement\x12\x0e\n\x06\x61mount\x18\x03 \x01(\t\x12&\n\tsignature\x18\x04 \x01(\x0b\x32\x13.messages.Signature\x12\x0c\n\x04\x64\x61ta\x18\x05 \x01(\x0c\"b\n\x07Receipt\x12\r\n\x05nonce\x18\x01 \x01(\x0c\x12 \n\x06reward\x18\x02 \x01(\x0b\x32\x10.messages.Reward\x12&\n\tsignature\x18\x03 \x01(\x0b\x32\x13.messages.Signatureb\x06proto3')
 )
 
 
@@ -145,8 +145,8 @@ _QUOTE = _descriptor.Descriptor(
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='per_unit_cost', full_name='messages.Quote.per_unit_cost', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
@@ -263,8 +263,8 @@ _REWARD = _descriptor.Descriptor(
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='amount', full_name='messages.Reward.amount', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),

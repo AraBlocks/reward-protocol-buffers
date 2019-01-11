@@ -38,7 +38,7 @@ A statement of work for a specific task.
 | nonce | bytes | Identifier for the SOW |
 | topic | string | The topic of interest |
 | work_unit | string | An individual unit of work (i.e GB, Frame, etc.) |
-| currency_unit | string | An individual unit of currency (i.e. Ara^-18, USD, wei, etc.) |
+| currency_unit | string | An individual unit of currency (i.e. Ara, USD, wei, etc.) |
 | signature | [Signature](#signature) | The signature associated with a peer |
 | data | bytes | Miscellaneous data |
 
@@ -49,7 +49,7 @@ A quote from a peer for a specific SOW.
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | nonce | bytes | Identifier for the quote |
-| per_unit_cost | int64 | The cost (in `currency_units`) per unit of work (in `work_units`) |
+| per_unit_cost | string | The cost (in `currency_units`) per unit of work (in `work_units`) |
 | sow | [SOW](#sow) | The associated SOW |
 | signature | [Signature](#signature) | The signature associated with a peer |
 | data | bytes | Miscellaneous data |
@@ -73,7 +73,7 @@ A reward for a specific agreement, sent by a verifiable peer.
 | ----- | ---- | ----------- |
 | nonce | bytes | Identifier for the reward |
 | agreement | [Agreement](#agreement) | The associated agreement |
-| amount | int64 | The reward amount (in `currency_units`) |
+| amount | string | The reward amount (in `currency_units`) |
 | signature | [Signature](#signature) | The signature associated with a peer |
 | data | bytes | Miscellaneous data |
 

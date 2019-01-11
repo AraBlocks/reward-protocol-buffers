@@ -18,7 +18,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
   add_message "messages.Quote" do
     optional :nonce, :bytes, 1
-    optional :per_unit_cost, :int64, 2
+    optional :per_unit_cost, :string, 2
     optional :sow, :message, 3, "messages.SOW"
     optional :signature, :message, 4, "messages.Signature"
     optional :data, :bytes, 5
@@ -32,7 +32,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "messages.Reward" do
     optional :nonce, :bytes, 1
     optional :agreement, :message, 2, "messages.Agreement"
-    optional :amount, :int64, 3
+    optional :amount, :string, 3
     optional :signature, :message, 4, "messages.Signature"
     optional :data, :bytes, 5
   end

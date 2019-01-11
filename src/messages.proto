@@ -20,7 +20,7 @@ message SOW {
 // A quote from a peer for a specific SOW.
 message Quote {
   bytes nonce = 1;
-  int64 per_unit_cost = 2;
+  string per_unit_cost = 2;
   SOW sow = 3;
   Signature signature  = 4;
   bytes data = 5;
@@ -41,7 +41,7 @@ message Agreement {
 message Reward {
   bytes nonce = 1;
   Agreement agreement = 2;
-  int64 amount = 3;
+  string amount = 3;
   Signature signature  = 4;
   bytes data = 5;
 }

@@ -482,6 +482,20 @@ class Quote : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::std::string* release_nonce();
   void set_allocated_nonce(::std::string* nonce);
 
+  // string per_unit_cost = 2;
+  void clear_per_unit_cost();
+  static const int kPerUnitCostFieldNumber = 2;
+  const ::std::string& per_unit_cost() const;
+  void set_per_unit_cost(const ::std::string& value);
+  #if LANG_CXX11
+  void set_per_unit_cost(::std::string&& value);
+  #endif
+  void set_per_unit_cost(const char* value);
+  void set_per_unit_cost(const char* value, size_t size);
+  ::std::string* mutable_per_unit_cost();
+  ::std::string* release_per_unit_cost();
+  void set_allocated_per_unit_cost(::std::string* per_unit_cost);
+
   // bytes data = 5;
   void clear_data();
   static const int kDataFieldNumber = 5;
@@ -514,21 +528,15 @@ class Quote : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::messages::Signature* mutable_signature();
   void set_allocated_signature(::messages::Signature* signature);
 
-  // int64 per_unit_cost = 2;
-  void clear_per_unit_cost();
-  static const int kPerUnitCostFieldNumber = 2;
-  ::google::protobuf::int64 per_unit_cost() const;
-  void set_per_unit_cost(::google::protobuf::int64 value);
-
   // @@protoc_insertion_point(class_scope:messages.Quote)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr nonce_;
+  ::google::protobuf::internal::ArenaStringPtr per_unit_cost_;
   ::google::protobuf::internal::ArenaStringPtr data_;
   ::messages::SOW* sow_;
   ::messages::Signature* signature_;
-  ::google::protobuf::int64 per_unit_cost_;
   mutable int _cached_size_;
   friend struct ::protobuf_messages_2eproto::TableStruct;
   friend void ::protobuf_messages_2eproto::InitDefaultsQuoteImpl();
@@ -773,6 +781,20 @@ class Reward : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::std::string* release_nonce();
   void set_allocated_nonce(::std::string* nonce);
 
+  // string amount = 3;
+  void clear_amount();
+  static const int kAmountFieldNumber = 3;
+  const ::std::string& amount() const;
+  void set_amount(const ::std::string& value);
+  #if LANG_CXX11
+  void set_amount(::std::string&& value);
+  #endif
+  void set_amount(const char* value);
+  void set_amount(const char* value, size_t size);
+  ::std::string* mutable_amount();
+  ::std::string* release_amount();
+  void set_allocated_amount(::std::string* amount);
+
   // bytes data = 5;
   void clear_data();
   static const int kDataFieldNumber = 5;
@@ -805,21 +827,15 @@ class Reward : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::messages::Signature* mutable_signature();
   void set_allocated_signature(::messages::Signature* signature);
 
-  // int64 amount = 3;
-  void clear_amount();
-  static const int kAmountFieldNumber = 3;
-  ::google::protobuf::int64 amount() const;
-  void set_amount(::google::protobuf::int64 value);
-
   // @@protoc_insertion_point(class_scope:messages.Reward)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr nonce_;
+  ::google::protobuf::internal::ArenaStringPtr amount_;
   ::google::protobuf::internal::ArenaStringPtr data_;
   ::messages::Agreement* agreement_;
   ::messages::Signature* signature_;
-  ::google::protobuf::int64 amount_;
   mutable int _cached_size_;
   friend struct ::protobuf_messages_2eproto::TableStruct;
   friend void ::protobuf_messages_2eproto::InitDefaultsRewardImpl();
@@ -1444,18 +1460,57 @@ inline void Quote::set_allocated_nonce(::std::string* nonce) {
   // @@protoc_insertion_point(field_set_allocated:messages.Quote.nonce)
 }
 
-// int64 per_unit_cost = 2;
+// string per_unit_cost = 2;
 inline void Quote::clear_per_unit_cost() {
-  per_unit_cost_ = GOOGLE_LONGLONG(0);
+  per_unit_cost_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::int64 Quote::per_unit_cost() const {
+inline const ::std::string& Quote::per_unit_cost() const {
   // @@protoc_insertion_point(field_get:messages.Quote.per_unit_cost)
-  return per_unit_cost_;
+  return per_unit_cost_.GetNoArena();
 }
-inline void Quote::set_per_unit_cost(::google::protobuf::int64 value) {
+inline void Quote::set_per_unit_cost(const ::std::string& value) {
   
-  per_unit_cost_ = value;
+  per_unit_cost_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:messages.Quote.per_unit_cost)
+}
+#if LANG_CXX11
+inline void Quote::set_per_unit_cost(::std::string&& value) {
+  
+  per_unit_cost_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:messages.Quote.per_unit_cost)
+}
+#endif
+inline void Quote::set_per_unit_cost(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  per_unit_cost_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:messages.Quote.per_unit_cost)
+}
+inline void Quote::set_per_unit_cost(const char* value, size_t size) {
+  
+  per_unit_cost_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:messages.Quote.per_unit_cost)
+}
+inline ::std::string* Quote::mutable_per_unit_cost() {
+  
+  // @@protoc_insertion_point(field_mutable:messages.Quote.per_unit_cost)
+  return per_unit_cost_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Quote::release_per_unit_cost() {
+  // @@protoc_insertion_point(field_release:messages.Quote.per_unit_cost)
+  
+  return per_unit_cost_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Quote::set_allocated_per_unit_cost(::std::string* per_unit_cost) {
+  if (per_unit_cost != NULL) {
+    
+  } else {
+    
+  }
+  per_unit_cost_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), per_unit_cost);
+  // @@protoc_insertion_point(field_set_allocated:messages.Quote.per_unit_cost)
 }
 
 // .messages.SOW sow = 3;
@@ -1928,18 +1983,57 @@ inline void Reward::set_allocated_agreement(::messages::Agreement* agreement) {
   // @@protoc_insertion_point(field_set_allocated:messages.Reward.agreement)
 }
 
-// int64 amount = 3;
+// string amount = 3;
 inline void Reward::clear_amount() {
-  amount_ = GOOGLE_LONGLONG(0);
+  amount_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::int64 Reward::amount() const {
+inline const ::std::string& Reward::amount() const {
   // @@protoc_insertion_point(field_get:messages.Reward.amount)
-  return amount_;
+  return amount_.GetNoArena();
 }
-inline void Reward::set_amount(::google::protobuf::int64 value) {
+inline void Reward::set_amount(const ::std::string& value) {
   
-  amount_ = value;
+  amount_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:messages.Reward.amount)
+}
+#if LANG_CXX11
+inline void Reward::set_amount(::std::string&& value) {
+  
+  amount_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:messages.Reward.amount)
+}
+#endif
+inline void Reward::set_amount(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  amount_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:messages.Reward.amount)
+}
+inline void Reward::set_amount(const char* value, size_t size) {
+  
+  amount_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:messages.Reward.amount)
+}
+inline ::std::string* Reward::mutable_amount() {
+  
+  // @@protoc_insertion_point(field_mutable:messages.Reward.amount)
+  return amount_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Reward::release_amount() {
+  // @@protoc_insertion_point(field_release:messages.Reward.amount)
+  
+  return amount_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Reward::set_allocated_amount(::std::string* amount) {
+  if (amount != NULL) {
+    
+  } else {
+    
+  }
+  amount_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), amount);
+  // @@protoc_insertion_point(field_set_allocated:messages.Reward.amount)
 }
 
 // .messages.Signature signature = 4;

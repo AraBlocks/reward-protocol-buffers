@@ -12,7 +12,7 @@ const {
 
 const testString = 'testString'
 const testBytes = Buffer.from(testString, 'ascii')
-const testNumber = 42
+const testNumber = '420000000000000000.000000000000007'
 
 const sig = new Signature()
 sig.setDid(testString)

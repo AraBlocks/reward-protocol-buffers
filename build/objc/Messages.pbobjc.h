@@ -117,7 +117,7 @@ typedef GPB_ENUM(Quote_FieldNumber) {
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *nonce;
 
-@property(nonatomic, readwrite) int64_t perUnitCost;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *perUnitCost;
 
 @property(nonatomic, readwrite, strong, null_resettable) SOW *sow;
 /** Test to see if @c sow has been set. */
@@ -182,7 +182,7 @@ typedef GPB_ENUM(Reward_FieldNumber) {
 /** Test to see if @c agreement has been set. */
 @property(nonatomic, readwrite) BOOL hasAgreement;
 
-@property(nonatomic, readwrite) int64_t amount;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *amount;
 
 @property(nonatomic, readwrite, strong, null_resettable) Signature *signature;
 /** Test to see if @c signature has been set. */
