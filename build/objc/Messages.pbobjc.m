@@ -207,10 +207,10 @@ typedef struct SOW__storage_ {
 typedef struct Quote__storage_ {
   uint32_t _has_storage_[1];
   NSData *nonce;
+  NSString *perUnitCost;
   SOW *sow;
   Signature *signature;
   NSData *data_p;
-  int64_t perUnitCost;
 } Quote__storage_;
 
 // This method is threadsafe because it is initially called
@@ -235,7 +235,7 @@ typedef struct Quote__storage_ {
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(Quote__storage_, perUnitCost),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeInt64,
+        .dataType = GPBDataTypeString,
       },
       {
         .name = "sow",
@@ -371,9 +371,9 @@ typedef struct Reward__storage_ {
   uint32_t _has_storage_[1];
   NSData *nonce;
   Agreement *agreement;
+  NSString *amount;
   Signature *signature;
   NSData *data_p;
-  int64_t amount;
 } Reward__storage_;
 
 // This method is threadsafe because it is initially called
@@ -407,7 +407,7 @@ typedef struct Reward__storage_ {
         .hasIndex = 2,
         .offset = (uint32_t)offsetof(Reward__storage_, amount),
         .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeInt64,
+        .dataType = GPBDataTypeString,
       },
       {
         .name = "signature",

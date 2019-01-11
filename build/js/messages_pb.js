@@ -600,7 +600,7 @@ proto.messages.Quote.prototype.toObject = function(opt_includeInstance) {
 proto.messages.Quote.toObject = function(includeInstance, msg) {
   var f, obj = {
     nonce: msg.getNonce_asB64(),
-    perUnitCost: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    perUnitCost: jspb.Message.getFieldWithDefault(msg, 2, ""),
     sow: (f = msg.getSow()) && proto.messages.SOW.toObject(includeInstance, f),
     signature: (f = msg.getSignature()) && proto.messages.Signature.toObject(includeInstance, f),
     data: msg.getData_asB64()
@@ -645,7 +645,7 @@ proto.messages.Quote.deserializeBinaryFromReader = function(msg, reader) {
       msg.setNonce(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt64());
+      var value = /** @type {string} */ (reader.readString());
       msg.setPerUnitCost(value);
       break;
     case 3:
@@ -699,8 +699,8 @@ proto.messages.Quote.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getPerUnitCost();
-  if (f !== 0) {
-    writer.writeInt64(
+  if (f.length > 0) {
+    writer.writeString(
       2,
       f
     );
@@ -771,17 +771,17 @@ proto.messages.Quote.prototype.setNonce = function(value) {
 
 
 /**
- * optional int64 per_unit_cost = 2;
- * @return {number}
+ * optional string per_unit_cost = 2;
+ * @return {string}
  */
 proto.messages.Quote.prototype.getPerUnitCost = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {number} value */
+/** @param {string} value */
 proto.messages.Quote.prototype.setPerUnitCost = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1238,7 +1238,7 @@ proto.messages.Reward.toObject = function(includeInstance, msg) {
   var f, obj = {
     nonce: msg.getNonce_asB64(),
     agreement: (f = msg.getAgreement()) && proto.messages.Agreement.toObject(includeInstance, f),
-    amount: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    amount: jspb.Message.getFieldWithDefault(msg, 3, ""),
     signature: (f = msg.getSignature()) && proto.messages.Signature.toObject(includeInstance, f),
     data: msg.getData_asB64()
   };
@@ -1287,7 +1287,7 @@ proto.messages.Reward.deserializeBinaryFromReader = function(msg, reader) {
       msg.setAgreement(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readInt64());
+      var value = /** @type {string} */ (reader.readString());
       msg.setAmount(value);
       break;
     case 4:
@@ -1344,8 +1344,8 @@ proto.messages.Reward.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getAmount();
-  if (f !== 0) {
-    writer.writeInt64(
+  if (f.length > 0) {
+    writer.writeString(
       3,
       f
     );
@@ -1438,17 +1438,17 @@ proto.messages.Reward.prototype.hasAgreement = function() {
 
 
 /**
- * optional int64 amount = 3;
- * @return {number}
+ * optional string amount = 3;
+ * @return {string}
  */
 proto.messages.Reward.prototype.getAmount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
-/** @param {number} value */
+/** @param {string} value */
 proto.messages.Reward.prototype.setAmount = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 

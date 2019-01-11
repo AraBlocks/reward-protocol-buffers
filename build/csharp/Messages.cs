@@ -29,13 +29,13 @@ namespace Messages {
             "DQoFdG9waWMYAiABKAkSEQoJd29ya191bml0GAMgASgJEhUKDWN1cnJlbmN5",
             "X3VuaXQYBCABKAkSJgoJc2lnbmF0dXJlGAUgASgLMhMubWVzc2FnZXMuU2ln",
             "bmF0dXJlEgwKBGRhdGEYBiABKAwifwoFUXVvdGUSDQoFbm9uY2UYASABKAwS",
-            "FQoNcGVyX3VuaXRfY29zdBgCIAEoAxIaCgNzb3cYAyABKAsyDS5tZXNzYWdl",
+            "FQoNcGVyX3VuaXRfY29zdBgCIAEoCRIaCgNzb3cYAyABKAsyDS5tZXNzYWdl",
             "cy5TT1cSJgoJc2lnbmF0dXJlGAQgASgLMhMubWVzc2FnZXMuU2lnbmF0dXJl",
             "EgwKBGRhdGEYBSABKAwicAoJQWdyZWVtZW50Eg0KBW5vbmNlGAEgASgMEh4K",
             "BXF1b3RlGAIgASgLMg8ubWVzc2FnZXMuUXVvdGUSJgoJc2lnbmF0dXJlGAMg",
             "ASgLMhMubWVzc2FnZXMuU2lnbmF0dXJlEgwKBGRhdGEYBCABKAwihQEKBlJl",
             "d2FyZBINCgVub25jZRgBIAEoDBImCglhZ3JlZW1lbnQYAiABKAsyEy5tZXNz",
-            "YWdlcy5BZ3JlZW1lbnQSDgoGYW1vdW50GAMgASgDEiYKCXNpZ25hdHVyZRgE",
+            "YWdlcy5BZ3JlZW1lbnQSDgoGYW1vdW50GAMgASgJEiYKCXNpZ25hdHVyZRgE",
             "IAEoCzITLm1lc3NhZ2VzLlNpZ25hdHVyZRIMCgRkYXRhGAUgASgMImIKB1Jl",
             "Y2VpcHQSDQoFbm9uY2UYASABKAwSIAoGcmV3YXJkGAIgASgLMhAubWVzc2Fn",
             "ZXMuUmV3YXJkEiYKCXNpZ25hdHVyZRgDIAEoCzITLm1lc3NhZ2VzLlNpZ25h",
@@ -547,12 +547,12 @@ namespace Messages {
 
     /// <summary>Field number for the "per_unit_cost" field.</summary>
     public const int PerUnitCostFieldNumber = 2;
-    private long perUnitCost_;
+    private string perUnitCost_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long PerUnitCost {
+    public string PerUnitCost {
       get { return perUnitCost_; }
       set {
-        perUnitCost_ = value;
+        perUnitCost_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -614,7 +614,7 @@ namespace Messages {
     public override int GetHashCode() {
       int hash = 1;
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
-      if (PerUnitCost != 0L) hash ^= PerUnitCost.GetHashCode();
+      if (PerUnitCost.Length != 0) hash ^= PerUnitCost.GetHashCode();
       if (sow_ != null) hash ^= Sow.GetHashCode();
       if (signature_ != null) hash ^= Signature.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
@@ -635,9 +635,9 @@ namespace Messages {
         output.WriteRawTag(10);
         output.WriteBytes(Nonce);
       }
-      if (PerUnitCost != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(PerUnitCost);
+      if (PerUnitCost.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PerUnitCost);
       }
       if (sow_ != null) {
         output.WriteRawTag(26);
@@ -662,8 +662,8 @@ namespace Messages {
       if (Nonce.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Nonce);
       }
-      if (PerUnitCost != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PerUnitCost);
+      if (PerUnitCost.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PerUnitCost);
       }
       if (sow_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sow);
@@ -688,7 +688,7 @@ namespace Messages {
       if (other.Nonce.Length != 0) {
         Nonce = other.Nonce;
       }
-      if (other.PerUnitCost != 0L) {
+      if (other.PerUnitCost.Length != 0) {
         PerUnitCost = other.PerUnitCost;
       }
       if (other.sow_ != null) {
@@ -721,8 +721,8 @@ namespace Messages {
             Nonce = input.ReadBytes();
             break;
           }
-          case 16: {
-            PerUnitCost = input.ReadInt64();
+          case 18: {
+            PerUnitCost = input.ReadString();
             break;
           }
           case 26: {
@@ -1044,12 +1044,12 @@ namespace Messages {
 
     /// <summary>Field number for the "amount" field.</summary>
     public const int AmountFieldNumber = 3;
-    private long amount_;
+    private string amount_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Amount {
+    public string Amount {
       get { return amount_; }
       set {
-        amount_ = value;
+        amount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1101,7 +1101,7 @@ namespace Messages {
       int hash = 1;
       if (Nonce.Length != 0) hash ^= Nonce.GetHashCode();
       if (agreement_ != null) hash ^= Agreement.GetHashCode();
-      if (Amount != 0L) hash ^= Amount.GetHashCode();
+      if (Amount.Length != 0) hash ^= Amount.GetHashCode();
       if (signature_ != null) hash ^= Signature.GetHashCode();
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
@@ -1125,9 +1125,9 @@ namespace Messages {
         output.WriteRawTag(18);
         output.WriteMessage(Agreement);
       }
-      if (Amount != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(Amount);
+      if (Amount.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Amount);
       }
       if (signature_ != null) {
         output.WriteRawTag(34);
@@ -1151,8 +1151,8 @@ namespace Messages {
       if (agreement_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Agreement);
       }
-      if (Amount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Amount);
+      if (Amount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Amount);
       }
       if (signature_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Signature);
@@ -1180,7 +1180,7 @@ namespace Messages {
         }
         Agreement.MergeFrom(other.Agreement);
       }
-      if (other.Amount != 0L) {
+      if (other.Amount.Length != 0) {
         Amount = other.Amount;
       }
       if (other.signature_ != null) {
@@ -1214,8 +1214,8 @@ namespace Messages {
             input.ReadMessage(agreement_);
             break;
           }
-          case 24: {
-            Amount = input.ReadInt64();
+          case 26: {
+            Amount = input.ReadString();
             break;
           }
           case 34: {

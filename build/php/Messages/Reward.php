@@ -24,9 +24,9 @@ class Reward extends \Google\Protobuf\Internal\Message
      */
     private $agreement = null;
     /**
-     * Generated from protobuf field <code>int64 amount = 3;</code>
+     * Generated from protobuf field <code>string amount = 3;</code>
      */
-    private $amount = 0;
+    private $amount = '';
     /**
      * Generated from protobuf field <code>.messages.Signature signature = 4;</code>
      */
@@ -86,8 +86,8 @@ class Reward extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amount = 3;</code>
-     * @return int|string
+     * Generated from protobuf field <code>string amount = 3;</code>
+     * @return string
      */
     public function getAmount()
     {
@@ -95,13 +95,13 @@ class Reward extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 amount = 3;</code>
-     * @param int|string $var
+     * Generated from protobuf field <code>string amount = 3;</code>
+     * @param string $var
      * @return $this
      */
     public function setAmount($var)
     {
-        GPBUtil::checkInt64($var);
+        GPBUtil::checkString($var, True);
         $this->amount = $var;
 
         return $this;

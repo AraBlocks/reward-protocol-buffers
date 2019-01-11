@@ -20,9 +20,9 @@ class Quote extends \Google\Protobuf\Internal\Message
      */
     private $nonce = '';
     /**
-     * Generated from protobuf field <code>int64 per_unit_cost = 2;</code>
+     * Generated from protobuf field <code>string per_unit_cost = 2;</code>
      */
-    private $per_unit_cost = 0;
+    private $per_unit_cost = '';
     /**
      * Generated from protobuf field <code>.messages.SOW sow = 3;</code>
      */
@@ -64,8 +64,8 @@ class Quote extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 per_unit_cost = 2;</code>
-     * @return int|string
+     * Generated from protobuf field <code>string per_unit_cost = 2;</code>
+     * @return string
      */
     public function getPerUnitCost()
     {
@@ -73,13 +73,13 @@ class Quote extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 per_unit_cost = 2;</code>
-     * @param int|string $var
+     * Generated from protobuf field <code>string per_unit_cost = 2;</code>
+     * @param string $var
      * @return $this
      */
     public function setPerUnitCost($var)
     {
-        GPBUtil::checkInt64($var);
+        GPBUtil::checkString($var, True);
         $this->per_unit_cost = $var;
 
         return $this;
